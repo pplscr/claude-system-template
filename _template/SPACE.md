@@ -1,30 +1,18 @@
-# Space: <назва>
+# {SPACE_NAME}
 
-> <короткий опис — одне речення>
-> Created: <дата>
-
-## Purpose
-
-<що робить цей простір, за що відповідає>
+- **Type**: {SPACE_TYPE}  (specialized | core)
+- **Node**: mac-mini
+- **Created**: {DATE}
 
 ## Agents
 
-| Agent | Role |
-|-------|------|
-| `<name>` | `<role>` |
+| Name | Role | Model | Provider |
+|------|------|-------|----------|
 
 ## Memory
+- Qdrant: `space_{SPACE_NAME}`
+- Files: `memory/`
 
-<опис того, що зберігається в memory/>
-
-## Tasks
-
-Active work → `tasks/active/`
-Backlog → `tasks/backlog/`
-Done → `tasks/done/`
-
-## Rules
-
-1. ...
-2. ...
-3. ...
+## Resources
+- Max agents: 10
+- Cost limit: $5/mo

@@ -1,58 +1,14 @@
-# Bootstrap: новий простір
+# Простір: {SPACE_NAME}
 
-> Це шаблон для створення нового простору. Скопіюй цю директорію і заповни.
+Я — Claude Code в просторі {SPACE_NAME}. Оркеструю агентів цього простору.
 
-## Крок 1: Копіювання
+## Мої агенти (у agents/)
+Дивлюсь у SPACE.md → знаходжу агентів → делегую їм через launch_agent.
 
-```bash
-cp -r ~/spaces/_template ~/spaces/<назва>
+## Як делегувати
 ```
-
-## Крок 2: Ідентичність
-
-Відредагуй `SPACE.md`:
-- Назва простору
-- Призначення (що робить, за що відповідає)
-- На якому вузлі працює
-- Статус
-
-## Крок 3: Агенти
-
-Створи агентів у `agents/` — мінімум один:
-```markdown
-# Agent: <назва>
-
-## Role
-...
-
-## Instructions
-...
+launch_agent: task_category={category}, cwd=~/spaces/{SPACE_NAME}
+prompt: Ти — {agent_name}. {задача}. 
+  Використовуй: {tools}. 
+  Поверни результат у /tmp/a2a/{agent_name}/outbox/.
 ```
-
-## Крок 4: Пам'ять
-
-Створи `memory/MEMORY.md` — початковий стан простору:
-```markdown
-# <space-name> — State
-
-- **Node**: <вузол>
-- **Created**: <дата>
-- **Status**: active
-```
-
-## Крок 5: Зареєструй в orchestrator
-
-Додай простір у `~/spaces/orchestrator/CLAUDE.md` → таблиця Available Spaces.
-
-## Крок 6: Зареєструй в system
-
-Додай простір у `~/spaces/system/memory/MEMORY.md` → таблиця Spaces.
-
-## Перевірка
-
-- [ ] `SPACE.md` заповнено
-- [ ] Мінімум 1 агент у `agents/`
-- [ ] `memory/MEMORY.md` створено
-- [ ] `workspace/` готовий до роботи
-- [ ] Простір зареєстровано в orchestrator
-- [ ] Простір зареєстровано в system memory
