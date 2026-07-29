@@ -1,0 +1,121 @@
+language = "en"
+data_dir = "/root/.cc-connect/data"
+
+[log]
+level = "info"
+
+[display]
+mode = "compact"
+show_context_indicator = false
+reply_footer = false
+thinking_messages = false
+tool_messages = true
+tool_max_len = 100
+thinking_max_len = 0
+history_max_len = 0
+hide_agent_footer = true
+
+[stream_preview]
+enabled = true
+interval_ms = 500
+min_delta_chars = 5
+max_chars = 2000
+
+[instant_reply]
+enabled = true
+content = "Опрацьовую..."
+
+attachment_send = "on"
+max_attachment_size_mb = 50
+
+[[projects]]
+name = "root"
+admin_from = "*"
+work_dir = "/root"
+reset_on_idle_mins = 0
+idle_timeout_mins = 0
+shell = "/bin/bash"
+shell_profile = "source /root/.bashrc 2>/dev/null || true"
+
+[projects.auto_compress]
+enabled = true
+max_tokens = 12000
+min_gap_mins = 10
+
+[projects.heartbeat]
+enabled = true
+interval_mins = 15
+prompt = "Якщо є незавершена робота — продовж. Якщо ні — нічого не роби."
+silent = true
+
+[projects.agent]
+type = "claudecode"
+
+[projects.agent.options]
+mode = "yolo"
+provider = "deepseek"
+
+[projects.agent.options.env]
+CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1"
+ANTHROPIC_MODEL = "deepseek-v4-pro"
+ANTHROPIC_DEFAULT_OPUS_MODEL = "deepseek-v4-pro"
+ANTHROPIC_DEFAULT_SONNET_MODEL = "deepseek-v4-pro"
+ANTHROPIC_DEFAULT_HAIKU_MODEL = "deepseek-v4-flash"
+CLAUDE_CODE_SUBAGENT_MODEL = "deepseek-v4-flash"
+CLAUDE_CODE_ATTRIBUTION_HEADER = "0"
+
+append_system_prompt = """
+You are the DISPATCHER on vuzol (100.84.177.33, Ubuntu 24.04, 8GB).
+You run the 24/7 infrastructure. TG is just one input channel.
+
+YOUR ROLE:
+  - Keep services alive: Qdrant :6333, PostgreSQL :5432, Task API :8000
+  - Run autonomous pipelines: digests, email agent, heartbeat checks
+  - Bridge Telegram: receive messages, respond to simple queries, delegate complex ones
+  - You are NOT the strategist. mac-mini (M4, 16GB, macOS) makes decisions and does heavy work.
+
+DELEGATION:
+  LOCAL (vuzol): service status, logs, quick DB queries, digest scripts
+  DELEGATE (mac-mini): code, agents, web, browser, analysis, any task >30s
+"""
+
+# ⚠️ ЗАМІНИТИ на свій API ключ
+[[projects.agent.providers]]
+name = "deepseek"
+api_key = "sk-REPLACE-WITH-YOUR-DEEPSEEK-KEY"
+base_url = "https://api.deepseek.com/anthropic"
+model = "deepseek-v4-pro"
+
+[[projects.agent.providers.models]]
+model = "deepseek-v4-pro"
+alias = "pro"
+
+[[projects.agent.providers.models]]
+model = "deepseek-v4-flash"
+alias = "flash"
+
+# ⚠️ ЗАМІНИТИ на свій API ключ
+[[projects.agent.providers]]
+name = "anthropic"
+api_key = "sk-ant-REPLACE-WITH-YOUR-ANTHROPIC-KEY"
+base_url = "https://api.anthropic.com"
+model = "claude-sonnet-4-20250514"
+
+[[projects.agent.providers.models]]
+model = "claude-sonnet-4-20250514"
+alias = "sonnet"
+
+[[projects.agent.providers.models]]
+model = "claude-opus-4-20250514"
+alias = "opus"
+
+# ⚠️ ЗАМІНИТИ на свій Telegram токен
+[[projects.platforms]]
+type = "telegram"
+
+[projects.platforms.options]
+token = "REPLACE-WITH-YOUR-TELEGRAM-TOKEN"
+allow_from = "*"
+admin_from = "*"
+progress_style = "compact"
+enable_reactions = false

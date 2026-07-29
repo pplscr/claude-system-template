@@ -1,0 +1,16 @@
+[Unit]
+Description=cc-connect - AI Agent Chat Bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/cc-connect --config /root/.cc-connect/config.toml
+WorkingDirectory=/root
+Restart=on-failure
+RestartSec=10
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="HOME=/root"
+
+[Install]
+WantedBy=multi-user.target
