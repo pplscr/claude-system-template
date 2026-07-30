@@ -1,90 +1,93 @@
-# Claude System Template — Сервер (Диспетчер)
+# Claude System Template
 
-Шаблон для розгортання AI-диспетчера 24/7 на Ubuntu.
+Шаблон Claude-системи: два вузли, одна пам'ять, багато агентів.
 
 ## Архітектура
 
 ```
-                         Internet
-                            │
-                     Cloudflare Tunnel
+┌──────────────────────────────────────────────────────────────┐
+│                     Tailscale Mesh (VPN)                       │
+│                                                               │
+│  ┌─────────────────────────┐   ┌──────────────────────────┐  │
+│  │  🧠 mac-mini            │   │  🖥️ vuzol                │  │
+│  │  macOS, M4, 16GB        │   │  Ubuntu 24.04, 8GB       │  │
+│  │                         │   │                          │  │
+│  │  Claude Code (DeepSeek) │   │  Claude Code (DeepSeek)  │  │
+│  │  РОЛЬ: Стратег          │   │  РОЛЬ: Диспетчер         │  │
+│  │                         │   │                          │  │
+│  │  ~/CLAUDE.md            │   │  /root/CLAUDE.md         │  │
+│  │  ~/AGENTS.md            │   │  /root/AGENTS.md         │  │
+│  │  ~/.claude/rules/       │   │                          │  │
+│  │  ~/spaces/              │   │                          │  │
+│  └──────────┬──────────────┘   └───────────┬──────────────┘  │
+│             │                              │                  │
+│             │  SSH + Qdrant :6333          │                  │
+│             │  + Task API :8000            │                  │
+│             │  + PostgreSQL :5432          │                  │
+│             └──────────────┬───────────────┘                  │
+│                            │                                  │
+│                     ┌──────┴──────┐                          │
+│                     │  🧠 Пам'ять  │                          │
+│                     │  Qdrant      │                          │
+│                     │  PostgreSQL  │                          │
+│                     │  Файли .md   │                          │
+│                     └─────────────┘                          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## Два вузли — дві ролі
+
+| | mac-mini | vuzol |
+|---|---|---|
+| **Роль** | Стратег + Виконавець | Диспетчер 24/7 |
+| **Рішення** | Приймає | НЕ приймає |
+| **Агенти** | Запускає (через простори) | Не запускає |
+| **Пам'ять** | Файли .md → синхронізація | Qdrant + PostgreSQL |
+| **Канали** | CLI, TG (через vuzol) | Telegram (cc-connect) |
+
+## Потік задачі
+
+```
+Користувач → Telegram → cc-connect (vuzol)
                             │
                             ▼
-┌──────────────────────────────────────────────────────┐
-│                 vuzol (Диспетчер)                      │
-│                 Ubuntu 24.04 | 8GB                     │
-│                                                        │
-│  ┌─────────────┐  ┌──────────┐  ┌──────────────────┐ │
-│  │  cc-connect │  │  ttyd    │  │  🎯 Оркестрація  │ │
-│  │  (Telegram  │  │  :7681   │  │  PostgreSQL tasks │ │
-│  │   міст)     │  │  (web    │  │  + Digest pipeline│ │
-│  └─────────────┘  │  terminal│  │  + Cron           │ │
-│                   └──────────┘  └──────────────────┘ │
-│                                                        │
-│  ┌─────────────────────────────────────────────────┐  │
-│  │  🧠 Пам'ять                                       │  │
-│  │  Qdrant :6333 (вектори) + PostgreSQL :5432 (ACID)│  │
-│  └─────────────────────────────────────────────────┘  │
-│                                                        │
-│  ┌─────────────────────────────────────────────────┐  │
-│  │  📦 Моніторинг                                    │  │
-│  │  Uptime Kuma :3001 | Dozzle :8080 | Beszel :8090│  │
-│  └─────────────────────────────────────────────────┘  │
-│                                                        │
-│  ┌─────────────────────────────────────────────────┐  │
-│  │  🌐 Nginx :80, :8880 (reverse proxy)             │  │
-│  └─────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────┘
-```
-
-## Сервіси
-
-| Сервіс | Порт | Призначення |
-|--------|------|-------------|
-| Nginx | :80, :8880 | Reverse proxy + статика |
-| Cloudflare Tunnel | — | Публічний доступ без відкритих портів |
-| Qdrant | :6333/:6334 | Векторна БД — семантичний пошук |
-| PostgreSQL 16 | :5432 | ACID — черга задач, метрики, архів |
-| Task API | :8000 | HTTP API + heartbeat |
-| ttyd | :7681 | Web-термінал |
-| cc-connect | — | Telegram-міст для Claude Code |
-| Uptime Kuma | :3001 | Моніторинг доступності |
-| Dozzle | :8080 | Логи Docker |
-| Beszel | :8090 | Системний моніторинг |
-| Vaultwarden | :8081 | Менеджер паролів |
-
-## Як працює диспетчеризація
-
-```
-Telegram → cc-connect → vuzol (Claude) → аналіз → простір → Task API (черга)
-                                                              ↓
-                                                         mac-mini poll + виконання + результат
+                    vuzol Claude (диспетчер)
+                      │  аналізує задачу
+                      │  класифікує → простір
+                      ▼
+                    Task API (PostgreSQL tasks)
+                      │
+                      ▼
+                    mac-mini poll + dispatcher.sh
+                      │  визначає агента
+                      │  читає model-routing.json
+                      ▼
+                    Claude в просторі (агент)
+                      │
+                      ▼
+                    Результат → Telegram
 ```
 
 ## Структура репозиторію
 
 ```
-vuzol/
-├── nginx/           ← reverse proxy конфіг
-├── systemd/         ← cloudflared, ttyd, cc-connect
-├── docker/          ← docker-compose (5 сервісів)
-├── scripts/         ← state.py, task-api.py, memory-to-qdrant.py...
-├── config/          ← CLAUDE.md + cc-connect.toml
-├── security/        ← UFW + fail2ban
-└── orchestrator/    ← диспетчеризація задач, digest pipeline, cron, PG schema
-
-memory/              ← трирівнева архітектура пам'яті
+├── README.md               ← цей файл
+├── config/                 ← CLAUDE.md для обох вузлів
+├── rules/                  ← 4 глобальні правила
+├── spaces/                 ← система просторів + шаблон
+├── memory/                 ← трирівнева архітектура пам'яті
+├── scripts/                ← ключові скрипти
+├── docker/                 ← docker-compose (Qdrant + моніторинг)
+├── nginx/                  ← reverse proxy конфіг
+├── systemd/                ← cloudflared, ttyd, cc-connect
+├── security/               ← UFW, fail2ban
+├── digest/                 ← автономні дайджести
+└── cron.md                 ← повний crontab
 ```
 
-## Розгортання з нуля
+## Розгортання
 
-```bash
-# Повний порядок — див. vuzol/README.md
-```
-
-## Ключові принципи
-
-- **Пам'ять трирівнева:** файли → Qdrant (семантичний пошук) → PostgreSQL (ACID)
-- **Диспетчеризація:** задача → простір → агент → модель → результат
-- **fail-soft:** Qdrant впав → PostgreSQL текстовий пошук → не краш
-- **НЕ роби LLM-виклики в hot path пам'яті** — ембедінг це векторна математика
+1. **vuzol** — підняти сервіси: `docker compose up -d`, nginx, systemd
+2. **mac-mini** — симлінки: `ln -sf claude-system/config/CLAUDE.md ~/CLAUDE.md`
+3. **Пам'ять** — PostgreSQL: `psql -f docker/init.sql`
+4. **Cron** — `crontab -e` → скопіювати з `cron.md`
