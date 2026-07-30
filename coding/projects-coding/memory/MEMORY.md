@@ -33,9 +33,9 @@
 
 | Агент | Модель | Коли |
 |-------|--------|------|
-| architect | deepseek-v4-pro[1m] + thinking | Нова фіча, складна архітектура |
-| dev | deepseek-v4-pro[1m] | Код, рефакторинг |
-| ops | deepseek-v4-pro[1m] | Docker, CI/CD, деплой |
+| architect | deepseek-v4-pro] + thinking | Нова фіча, складна архітектура |
+| dev | deepseek-v4-pro] | Код, рефакторинг |
+| ops | deepseek-v4-pro] | Docker, CI/CD, деплой |
 | tester | deepseek-v4-flash | Тести, баги |
 | reviewer | deepseek-v4-flash | Рев'ю перед комітом |
 

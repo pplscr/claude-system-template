@@ -2,7 +2,7 @@
 name: architect
 description: System design & architecture agent. Plans multi-file features, database schemas, API design, cross-platform architecture.
 tools: Read, Glob, Grep, WebSearch, Bash
-model: deepseek-v4-pro[1m]
+model: deepseek-v4-pro]
 thinking: true
 ---
 ---

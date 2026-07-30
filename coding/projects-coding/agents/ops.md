@@ -2,7 +2,7 @@
 name: ops
 description: DevOps & deployment agent. Docker, CI/CD, server setup, cross-platform deployment. Works on mac-mini for all platforms.
 tools: Read, Write, Edit, Bash, Glob, Grep, WebSearch
-model: deepseek-v4-pro[1m]
+model: deepseek-v4-pro]
 ---
 
 # 🚀 ops.md — DevOps / Деплой

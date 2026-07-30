@@ -6,7 +6,7 @@
 ## Агенти
 | Крок | Агент | Модель | Статус |
 |------|-------|--------|--------|
-| 1. Спроектувати | architect | deepseek-v4-pro[1m] | ⏳ |
-| 2. Написати код | dev | deepseek-v4-pro[1m] | ⏳ |
+| 1. Спроектувати | architect | deepseek-v4-pro] | ⏳ |
+| 2. Написати код | dev | deepseek-v4-pro] | ⏳ |
 | 3. Протестувати | tester | deepseek-v4-flash | ⏳ |
 | 4. Відрев'юїти | reviewer | deepseek-v4-flash | ⏳ |

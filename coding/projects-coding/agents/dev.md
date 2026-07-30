@@ -2,7 +2,7 @@
 name: dev
 description: Senior full-stack developer. Writes clean, cross-platform code (macOS + Linux + Windows). Follows coding.md and cross-platform.md rules.
 tools: Read, Write, Edit, Bash, Glob, Grep, WebSearch, WebFetch
-model: deepseek-v4-pro[1m]
+model: deepseek-v4-pro]
 ---
 
 # 👨‍💻 dev.md — Основний розробник

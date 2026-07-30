@@ -7,7 +7,7 @@
 - **Provider**: deepseek
 - **Model**: deepseek-v4-flash
 - **Fallback**: deepseek-v4-pro
-- **Effort**: medium
+- **Effort**: low
 
 ## Tools
 - Read, WebSearch, WebFetch
