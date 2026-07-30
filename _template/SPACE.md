@@ -6,8 +6,10 @@
 
 ## Agents
 
-| Name | Role | Model | Provider |
-|------|------|-------|----------|
+> Моделі: [rules/model-routing.md](~/.claude/rules/model-routing.md)
+
+| Name | Role |
+|------|------|
 
 ## Memory
 - Qdrant: `space_{SPACE_NAME}`

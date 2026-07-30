@@ -4,9 +4,7 @@
 {ONE_LINE_DESCRIPTION}
 
 ## Model
-- **Provider**: deepseek
-- **Model**: deepseek-v4-flash
-- **Fallback**: deepseek-v4-pro
+→ [rules/model-routing.md](~/.claude/rules/model-routing.md)
 
 ## Tools
 - Read, Bash, Grep, WebSearch
