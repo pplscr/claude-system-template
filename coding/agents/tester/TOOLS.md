@@ -1,9 +1,11 @@
-# Tools
+# TOOLS -- tester
 
-Available tools depend on the orchestrator session.
-Common tools: Bash, Read, Write, Edit, Grep, Glob.
+## Allowed
+- Read, Bash, Write, Edit, Grep, Glob, WebSearch, WebFetch
 
-When running on mac-mini:
-- `python3 ~/scripts/state.py` for state tracking
-- `ssh vuzol` for server operations (if needed)
-- `bash ~/.claude/scripts/statusline.sh` for system status
+## Forbidden
+- None (space-specific restrictions apply)
+
+## Space-specific
+- Working directory: ~/spaces/coding/
+- Claude Code tools as provided by orchestrator

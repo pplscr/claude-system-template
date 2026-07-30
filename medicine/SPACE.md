@@ -1,4 +1,4 @@
-# medicine
+# Медицина
 
 - **Type**: specialized
 - **Node**: mac-mini
@@ -6,11 +6,13 @@
 
 ## Agents
 
-| Name | Role | Model | Provider |
-|------|------|-------|----------|
-| `lab-analyst` | Аналіз результатів лабораторії | deepseek-v4-pro[1m] | deepseek |
-| `diagnostician` | Діагностика на основі симптомів | deepseek-v4-pro[1m] | deepseek |
-| `researcher` | Пошук медичної інформації | deepseek-v4-flash | deepseek |
+> Моделі: [rules/model-routing.md](~/.claude/rules/model-routing.md)
+
+| Name | Role |
+|------|------|
+| `lab-analyst` | Аналіз результатів лабораторії |
+| `diagnostician` | Діагностика на основі симптомів |
+| `researcher` | Пошук медичної інформації |
 
 ## Memory
 - Qdrant: `space_medicine`

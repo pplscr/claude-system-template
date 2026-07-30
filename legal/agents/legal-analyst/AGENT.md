@@ -1,8 +1,8 @@
 ---
 name: legal-analyst
 role: Аналіз юридичних документів та прецедентів
-model: auto
-provider: auto
+model: deepseek-v4-pro
+provider: deepseek
 effort: medium
 space: legal
 ---

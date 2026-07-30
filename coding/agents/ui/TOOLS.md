@@ -1,4 +1,4 @@
-# TOOLS -- reviewer
+# TOOLS -- ui
 
 ## Allowed
 - Read, Bash, Write, Edit, Grep, Glob, WebSearch, WebFetch

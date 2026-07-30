@@ -1,0 +1,60 @@
+{
+  "_schema": "1.0",
+  "_description": "Case state file — auto-updated by Claude when working on the case.",
+  "case_id": "F&W-3M",
+  "case_name": "Fördern & Wohnen — 3. Mahnung",
+  "forum": "Amtsgericht Hamburg (potential)",
+  "type": "Debt Collection — Wohnkosten",
+  "status": "active",
+  "phase": "mahnung_draft",
+  "filed_date": null,
+  "confirmation_numbers": {},
+  "deadlines": {
+    "payment_mahnung3": {
+      "date": "2026-08-15",
+      "description": "Send 3. Mahnung to tenant — €13 166.05 debt (2022-06 – 2024-05)",
+      "status": "pending",
+      "days_remaining": 16
+    }
+  },
+  "progress": {
+    "percentage": 30,
+    "completed": [
+      "Case analysis completed",
+      "Debt calculation verified — €13 166.05",
+      "Previous Mahnungen (1+2) reviewed"
+    ],
+    "pending": [
+      "Draft 3. Mahnung letter",
+      "Review German grammar (separate pass)",
+      "Send 3. Mahnung per Einschreiben",
+      "Prepare for Amtsgericht filing if no response"
+    ]
+  },
+  "drafts": {
+    "location": "drafts/",
+    "files": [],
+    "status": "not_started"
+  },
+  "parties": {
+    "applicant": {
+      "name": "Fördern & Wohnen",
+      "contact": "Joana Ramos",
+      "email": "joana.ramos@foerdernundwohnen.de",
+      "phone": "040 428 35 38 13"
+    },
+    "respondent": {
+      "name": "Tenant (see CASE.md)",
+      "address": "Hamburg, Germany"
+    }
+  },
+  "notes": {
+    "critical": [
+      "German grammar MUST be reviewed separately before sending",
+      "All amounts in Euro",
+      "Einschreiben (registered mail) required for 3. Mahnung"
+    ]
+  },
+  "last_updated": "2026-07-30T11:34:36.382143",
+  "last_activity": "Case state initialized. 3. Mahnung draft pending."
+}

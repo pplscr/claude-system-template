@@ -1,8 +1,8 @@
 ---
 name: email-drafter
 role: Складання листів (німецька/англійська)
-model: auto
-provider: auto
+model: deepseek-v4-flash
+provider: deepseek
 effort: medium
 space: legal
 ---

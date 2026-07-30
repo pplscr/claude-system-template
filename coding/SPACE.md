@@ -13,13 +13,17 @@
 
 ## Agents
 
-| Name | Role | Model | Provider |
-|------|------|-------|----------|
-| dev | Розробка коду/скриптів | auto | auto |
-| tester | Тестування | auto | auto |
-| architect | Архітектурні рішення | auto | auto |
-| reviewer | Code review | auto | auto |
-| ops | Деплой, сервер | auto | auto |
+> Моделі: [rules/model-routing.md](~/.claude/rules/model-routing.md)
+
+| Name | Role |
+|------|------|
+| dev | Розробка коду/скриптів |
+| tester | Тестування |
+| architect | Архітектурні рішення |
+| reviewer | Code review |
+| ops | Деплой, сервер |
+| monitoring | Моніторинг (Beszel) |
+| ui | Design Architect — UI/UX |
 
 ## Memory
 - Qdrant: `space_coding`

@@ -1,8 +1,8 @@
 ---
 name: tester
 role: Тестування та валідація
-model: auto
-provider: auto
+model: claude-haiku-4.5
+provider: openrouter
 effort: medium
 space: coding
 ---

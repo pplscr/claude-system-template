@@ -1,0 +1,42 @@
+{
+  "_schema": "1.0",
+  "_description": "Case state file — single source of truth. Auto-updated by Claude when working on the case.",
+  "_rules": [
+    "Read case.json at session start when entering case folder",
+    "Update case.json after any material change (drafts created, deadlines changed, filing completed, etc.)",
+    "Update last_updated and last_activity on every change",
+    "Recalculate days_remaining in deadlines on each update",
+    "Keep progress.completed and progress.pending in sync with reality"
+  ],
+  "case_id": "",
+  "case_name": "",
+  "forum": "",
+  "type": "",
+  "status": "active|paused|closed|appealed",
+  "phase": "",
+  "filed_date": null,
+  "confirmation_numbers": {},
+  "deadlines": {},
+  "progress": {
+    "percentage": 0,
+    "completed": [],
+    "pending": []
+  },
+  "drafts": {
+    "location": "",
+    "files": [],
+    "status": ""
+  },
+  "parties": {
+    "applicant": {},
+    "respondent": {},
+    "opposing_counsel": {},
+    "others": {}
+  },
+  "notes": {
+    "critical": [],
+    "warnings": []
+  },
+  "last_updated": "",
+  "last_activity": ""
+}

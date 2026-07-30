@@ -6,7 +6,7 @@
 ## Model
 - **Provider**: deepseek
 - **Model**: deepseek-v4-flash
-- **Fallback**: deepseek-v4-pro[1m]
+- **Fallback**: deepseek-v4-pro
 
 ## Tools
 - Read, Bash, Grep, WebSearch

@@ -6,7 +6,7 @@
 
 ## Model
 - **Provider**: deepseek
-- **Model**: deepseek-v4-pro[1m]
+- **Model**: deepseek-v4-pro
 - **Effort**: high
 
 ## Tools

@@ -1,0 +1,722 @@
+#!/usr/bin/env python3
+"""
+State v3 — Unified project + case state, PostgreSQL-backed.
+Replaces state.py (JSON files) + case_db.py (DB).
+
+Usage:
+  python3 state3.py list                              # all projects
+  python3 state3.py list --json                       # machine-readable
+  python3 state3.py show <project_id>                 # full state
+  python3 state3.py deadlines                         # all upcoming deadlines
+  python3 state3.py done <id> "<step text>"           # move step pending→completed
+  python3 state3.py add <id> pending|completed "<step>"
+  python3 state3.py progress <id> <0-100>
+  python3 state3.py status <id> <active|paused|done|blocked>
+  python3 state3.py phase <id> <phase>
+  python3 state3.py priority <id> <critical|high|medium|low>
+  python3 state3.py deadline <id> <key> <YYYY-MM-DD> "<desc>"
+  python3 state3.py activity <id> "<text>"
+  python3 state3.py note <id> <type> "<text>"
+  python3 state3.py conf <id> <key> <value>
+  python3 state3.py init <id> "<name>" <tier> [contact]
+  python3 state3.py priority-list                      # auto-priority check
+  python3 state3.py migrate                            # JSON → DB migration
+"""
+
+import sys, os, json
+import psycopg2
+import psycopg2.extras
+from datetime import date, datetime
+
+DSN = os.environ.get("STATE_DB_DSN", "dbname=orchestrator user=postgres")
+
+# ── Project registry (mirrors state.py PROJECTS) ──
+PROJECTS = {
+    "fw-mahnung": {
+        "name": "F&W 3. Mahnung",
+        "tier": "life",
+        "description": "€13 166.05 борг за проживання (2022-06 – 2024-05), Гамбург",
+        "contact": "Joana Ramos, joana.ramos@foerdernundwohnen.de, 040 428 35 38 13",
+    },
+    "factory-nsc": {
+        "name": "NSC Legal Case",
+        "tier": "life",
+        "description": "Юридичний кейс проти National Steel Car — OLRB, DFR, OHSA, MECP",
+    },
+    "cibc": {
+        "name": "CIBC Credit Recovery",
+        "tier": "life",
+        "description": "Втрачений телефон → немає 2FA → пропущений платіж → скоринг -200",
+        "contact": "CIBC: +1-902-420-2422 (24/7)",
+    },
+    "finances": {
+        "name": "Фінанси",
+        "tier": "life",
+        "description": "Бюджет, API ключі, підписки, витрати",
+    },
+    "merezha": {
+        "name": "Мережа A2A Orchestrator",
+        "tier": "hobby",
+        "description": "Agent-to-Agent комунікація L0-L3, Python 3.12+, v0.4.0",
+    },
+    "pantheon": {
+        "name": "Pantheon Office",
+        "tier": "hobby",
+        "description": "FastAPI + Next.js monorepo, AI-платформа",
+    },
+    "setup-gmail-orchestrator": {
+        "name": "Gmail MCP Orchestrator",
+        "tier": "hobby",
+        "description": "Налаштувати Gmail доступ для оркестратора",
+    },
+    "mac-infra": {
+        "name": "mac-mini Infrastructure",
+        "tier": "life",
+        "description": "CLAUDE.md, rules, scripts, healthcheck, backup to vuzol",
+    },
+    "claude-system": {
+        "name": "Claude System Management",
+        "tier": "life",
+        "description": "Керування claude-system скриптами, state tracking, sync з vuzol",
+    },
+    # Legal cases (also in PROJECTS, accessed by case_id)
+    "1283-26-UR": {
+        "name": "Maneliuk v National Steel Car Limited",
+        "tier": "life",
+        "description": "OHSA s.50 Reprisal — OLRB",
+        "parent": "factory-nsc",
+    },
+    "F&W-3M": {
+        "name": "Fördern & Wohnen — 3. Mahnung",
+        "tier": "life",
+        "description": "Debt Collection — Wohnkosten",
+        "parent": "fw-mahnung",
+    },
+}
+
+
+def conn():
+    return psycopg2.connect(DSN)
+
+
+def _ensure_project(cur, pid: str):
+    """Ensure a project row exists. Create from registry if missing."""
+    cur.execute("SELECT project_id FROM projects WHERE project_id=%s", (pid,))
+    if cur.fetchone():
+        return
+    proj = PROJECTS.get(pid, {"name": pid, "tier": "life", "description": pid})
+    cur.execute("""
+        INSERT INTO projects (project_id, name, tier, description, contact)
+        VALUES (%s,%s,%s,%s,%s)
+        ON CONFLICT (project_id) DO NOTHING
+    """, (pid, proj["name"], proj["tier"], proj.get("description", ""), proj.get("contact", "")))
+
+
+# ── Queries ──
+
+def cmd_list(json_mode=False):
+    c = conn()
+    cur = c.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("""
+        SELECT p.project_id, p.name, p.tier, p.status, p.priority, p.progress_pct,
+               p.last_activity,
+               (SELECT json_agg(json_build_object(
+                    'key', d.deadline_key, 'date', d.deadline_date,
+                    'desc', d.description, 'status', d.status,
+                    'days_left', d.deadline_date - CURRENT_DATE
+                )) FROM project_deadlines d WHERE d.project_id = p.project_id) AS deadlines
+        FROM projects p
+        WHERE p.status != 'closed'
+        ORDER BY p.progress_pct DESC
+    """)
+    rows = cur.fetchall()
+    cur.close()
+    c.close()
+
+    if json_mode:
+        result = {"projects": [], "generated_at": datetime.now().isoformat()}
+        for r in rows:
+            dls = r["deadlines"] or []
+            days_list = [(d["key"], d["days_left"]) for d in dls]
+            urgent = min(days_list, key=lambda x: x[1] if x[1] is not None else 999) if days_list else (None, None)
+            result["projects"].append({
+                "id": r["project_id"],
+                "name": r["name"],
+                "tier": r["tier"],
+                "status": r["status"],
+                "priority": r["priority"],
+                "progress": r["progress_pct"],
+                "deadlines": {d["key"]: str(d["date"]) for d in dls},
+                "days_remaining": {d["key"]: d["days_left"] for d in dls},
+                "urgent_deadline": urgent[0],
+                "urgent_days": urgent[1],
+                "last_activity": r["last_activity"],
+            })
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+
+    print(f"{'ID':<22} {'Name':<36} {'Tier':<6} {'St':<8} {'Prog':<6} {'Prio':<10} {'Deadlines'}")
+    print("-" * 130)
+    for r in rows:
+        dls = r["deadlines"] or []
+        dl_str = ", ".join(
+            f"{d['key']}={str(d['date'])} ({d['days_left']}d)"
+            for d in sorted(dls, key=lambda x: x["days_left"] or 999)
+        ) or "—"
+        print(f"{r['project_id']:<22} {r['name']:<36} {r['tier']:<6} {r['status']:<8} "
+              f"{r['progress_pct']}%{'':<2}  {r['priority'] or '—':<10} {dl_str}")
+
+
+def cmd_show(pid: str, json_mode: bool = False):
+    c = conn()
+    cur = c.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("""SELECT p.*,
+                   (SELECT json_agg(json_build_object(
+                        'key', d.deadline_key, 'date', d.deadline_date,
+                        'desc', d.description, 'status', d.status,
+                        'days_left', d.deadline_date - CURRENT_DATE
+                    )) FROM project_deadlines d WHERE d.project_id = p.project_id) AS deadlines,
+                   (SELECT json_agg(json_build_object(
+                        'type', step_type, 'text', step_text
+                    ) ORDER BY sort_order) FROM project_steps WHERE project_id = p.project_id) AS steps
+                   FROM projects p WHERE p.project_id=%s""", (pid,))
+    p = cur.fetchone()
+    if not p:
+        print(json.dumps({"error": f"project '{pid}' not found"}, ensure_ascii=False) if json_mode else f"❌ Project not found: {pid}")
+        cur.close()
+        c.close()
+        return
+
+    if json_mode:
+        confs = p.get("confirmation_numbers") or {}
+        if isinstance(confs, str):
+            confs = json.loads(confs)
+        dls = p["deadlines"] or []
+        steps_list = p["steps"] or []
+        result = {
+            "id": p["project_id"],
+            "name": p["name"],
+            "tier": p["tier"],
+            "status": p["status"],
+            "priority": p["priority"],
+            "progress": p["progress_pct"],
+            "phase": p.get("phase"),
+            "filed_date": str(p["filed_date"]) if p.get("filed_date") else None,
+            "description": p.get("description"),
+            "contact": p.get("contact"),
+            "confirmation_numbers": confs,
+            "deadlines": {d["key"]: {"date": str(d["date"]), "days_left": d["days_left"], "status": d["status"], "desc": d["desc"]} for d in dls},
+            "steps": {"completed": [s["text"] for s in steps_list if s["type"]=="completed"],
+                      "pending": [s["text"] for s in steps_list if s["type"]=="pending"]},
+            "last_activity": p.get("last_activity"),
+            "last_updated": p["last_updated"].isoformat() if p.get("last_updated") else None,
+        }
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        cur.close()
+        c.close()
+        return
+
+    print(f"═══ {p['project_id']} — {p['name']} ═══")
+    print(f"Tier: {p['tier']} | Status: {p['status']} | Priority: {p['priority']} | Progress: {p['progress_pct']}%")
+    if p.get("phase"):
+        print(f"Phase: {p['phase']}")
+    if p.get("filed_date"):
+        print(f"Filed: {p['filed_date']}")
+    if p.get("description"):
+        print(f"Description: {p['description']}")
+    if p.get("contact"):
+        print(f"Contact: {p['contact']}")
+
+    # Confirmation numbers
+    if p.get("confirmation_numbers"):
+        confs = p["confirmation_numbers"]
+        if isinstance(confs, str):
+            confs = json.loads(confs)
+        if confs:
+            for k, v in confs.items():
+                if v:
+                    print(f"  📎 {k}: {v}")
+
+    # Deadlines
+    cur.execute("""SELECT * FROM project_deadlines WHERE project_id=%s
+                   ORDER BY deadline_date""", (pid,))
+    dls = cur.fetchall()
+    if dls:
+        print(f"\n📅 Deadlines:")
+        for d in dls:
+            days = (d["deadline_date"] - date.today()).days
+            icon = "‼" if days < 0 else ("⚠" if days <= 3 else "📅")
+            print(f"  {icon} {d['deadline_key']}: {d['deadline_date']} ({days}d) [{d['status']}] — {d['description']}")
+
+    # Steps
+    cur.execute("SELECT step_type, step_text FROM project_steps WHERE project_id=%s ORDER BY sort_order", (pid,))
+    steps = cur.fetchall()
+    completed = [s for s in steps if s["step_type"] == "completed"]
+    pending = [s for s in steps if s["step_type"] == "pending"]
+    if completed:
+        print(f"\n✅ Completed ({len(completed)}):")
+        for s in completed:
+            print(f"  ✓ {s['step_text']}")
+    if pending:
+        print(f"\n📋 Pending ({len(pending)}):")
+        for s in pending:
+            print(f"  ○ {s['step_text']}")
+
+    # Recent activity
+    cur.execute("SELECT * FROM project_activity WHERE project_id=%s ORDER BY created_at DESC LIMIT 5", (pid,))
+    acts = cur.fetchall()
+    if acts:
+        print(f"\n🕐 Recent Activity:")
+        for a in acts:
+            print(f"  [{a['created_at'].strftime('%m-%d %H:%M')}] {a['activity_text']} ({a['source']})")
+
+    cur.close()
+    c.close()
+
+
+def cmd_deadlines():
+    c = conn()
+    cur = c.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("""
+        SELECT p.name, d.project_id, d.deadline_key, d.deadline_date,
+               d.deadline_date - CURRENT_DATE AS days_left, d.status
+        FROM project_deadlines d
+        JOIN projects p ON p.project_id = d.project_id
+        WHERE d.status = 'pending'
+        ORDER BY d.deadline_date
+    """)
+    rows = cur.fetchall()
+    print(f"{'Project':<40} {'Deadline':<25} {'Date':<12} {'Days':<6} {'Status'}")
+    print("-" * 95)
+    for r in rows:
+        icon = "‼" if r["days_left"] and r["days_left"] < 0 else ("⚠" if r["days_left"] and r["days_left"] <= 3 else "  ")
+        print(f"{icon} {r['name']:<38} {r['deadline_key']:<25} {str(r['deadline_date']):<12} {r['days_left']:<6} {r['status']}")
+    cur.close()
+    c.close()
+
+
+# ── Mutations ──
+
+def _recalc_progress(cur, pid: str):
+    cur.execute("SELECT count(*) FROM project_steps WHERE project_id=%s AND step_type='completed'", (pid,))
+    done = cur.fetchone()[0]
+    cur.execute("SELECT count(*) FROM project_steps WHERE project_id=%s", (pid,))
+    total = cur.fetchone()[0]
+    pct = round(done / total * 100) if total > 0 else 0
+    cur.execute("UPDATE projects SET progress_pct=%s, last_updated=now() WHERE project_id=%s", (pct, pid))
+    return pct
+
+
+def cmd_done(pid: str, text: str):
+    c = conn()
+    cur = c.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("SELECT id, step_text FROM project_steps WHERE project_id=%s AND step_type='pending'", (pid,))
+    pending = cur.fetchall()
+
+    matched = None
+    for s in pending:
+        if text.lower() in s["step_text"].lower():
+            matched = s
+            break
+
+    if not matched:
+        print(f"⚠️  Not found in pending: {text}")
+        cur.close()
+        c.close()
+        return
+
+    cur.execute("UPDATE project_steps SET step_type='completed', done_at=now() WHERE id=%s", (matched["id"],))
+    pct = _recalc_progress(cur, pid)
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                (pid, f"✅ Done: {matched['step_text']}"))
+
+    # Auto-update priority
+    _auto_priority(cur, pid)
+
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Done ({pct}%): {matched['step_text']}")
+
+
+def cmd_add(pid: str, step_type: str, text: str):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+
+    cur.execute("SELECT coalesce(max(sort_order),0)+1 FROM project_steps WHERE project_id=%s AND step_type=%s",
+                (pid, step_type))
+    next_order = cur.fetchone()[0]
+
+    cur.execute("INSERT INTO project_steps (project_id, step_text, step_type, sort_order) VALUES (%s,%s,%s,%s)",
+                (pid, text, step_type, next_order))
+
+    pct = _recalc_progress(cur, pid)
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                (pid, f"➕ Added {step_type}: {text}"))
+    _auto_priority(cur, pid)
+
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Added to {step_type} ({pct}%): {text}")
+
+
+def cmd_deadline(pid: str, key: str, date_str: str, desc: str = ""):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+
+    cur.execute("""
+        INSERT INTO project_deadlines (project_id, deadline_key, deadline_date, description)
+        VALUES (%s,%s,%s,%s)
+        ON CONFLICT (project_id, deadline_key) DO UPDATE SET
+            deadline_date=EXCLUDED.deadline_date, description=EXCLUDED.description
+    """, (pid, key, date_str, desc))
+
+    cur.execute("UPDATE projects SET last_updated=now() WHERE project_id=%s", (pid,))
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                (pid, f"📅 Deadline {key}: {date_str} — {desc}"))
+    _auto_priority(cur, pid)
+
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Deadline {key} = {date_str} ({desc})")
+
+
+def cmd_activity(pid: str, text: str):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')", (pid, text))
+    cur.execute("UPDATE projects SET last_activity=%s, last_updated=now() WHERE project_id=%s", (text, pid))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Activity: {text}")
+
+
+def cmd_progress(pid: str, pct: str):
+    c = conn()
+    cur = c.cursor()
+    p = int(pct)
+    cur.execute("UPDATE projects SET progress_pct=%s, last_updated=now() WHERE project_id=%s", (p, pid))
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                (pid, f"📊 Progress: {p}%"))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Progress = {p}%")
+
+
+def cmd_status(pid: str, status: str):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+    cur.execute("UPDATE projects SET status=%s, last_updated=now() WHERE project_id=%s", (status, pid))
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                (pid, f"🔵 Status → {status}"))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Status → {status}")
+
+
+def cmd_phase(pid: str, phase: str):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+    cur.execute("UPDATE projects SET phase=%s, last_updated=now() WHERE project_id=%s", (phase, pid))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Phase → {phase}")
+
+
+def cmd_priority_set(pid: str, priority: str):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+    cur.execute("UPDATE projects SET priority=%s, last_updated=now() WHERE project_id=%s", (priority, pid))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Priority → {priority}")
+
+
+def cmd_conf(pid: str, key: str, value: str):
+    c = conn()
+    cur = c.cursor()
+    cur.execute("SELECT confirmation_numbers FROM projects WHERE project_id=%s", (pid,))
+    row = cur.fetchone()
+    if row:
+        confs = row[0] if isinstance(row[0], dict) else json.loads(row[0] or "{}")
+        confs[key] = value
+        cur.execute("UPDATE projects SET confirmation_numbers=%s, last_updated=now() WHERE project_id=%s",
+                    (json.dumps(confs), pid))
+        cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                    (pid, f"📎 {key} = {value}"))
+        c.commit()
+        print(f"✅ {key} = {value}")
+    cur.close()
+    c.close()
+
+
+def cmd_note(pid: str, note_type: str, text: str):
+    c = conn()
+    cur = c.cursor()
+    _ensure_project(cur, pid)
+    cur.execute("INSERT INTO project_notes (project_id, note_type, note_text) VALUES (%s,%s,%s)", (pid, note_type, text))
+    cur.execute("UPDATE projects SET last_updated=now() WHERE project_id=%s", (pid,))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Note [{note_type}]: {text}")
+
+
+def cmd_init(pid: str, name: str, tier: str, contact: str = ""):
+    c = conn()
+    cur = c.cursor()
+    cur.execute("""
+        INSERT INTO projects (project_id, name, tier, contact)
+        VALUES (%s,%s,%s,%s)
+        ON CONFLICT (project_id) DO UPDATE SET name=EXCLUDED.name, tier=EXCLUDED.tier
+    """, (pid, name, tier, contact))
+    cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                (pid, "Project initialized"))
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"✅ Project created: {pid} — {name} (tier={tier})")
+
+
+# ── Auto-priority ──
+
+PRIORITY_LABELS = {"critical": "‼ CRITICAL", "high": "⚠ HIGH", "medium": "MEDIUM", "low": "LOW"}
+
+
+def _auto_priority(cur, pid: str):
+    """Auto-set priority based on closest deadline."""
+    cur.execute("SELECT tier FROM projects WHERE project_id=%s", (pid,))
+    row = cur.fetchone()
+    tier = row[0] if row else "life"
+
+    cur.execute("""SELECT deadline_date - CURRENT_DATE AS days_left
+                   FROM project_deadlines WHERE project_id=%s AND status='pending'
+                   ORDER BY deadline_date LIMIT 1""", (pid,))
+    row = cur.fetchone()
+    if not row or row[0] is None:
+        return None
+
+    days = row[0]
+    if days <= 3:
+        auto = "critical"
+    elif days <= 7:
+        auto = "high"
+    elif days <= 14:
+        auto = "medium"
+    else:
+        auto = "low"
+
+    if tier == "hobby" and auto in ("critical", "high"):
+        auto = "medium"
+
+    cur.execute("SELECT priority FROM projects WHERE project_id=%s", (pid,))
+    current = cur.fetchone()[0]
+    if auto != current:
+        cur.execute("UPDATE projects SET priority=%s, last_updated=now() WHERE project_id=%s", (auto, pid))
+        cur.execute("INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'state3')",
+                    (pid, f"🔺 Auto-priority: {current} → {auto} (deadline in {days}d)"))
+    return auto
+
+
+def cmd_priority_list():
+    """Show auto-priority for all projects."""
+    c = conn()
+    cur = c.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("""
+        SELECT p.project_id, p.name, p.tier, p.priority,
+               (SELECT deadline_date - CURRENT_DATE FROM project_deadlines d
+                WHERE d.project_id = p.project_id AND d.status='pending'
+                ORDER BY deadline_date LIMIT 1) AS min_days,
+               (SELECT deadline_key FROM project_deadlines d
+                WHERE d.project_id = p.project_id AND d.status='pending'
+                ORDER BY deadline_date LIMIT 1) AS urgent_key
+        FROM projects p WHERE p.status NOT IN ('closed','done')
+        ORDER BY min_days NULLS LAST
+    """)
+    rows = cur.fetchall()
+
+    changes = []
+    for r in rows:
+        days = r["min_days"]
+        if days is None:
+            continue
+        tier = r["tier"] or "life"
+        if days <= 3:
+            auto = "critical"
+        elif days <= 7:
+            auto = "high"
+        elif days <= 14:
+            auto = "medium"
+        else:
+            auto = "low"
+        if tier == "hobby" and auto in ("critical", "high"):
+            auto = "medium"
+
+        current = r["priority"]
+        if auto != current:
+            changes.append({**r, "auto": auto, "days": days})
+
+    if changes:
+        print(f"{'Project':<25} {'Current':<12} {'Auto':<12} {'Days':<6} {'Deadline'}")
+        print("-" * 70)
+        for c in changes:
+            print(f"{c['project_id']:<25} {c['priority'] or '—':<12} {PRIORITY_LABELS.get(c['auto'], c['auto']):<12} {c['days']:<6} {c['urgent_key']}")
+        print(f"\n{len(changes)} project(s) need priority update.")
+        print("Run: python3 state3.py priority-list --apply")
+    else:
+        print("✅ All priorities are current.")
+
+    cur.close()
+    c.close()
+
+
+# ── Migration: JSON → DB ──
+
+def cmd_migrate():
+    """Migrate all ~/.claude/projects/*.json → PostgreSQL."""
+    import glob
+
+    projects_dir = os.path.expanduser("~/.claude/projects")
+    if not os.path.isdir(projects_dir):
+        print(f"❌ Not found: {projects_dir}")
+        return
+
+    c = conn()
+    cur = c.cursor()
+    migrated = 0
+
+    for path in sorted(glob.glob(f"{projects_dir}/*.json")):
+        pid = os.path.basename(path).replace(".json", "")
+        proj_reg = PROJECTS.get(pid, {})
+
+        with open(path) as f:
+            s = json.load(f)
+
+        # Upsert project
+        cur.execute("""
+            INSERT INTO projects (project_id, name, tier, status, priority, progress_pct,
+                                  description, contact, last_activity)
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            ON CONFLICT (project_id) DO UPDATE SET
+                name=EXCLUDED.name, tier=EXCLUDED.tier, status=EXCLUDED.status,
+                priority=EXCLUDED.priority, progress_pct=EXCLUDED.progress_pct,
+                description=EXCLUDED.description, contact=EXCLUDED.contact,
+                last_activity=EXCLUDED.last_activity, last_updated=now()
+        """, (
+            pid,
+            s.get("name", proj_reg.get("name", pid)),
+            s.get("tier", proj_reg.get("tier", "life")),
+            s.get("status", "active"),
+            s.get("priority"),
+            s.get("progress", 0),
+            s.get("description", proj_reg.get("description", "")),
+            s.get("contact", proj_reg.get("contact")),
+            s.get("last_activity"),
+        ))
+
+        # Deadlines (skip empty dates)
+        for key, dl_str in s.get("deadlines", {}).items():
+            if not dl_str or dl_str.strip() == "":
+                continue  # skip empty dates
+            try:
+                datetime.strptime(dl_str, "%Y-%m-%d")  # validate date format
+            except ValueError:
+                print(f"  ⚠️  {pid}: skipping invalid date '{dl_str}' for key '{key}'")
+                continue
+            cur.execute("""
+                INSERT INTO project_deadlines (project_id, deadline_key, deadline_date, description)
+                VALUES (%s,%s,%s,%s)
+                ON CONFLICT (project_id, deadline_key) DO UPDATE SET
+                    deadline_date=EXCLUDED.deadline_date
+            """, (pid, key, dl_str, f"Migrated from JSON — key={key}"))
+
+        # Steps (next_steps → pending) — skip if already have steps from case_db
+        cur.execute("SELECT count(*) FROM project_steps WHERE project_id=%s", (pid,))
+        if cur.fetchone()[0] == 0:
+            for i, step in enumerate(s.get("next_steps", [])):
+                cur.execute(
+                    "INSERT INTO project_steps (project_id, step_text, step_type, sort_order) VALUES (%s,%s,'pending',%s)",
+                    (pid, step, i))
+
+        # Activity
+        if s.get("last_activity"):
+            cur.execute(
+                "INSERT INTO project_activity (project_id, activity_text, source) VALUES (%s,%s,'migration')",
+                (pid, s["last_activity"]))
+
+        d_count = sum(1 for k, v in s.get("deadlines", {}).items() if v and v.strip())
+        print(f"  ✅ {pid}: progress={s.get('progress',0)}%, deadlines={d_count}/{len(s.get('deadlines',{}))}, steps={len(s.get('next_steps',[]))}")
+        migrated += 1
+
+    c.commit()
+    cur.close()
+    c.close()
+    print(f"\nMigrated {migrated} projects from JSON → PostgreSQL")
+
+
+# ── Main ──
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(__doc__)
+        sys.exit(0)
+
+    cmd = sys.argv[1]
+
+    try:
+        if cmd == "list":
+            cmd_list(json_mode="--json" in sys.argv)
+        elif cmd == "deadlines":
+            cmd_deadlines()
+        elif cmd == "show" and len(sys.argv) >= 3:
+            cmd_show(sys.argv[2], json_mode="--json" in sys.argv)
+        elif cmd == "done" and len(sys.argv) >= 4:
+            cmd_done(sys.argv[2], " ".join(sys.argv[3:]))
+        elif cmd == "add" and len(sys.argv) >= 5:
+            cmd_add(sys.argv[2], sys.argv[3], " ".join(sys.argv[4:]))
+        elif cmd == "deadline" and len(sys.argv) >= 5:
+            desc = sys.argv[5] if len(sys.argv) >= 6 else ""
+            cmd_deadline(sys.argv[2], sys.argv[3], sys.argv[4], desc)
+        elif cmd == "progress" and len(sys.argv) >= 4:
+            cmd_progress(sys.argv[2], sys.argv[3])
+        elif cmd == "status" and len(sys.argv) >= 4:
+            cmd_status(sys.argv[2], sys.argv[3])
+        elif cmd == "phase" and len(sys.argv) >= 4:
+            cmd_phase(sys.argv[2], sys.argv[3])
+        elif cmd == "priority" and len(sys.argv) >= 4:
+            cmd_priority_set(sys.argv[2], sys.argv[3])
+        elif cmd == "activity" and len(sys.argv) >= 4:
+            cmd_activity(sys.argv[2], " ".join(sys.argv[3:]))
+        elif cmd == "note" and len(sys.argv) >= 5:
+            cmd_note(sys.argv[2], sys.argv[3], " ".join(sys.argv[4:]))
+        elif cmd == "conf" and len(sys.argv) >= 5:
+            cmd_conf(sys.argv[2], sys.argv[3], " ".join(sys.argv[4:]))
+        elif cmd == "init" and len(sys.argv) >= 5:
+            contact = sys.argv[5] if len(sys.argv) >= 6 else ""
+            cmd_init(sys.argv[2], sys.argv[3], sys.argv[4], contact)
+        elif cmd == "priority-list":
+            cmd_priority_list()
+        elif cmd == "migrate":
+            cmd_migrate()
+        else:
+            print(__doc__)
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)

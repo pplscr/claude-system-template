@@ -1,0 +1,4 @@
+#!/bin/bash
+# Local wrapper for state3.py on vuzol (unified state management)
+# Usage: ./case-db list | show 1283-26-UR | done 1283-26-UR "step" | ...
+ssh vuzol python3 /root/scripts/state3.py "$@"

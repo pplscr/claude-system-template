@@ -1,8 +1,8 @@
 ---
 name: reviewer
 role: Code review
-model: auto
-provider: auto
+model: claude-sonnet-5
+provider: openrouter
 effort: medium
 space: coding
 ---

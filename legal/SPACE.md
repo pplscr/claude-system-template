@@ -6,11 +6,15 @@
 
 ## Agents
 
-| Name | Role | Model | Provider |
-|------|------|-------|----------|
-| legal-analyst | Аналіз справ, Widerspruch, прецеденти | auto | auto |
-| email-drafter | Чернетки листів німецькою/англійською | auto | auto |
-| doc-reviewer | Перевірка документів на дефекти | auto | auto |
+> Моделі: [rules/model-routing.md](~/.claude/rules/model-routing.md)
+
+| Name | Role |
+|------|------|
+| legal-analyst | Аналіз справ, Widerspruch, прецеденти, OLRB, OHSA, DFR |
+| email-drafter | Чернетки листів німецькою/англійською, афідевіти |
+| doc-reviewer | Перевірка документів, OCR, організація доказів |
+
+> Спеціалізовані задачі (канадське трудове, афідевіти, докази) — через правильний prompt до цих трьох агентів, не створювати окремих.
 
 ## Memory
 - Qdrant: `space_legal`
@@ -21,6 +25,7 @@
 | Case | Dir | Amount | Status | Deadline |
 |------|-----|--------|--------|----------|
 | F&W Fördern & Wohnen | `fw-debt/` | €13.166 | active | 31.07 / 17.08.2026 |
+| Factory NSC | `factory-nsc/` | damages (Braganza $195K) | active | — |
 
 ## Rules
 - Усі листи німецькою — перевіряти граматику через native-speaker перевірку
