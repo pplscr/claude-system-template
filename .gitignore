@@ -5,7 +5,7 @@
 credentials.env
 credentials.json
 
-# OS
+# macOS
 .DS_Store
 Thumbs.db
 

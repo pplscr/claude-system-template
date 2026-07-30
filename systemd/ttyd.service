@@ -1,0 +1,13 @@
+[Unit]
+Description=ttyd - Web Terminal
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ttyd --port 7681 --interface lo --terminal-type xterm-256color --writable /bin/bash
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target

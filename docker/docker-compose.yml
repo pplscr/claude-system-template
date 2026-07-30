@@ -1,0 +1,105 @@
+# vuzol — core infrastructure services
+# docker compose up -d
+
+services:
+  # ── Task API: FastAPI queue serving mac-mini ──
+  api:
+    image: ghcr.io/pplscr/merezha:latest
+    container_name: task-api
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/orchestrator
+      - QDRANT_URL=http://qdrant:6333
+    volumes:
+      - /root/scripts:/scripts:ro
+      - /tmp:/tmp
+    depends_on:
+      - postgres
+      - qdrant
+
+  # ── Qdrant: векторна пам'ять (core infrastructure) ──
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6333:6333"   # HTTP API
+      - "127.0.0.1:6334:6334"   # gRPC
+    volumes:
+      - /var/lib/qdrant/storage:/qdrant/storage
+      - /var/lib/qdrant/snapshots:/qdrant/snapshots
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+      - QDRANT__LOG_LEVEL=INFO
+
+  # ── PostgreSQL 16: ACID storage ──
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      - POSTGRES_DB=orchestrator
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=REPLACE-WITH-YOUR-PG-PASSWORD
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  # ── Uptime Kuma: моніторинг статусу ──
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3001:3001"
+    volumes:
+      - /var/lib/uptime-kuma:/app/data
+
+  # ── Dozzle: перегляд логів Docker ──
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  # ── Vaultwarden: менеджер паролів ──
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:80"
+    volumes:
+      - /var/lib/vaultwarden:/data
+    environment:
+      - SIGNUPS_ALLOWED=false
+      - ADMIN_TOKEN=REPLACE-WITH-YOUR-ADMIN-TOKEN
+
+  # ── Beszel: моніторинг системи ──
+  beszel:
+    image: henrygd/beszel:latest
+    container_name: beszel
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8090:8090"
+    volumes:
+      - /var/lib/beszel:/beszel_data
+
+  # ── Beszel Agent: збір метрик ──
+  beszel-agent:
+    image: henrygd/beszel-agent:latest
+    container_name: beszel-agent
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - KEY=REPLACE-WITH-YOUR-BESZEL-KEY
+      - PORT=45876
