@@ -1,8 +1,8 @@
 {
   "_schema": "2.0",
-  "_generated_at": "2026-08-01T00:00:21.612683",
+  "_generated_at": "2026-08-01T00:14:58.852353",
   "_generated_by": "tasks-parse.py",
-  "total_spaces": 6,
+  "total_spaces": 8,
   "total_items": 18,
   "active_items": 14,
   "critical_count": 5,
@@ -242,6 +242,42 @@
       "space": "security",
       "space_label": "Security",
       "icon": "🔒",
+      "status": "paused",
+      "priority": "low",
+      "progress_pct": 0,
+      "active_cases": 0,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [],
+        "upcoming": []
+      },
+      "items": []
+    },
+    {
+      "space": "test-000916",
+      "space_label": "test-000916",
+      "icon": "📋",
+      "status": "paused",
+      "priority": "low",
+      "progress_pct": 0,
+      "active_cases": 0,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [],
+        "upcoming": []
+      },
+      "items": []
+    },
+    {
+      "space": "test-demo",
+      "space_label": "test-demo",
+      "icon": "📋",
       "status": "paused",
       "priority": "low",
       "progress_pct": 0,
