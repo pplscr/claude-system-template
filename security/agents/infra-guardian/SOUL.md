@@ -22,13 +22,6 @@
 - Помилки в логах (останні 20)
 - Рекомендації
 
-#### Brain (Agent Memory)
-- Local: ~/spaces/security/memory/agents/infra-guardian/MEMORY.md
-- Qdrant: agent_security_infra-guardian on vuzol:6333
-- Before work: ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent security/infra-guardian
-- After work: save to MEMORY.md -> git push
-- PG log: ssh vuzol python3 /root/scripts/agent-log.py --space security --agent infra-guardian ...
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/security/memory/agents/infra-guardian/MEMORY.md`

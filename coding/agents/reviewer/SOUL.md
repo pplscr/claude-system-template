@@ -13,14 +13,6 @@
 3. Перевіряй граничні випадки (null, empty, overflow, race conditions)
 4. Для security-sensitive коду — adversarial review (3 окремі перевірки)
 
-#### Brain (Agent Memory)
-
-- Local: ~/spaces/coding/memory/agents/reviewer/MEMORY.md
-- Qdrant: agent_coding_reviewer on vuzol:6333
-- Before work: ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent coding/reviewer
-- After work: save to MEMORY.md -> git push
-- PG log: ssh vuzol python3 /root/scripts/agent-log.py --space coding --agent reviewer ...
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/coding/memory/agents/reviewer/MEMORY.md`

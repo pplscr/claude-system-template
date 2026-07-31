@@ -68,14 +68,6 @@
 - **Model routing:** `~/.claude/rules/model-routing.md` — tier list + escalation
 - **Parent:** [[finance-overview]] — структура простору
 
-#### Brain (Agent Memory)
-
-- **Local:** `~/spaces/finance/memory/agents/expense-tracker/MEMORY.md`
-- **Qdrant:** `agent_finance_expense-tracker` on vuzol:6333
-- **Before work:** `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent finance/expense-tracker`
-- **After work:** save to MEMORY.md → git push
-- **PG log:** `ssh vuzol python3 /root/scripts/agent-log.py --space finance --agent expense-tracker --status done --model MODEL --tokens IN,OUT --cost USD --duration MS --summary "що зроблено"`
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/finance/memory/agents/expense-tracker/MEMORY.md`

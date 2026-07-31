@@ -21,13 +21,6 @@
 - Qdrant: space_coding | Task API: vuzol:8000
 - Budget: $5/mo | Max agents: 10
 
-#### Brain (Agent Memory)
-- Local: ~/spaces/coding/memory/agents/architect/MEMORY.md
-- Qdrant: agent_coding_architect on vuzol:6333
-- Before work: ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent coding/architect
-- After work: save to MEMORY.md -> git push
-- PG log: ssh vuzol python3 /root/scripts/agent-log.py --space coding --agent architect ...
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/coding/memory/agents/architect/MEMORY.md`

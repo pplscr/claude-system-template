@@ -21,13 +21,6 @@
 - Конкретні рекомендації
 - Пріоритет: CRITICAL > HIGH > MEDIUM > LOW
 
-#### Brain (Agent Memory)
-- Local: `~/spaces/security/memory/agents/security-auditor/MEMORY.md`
-- Qdrant: `agent_security_security-auditor` on vuzol:6333
-- Before work: `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent security/security-auditor`
-- After work: save to MEMORY.md -> git push
-- PG log: `ssh vuzol python3 /root/scripts/agent-log.py --space security --agent security-auditor ...`
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/security/memory/agents/security-auditor/MEMORY.md`

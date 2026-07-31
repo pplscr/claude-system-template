@@ -51,13 +51,6 @@
 - Кількість нових транзакцій/ордерів/дивідендів
 - Час останнього оновлення
 
-#### Brain (Agent Memory)
-- Local: ~/spaces/finance/memory/agents/t212-sync/MEMORY.md
-- Qdrant: agent_finance_t212-sync on vuzol:6333
-- Before work: ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent finance/t212-sync
-- After work: save to MEMORY.md -> git push
-- PG log: ssh vuzol python3 /root/scripts/agent-log.py --space finance --agent t212-sync ...
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/finance/memory/agents/t212-sync/MEMORY.md`

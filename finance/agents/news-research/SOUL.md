@@ -79,13 +79,6 @@
 - **Model routing:** `~/.claude/rules/model-routing.md` — tier list + escalation
 - **Parent:** [[finance-overview]] — структура простору
 
-#### Brain (Agent Memory)
-- Local: ~/spaces/finance/memory/agents/news-research/MEMORY.md
-- Qdrant: agent_finance_news-research on vuzol:6333
-- Before work: ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent finance/news-research
-- After work: save to MEMORY.md -> git push
-- PG log: ssh vuzol python3 /root/scripts/agent-log.py --space finance --agent news-research ...
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/finance/memory/agents/news-research/MEMORY.md`

@@ -9,14 +9,6 @@ Always check `~/claude-system/ARCHITECTURE-MAC.md` before making system changes.
 2. Do not touch other spaces
 3. Report results back to the orchestrator
 
-#### Brain (Agent Memory)
-
-- **Local:** `~/spaces/coding/memory/agents/ops/MEMORY.md`
-- **Qdrant:** `agent_coding_ops` collection on vuzol:6333
-- **Before work:** `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent coding/ops`
-- **After work:** save to MEMORY.md → git push
-- **PG log:** `ssh vuzol python3 /root/scripts/agent-log.py --space coding --agent ops ...`
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/coding/memory/agents/ops/MEMORY.md`

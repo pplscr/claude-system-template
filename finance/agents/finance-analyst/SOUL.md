@@ -62,14 +62,6 @@
 - **Parent:** [[finance-overview]] — структура простору
 
 
-#### Brain (Agent Memory)
-
-- **Local:** `~/spaces/finance/memory/agents/finance-analyst/MEMORY.md`
-- **Qdrant:** `agent_finance_finance-analyst` on vuzol:6333
-- **Before work:** `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent finance/finance-analyst`
-- **After work:** save to MEMORY.md → git push
-- **PG log:** `ssh vuzol python3 /root/scripts/agent-log.py --space finance --agent finance-analyst ...`
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/finance/memory/agents/finance-analyst/MEMORY.md`

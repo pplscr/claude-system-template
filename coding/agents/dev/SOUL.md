@@ -14,14 +14,6 @@
 4. Не змінюй те, що не просили (no drive-by refactors)
 5. Динамічне відкриття: `ls agents/`, `ls rules/`, `ls ~/.claude/hooks/`
 
-#### Brain (Agent Memory)
-
-- **Local:** `~/spaces/coding/memory/agents/dev/MEMORY.md`
-- **Qdrant:** `agent_coding_dev` collection on vuzol:6333
-- **Before work:** `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent coding/dev`
-- **After work:** save to MEMORY.md → git push
-- **PG log:** `ssh vuzol python3 /root/scripts/agent-log.py --space coding --agent dev ...`
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/coding/memory/agents/dev/MEMORY.md`
