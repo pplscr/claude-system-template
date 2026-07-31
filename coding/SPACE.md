@@ -13,25 +13,37 @@
 
 ## Agents
 
-> Моделі: [rules/model-routing.md](~/.claude/rules/model-routing.md)
+> Моделі: `~/.claude/rules/model-routing.md`
+> Відкриття: `ls agents/` → `cat agents/<name>/SOUL.md`
 
-| Name | Role |
-|------|------|
-| dev | Розробка коду/скриптів |
-| tester | Тестування |
-| architect | Архітектурні рішення |
-| reviewer | Code review |
-| ops | Деплой, сервер |
-| monitoring | Моніторинг (Beszel) |
-| ui | Design Architect — UI/UX |
+| Name | Tier | Effort | Role |
+|------|------|--------|------|
+| architect | T2 | high | Архітектурне планування, дизайн систем |
+| dev | T2 | medium | Розробка коду та скриптів |
+| reviewer | T2 | medium | Рецензія коду, adversarial verify |
+| tester | T1 | low | Тестування, граничні випадки |
+| ops | T1 | low | DevOps, деплой, інфраструктура |
+| monitoring | T1 | low | Моніторинг, healthcheck, логування |
+| ui | T2 | medium | UI/UX дизайн, верстка, візуалізація |
+| agent-architect | T2 | high | Дослідження → дизайн → створення агентів |
+
+Перед запуском агента читай його SOUL.md. Модель — згідно routing config, не пиши модель у prompt.
 
 ## Memory
 - Qdrant: `space_coding`
 - Files: `memory/`
 
+## Tasks
+- **tasks-all.json**: `~/spaces/tasks-all.json` — всі завдання з усіх просторів
+- **Стан простору**: `task.json`
+- **Парсер**: `python3 ~/claude-system/scripts/tasks-parse.py`
+- **При змінах**: онови task.json → запусти tasks-parse.py
+
+## Resources
+- Max agents: 10
+- Cost limit: $5/mo
+
 ## Projects
-| Project | Dir | Status |
-|---------|-----|--------|
-| json-validator | `projects-coding/` | done |
-| notify | `projects-coding/` | done |
-| sysinfo | `projects-coding/` | done |
+
+**Динамічне відкриття**: `ls projects-coding/` — кожна директорія = окремий проект.
+Статус проекту — в його `task.json`.
