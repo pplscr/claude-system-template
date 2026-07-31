@@ -69,16 +69,10 @@
 - **Model routing:** `~/.claude/rules/model-routing.md` — tier list + escalation
 - **Parent:** [[finance-overview]] — структура простору
 
-## 🧠 Пам'ять
-
-**Перед роботою**: `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "запит" --space finance
-**Після роботи**: зберегти в `~/spaces/finance/memory/agents/trading-research/<name>.md` → git push
-**Колекція**: `agent_finance_trading-research`
-**PG лог**: `ssh vuzol python3 /root/scripts/agent-log.py --space finance --agent trading-research --status done --model MODEL --tokens IN,OUT --cost USD --duration MS --summary "що зроблено"`
-
 ## 🧠 Brain (Agent Memory)
 
 - **Local:** `~/spaces/finance/memory/agents/trading-research/MEMORY.md`
 - **Qdrant:** `agent_finance_trading-research` collection on vuzol:6333
 - **Before work:** `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent finance/trading-research`
 - **After work:** save decisions/errors/patterns to MEMORY.md → git push
+- **PG log:** `ssh vuzol python3 /root/scripts/agent-log.py --space finance --agent trading-research --status done --model MODEL --tokens IN,OUT --cost USD --duration MS --summary "what was done"`
