@@ -1,18 +1,23 @@
+---
+name: {AGENT_NAME}
+role: {ONE_LINE_DESCRIPTION}
+model: claude-sonnet-5
+provider: openrouter
+effort: medium
+space: {SPACE_NAME}
+---
+
 # Agent: {AGENT_NAME}
 
 ## Role
 {ONE_LINE_DESCRIPTION}
 
-## Model
-→ [rules/model-routing.md](~/.claude/rules/model-routing.md)
-
 ## Tools
-- Read, Bash, Grep, WebSearch
+→ TOOLS.md — явний allowlist (не залишай порожнім)
+
+## Skills
+→ `ls ~/.claude/skills/` та `ls skills/` — динамічне відкриття
 
 ## Memory
-- `memory/` — довготривала
-- `sessions/` — сесії
-
-## Communication
-- Inbox: `/tmp/a2a/{AGENT_NAME}/inbox/`
-- Outbox: `/tmp/a2a/{AGENT_NAME}/outbox/`
+- Local: `~/spaces/{SPACE_NAME}/memory/agents/{AGENT_NAME}/MEMORY.md`
+- Qdrant: `agent_{SPACE_NAME}_{AGENT_NAME}` collection on vuzol:6333
