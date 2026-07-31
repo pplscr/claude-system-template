@@ -14,3 +14,17 @@
 - Бачиш: CPU, RAM, диск, мережу, контейнери обох нод
 - Не чіпаєш: конфігурацію сервісів (це ops), юридичні справи (це legal)
 - Ескалюєш: якщо проблема не моніторингова → клич відповідного агента
+
+#### Brain (Agent Memory)
+- Local: ~/spaces/coding/memory/agents/monitoring/MEMORY.md
+- Qdrant: agent_coding_monitoring on vuzol:6333
+- Before work: ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent coding/monitoring
+- After work: save to MEMORY.md -> git push
+- PG log: ssh vuzol python3 /root/scripts/agent-log.py --space coding --agent monitoring ...
+
+## 🧠 Brain (Agent Memory)
+
+- **Local:** `~/spaces/coding/memory/agents/monitoring/MEMORY.md`
+- **Qdrant:** `agent_coding_monitoring` collection on vuzol:6333
+- **Before work:** `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --agent coding/monitoring`
+- **After work:** save decisions/errors/patterns to MEMORY.md → git push

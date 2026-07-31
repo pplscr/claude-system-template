@@ -1,0 +1,19 @@
+{
+  "id": "pantheon",
+  "name": "Pantheon Office",
+  "status": "active",
+  "priority": "low",
+  "progress": 15,
+  "description": "FastAPI + Next.js monorepo, AI-платформа",
+  "deadlines": {},
+  "next_steps": [
+    "Завершити міграцію style/glass-demo2",
+    "Пофіксити OpenAPI SDK генерацію",
+    "Налаштувати CI/CD"
+  ],
+  "blocked_by": [],
+  "contact": null,
+  "last_activity": "Backup перед disk cleanup (eea1d2b). Є незакомічені зміни.",
+  "tier": "hobby",
+  "last_updated": "2026-07-29T17:19:53.298426"
+}

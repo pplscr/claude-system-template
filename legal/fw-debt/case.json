@@ -6,35 +6,67 @@
   "forum": "Amtsgericht Hamburg (potential)",
   "type": "Debt Collection — Wohnkosten",
   "status": "active",
-  "phase": "mahnung_draft",
-  "filed_date": null,
-  "confirmation_numbers": {},
+  "phase": "widerspruch_pending",
+  "filed_date": "2026-07-31",
+  "confirmation_numbers": {
+    "ratenzahlung": "sent 31.07.2026 14:10 via ruslanmaneliuk@gmail.com"
+  },
   "deadlines": {
     "payment_mahnung3": {
       "date": "2026-08-15",
       "description": "Send 3. Mahnung to tenant — €13 166.05 debt (2022-06 – 2024-05)",
       "status": "pending",
       "days_remaining": 16
+    },
+    "ratenzahlung_email": {
+      "date": "2026-07-31",
+      "description": "Ratenzahlung email to Joana Ramos — 50€/Monat ohne Anerkennung",
+      "status": "completed",
+      "sent_at": "2026-07-31T14:10:58+02:00",
+      "days_remaining": 0
+    },
+    "widerspruch": {
+      "date": "2026-08-17",
+      "description": "Widerspruch Einschreiben + Email — 12 arguments",
+      "status": "pending",
+      "days_remaining": 18
     }
   },
   "progress": {
-    "percentage": 30,
+    "percentage": 80,
     "completed": [
       "Case analysis completed",
       "Debt calculation verified — €13 166.05",
-      "Previous Mahnungen (1+2) reviewed"
+      "Previous Mahnungen (1+2) reviewed",
+      "Deep legal research: 8 precedents, Verjährung confirmed",
+      "Ratenzahlung email finalized (EMAIL-READY for 31.07)",
+      "✅ Ratenzahlung EMAIL SENT — 31.07.2026 14:10 CET",
+      "Widerspruch v2 rewritten (12 arguments, deadline 17.08)",
+      "New docs analyzed: Jobcenter Anhörung + Agentur für Arbeit ALG I",
+      "Identity error corrected: Oleksandr ≠ Ruslan (NSC Canada irrelevant)",
+      "Jobcenter €502 payment confirmed by Oleksandr",
+      "W444 Wohnbedingungen documented (4 Pers/Zimmer)",
+      "All files synced: mac, Telegram, Gmail drafts",
+      "Ukrainian translations complete"
     ],
     "pending": [
-      "Draft 3. Mahnung letter",
-      "Review German grammar (separate pass)",
-      "Send 3. Mahnung per Einschreiben",
-      "Prepare for Amtsgericht filing if no response"
+      "Wait for F&W response to Ratenzahlung — ~2-4 weeks",
+      "Send Widerspruch per Einschreiben + email — deadline 17.08.2026",
+      "Print and sign widerspruch-PRINT.txt",
+      "Request Akteneinsicht (§29 HmbVwVfG)",
+      "Get CMR Arbeitsbescheinigung (dates, exact income)",
+      "Verify no other debts exist"
     ]
   },
   "drafts": {
     "location": "drafts/",
-    "files": [],
-    "status": "not_started"
+    "files": [
+      "EMAIL-READY-ratenzahlung-31-07-2026.txt",
+      "ratenzahlung-angebot.md",
+      "widerspruch-final.md",
+      "next-steps.md"
+    ],
+    "status": "ready_for_review"
   },
   "parties": {
     "applicant": {
@@ -52,9 +84,10 @@
     "critical": [
       "German grammar MUST be reviewed separately before sending",
       "All amounts in Euro",
-      "Einschreiben (registered mail) required for 3. Mahnung"
+      "Ratenzahlung email MUST be sent TODAY (31.07) — ruslanmaneliuk@gmail.com",
+      "Widerspruch per Einschreiben + email before 17.08"
     ]
   },
-  "last_updated": "2026-07-30T11:34:36.382143",
-  "last_activity": "Case state initialized. 3. Mahnung draft pending."
+  "last_updated": "2026-07-31T14:15:00.000000",
+  "last_activity": "✅ RATENZAHLUNG SENT 31.07.2026 14:10. Ratenzahlung email sent to Joana Ramos + CC Sachbearbeitung. All protective clauses intact. Widerspruch draft in Gmail, ready for 17.08."
 }

@@ -1,0 +1,4430 @@
+{
+  "cash": {
+    "free": 2622.96,
+    "total": 7742.49,
+    "ppl": -190.46,
+    "result": 152.56,
+    "invested": 4943.05,
+    "pieCash": 3.7,
+    "blocked": 348.0
+  },
+  "positions": [
+    {
+      "instrument": {
+        "ticker": "KMB_US_EQ",
+        "name": "Kimberly-Clark",
+        "isin": "US4943681035",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:03.000+02:00",
+      "quantity": 0.47511371,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.47511371,
+      "currentPrice": 109.91,
+      "averagePricePaid": 100.96530365,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.28,
+        "currentValue": 45.27,
+        "unrealizedProfitLoss": 3.99,
+        "fxImpact": 0.31
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "WGLDd_EQ",
+        "name": "WisdomTree Core Physical Gold",
+        "isin": "JE00BN2CJ301",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-16T17:28:25.000+02:00",
+      "quantity": 5.03863784,
+      "quantityAvailableForTrading": 5.0,
+      "quantityInPies": 0.03863784,
+      "currentPrice": 348.64,
+      "averagePricePaid": 395.14647872,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 1991.0,
+        "currentValue": 1756.67,
+        "unrealizedProfitLoss": -234.33,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "AGNC_US_EQ",
+        "name": "AGNC Investment",
+        "isin": "US00123Q1040",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:00.000+02:00",
+      "quantity": 4.85531061,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 4.85531061,
+      "currentPrice": 10.66,
+      "averagePricePaid": 10.83761766,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 45.35,
+        "currentValue": 44.87,
+        "unrealizedProfitLoss": -0.48,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "SLB_US_EQ",
+        "name": "SLB",
+        "isin": "AN8068571086",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 1.06689023,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 1.06689023,
+      "currentPrice": 49.56,
+      "averagePricePaid": 50.3519467,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 46.38,
+        "currentValue": 45.84,
+        "unrealizedProfitLoss": -0.54,
+        "fxImpact": 0.19
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "GD_US_EQ",
+        "name": "General Dynamics",
+        "isin": "US3695501086",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.13626212,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.13626212,
+      "currentPrice": 383.28,
+      "averagePricePaid": 352.55579467,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.37,
+        "currentValue": 45.28,
+        "unrealizedProfitLoss": 3.91,
+        "fxImpact": 0.28
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "TROW_US_EQ",
+        "name": "T Rowe Price",
+        "isin": "US74144T1088",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:31:16.000+02:00",
+      "quantity": 0.44528626,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.44528626,
+      "currentPrice": 111.87,
+      "averagePricePaid": 103.16958803,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 39.54,
+        "currentValue": 43.19,
+        "unrealizedProfitLoss": 3.65,
+        "fxImpact": 0.29
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CSCO_US_EQ",
+        "name": "Cisco Systems",
+        "isin": "US17275R1023",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.46207321,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.46207321,
+      "currentPrice": 116.16,
+      "averagePricePaid": 95.07151475,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 37.99,
+        "currentValue": 46.54,
+        "unrealizedProfitLoss": 8.55,
+        "fxImpact": 0.1
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "PEP_US_EQ",
+        "name": "PepsiCo",
+        "isin": "US7134481081",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:00.000+02:00",
+      "quantity": 0.37415561,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.37415561,
+      "currentPrice": 140.04,
+      "averagePricePaid": 147.9063751,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 47.75,
+        "currentValue": 45.43,
+        "unrealizedProfitLoss": -2.32,
+        "fxImpact": 0.23
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "NUE_US_EQ",
+        "name": "Nucor",
+        "isin": "US6703461052",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.20583624,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.20583624,
+      "currentPrice": 257.94,
+      "averagePricePaid": 202.63681459,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 36.01,
+        "currentValue": 46.03,
+        "unrealizedProfitLoss": 10.02,
+        "fxImpact": 0.15
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "SXR8d_EQ",
+        "name": "iShares Core S&P 500 (Acc)",
+        "isin": "IE00B5BMR087",
+        "currency": "EUR"
+      },
+      "createdAt": "2025-12-22T16:36:06.000+02:00",
+      "quantity": 0.33216271,
+      "quantityAvailableForTrading": 0.3,
+      "quantityInPies": 0.03216271,
+      "currentPrice": 696.24,
+      "averagePricePaid": 633.12344724,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 210.3,
+        "currentValue": 231.26,
+        "unrealizedProfitLoss": 20.96,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "SHW_US_EQ",
+        "name": "Sherwin-Williams",
+        "isin": "US8243481061",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.15147612,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.15147612,
+      "currentPrice": 340.7,
+      "averagePricePaid": 327.97248834,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 42.73,
+        "currentValue": 44.74,
+        "unrealizedProfitLoss": 2.01,
+        "fxImpact": 0.34
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "BMO_US_EQ",
+        "name": "Bank of Montreal",
+        "isin": "CA0636711016",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.29697432,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.29697432,
+      "currentPrice": 179.58,
+      "averagePricePaid": 154.6935102,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 39.59,
+        "currentValue": 46.24,
+        "unrealizedProfitLoss": 6.65,
+        "fxImpact": 0.24
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "EMR_US_EQ",
+        "name": "Emerson Electric",
+        "isin": "US2910111044",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.35386386,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.35386386,
+      "currentPrice": 150.22,
+      "averagePricePaid": 141.04294233,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 43.06,
+        "currentValue": 46.09,
+        "unrealizedProfitLoss": 3.03,
+        "fxImpact": 0.21
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "TD_US_EQ",
+        "name": "Toronto-Dominion Bank",
+        "isin": "CA8911605092",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:04.000+02:00",
+      "quantity": 0.4454704,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.4454704,
+      "currentPrice": 120.26,
+      "averagePricePaid": 106.92068429,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.07,
+        "currentValue": 46.45,
+        "unrealizedProfitLoss": 5.38,
+        "fxImpact": 0.23
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "ROP_US_EQ",
+        "name": "Roper Technologies",
+        "isin": "US7766961061",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:09.000+02:00",
+      "quantity": 0.13919503,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.13919503,
+      "currentPrice": 392.31,
+      "averagePricePaid": 350.0843385,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.89,
+        "currentValue": 47.34,
+        "unrealizedProfitLoss": 5.45,
+        "fxImpact": 0.35
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "LTC_US_EQ",
+        "name": "LTC Properties",
+        "isin": "US5021751020",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 1.2850626,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 1.2850626,
+      "currentPrice": 40.21,
+      "averagePricePaid": 38.29385432,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 42.35,
+        "currentValue": 44.8,
+        "unrealizedProfitLoss": 2.45,
+        "fxImpact": 0.32
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "JNJ_US_EQ",
+        "name": "Johnson & Johnson",
+        "isin": "US4781601046",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:03.000+02:00",
+      "quantity": 0.20032569,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.20032569,
+      "currentPrice": 257.75,
+      "averagePricePaid": 233.36996867,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 40.21,
+        "currentValue": 44.77,
+        "unrealizedProfitLoss": 4.56,
+        "fxImpact": 0.33
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "GOOD_US_EQ",
+        "name": "Gladstone Commercial",
+        "isin": "US3765361080",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 4.12689096,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 4.12689096,
+      "currentPrice": 12.45,
+      "averagePricePaid": 12.37493321,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.02,
+        "currentValue": 44.55,
+        "unrealizedProfitLoss": 0.53,
+        "fxImpact": 0.26
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "BMY_US_EQ",
+        "name": "Bristol-Myers Squibb",
+        "isin": "US1101221083",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:03.000+02:00",
+      "quantity": 0.84621675,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.84621675,
+      "currentPrice": 65.21,
+      "averagePricePaid": 57.17211341,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.61,
+        "currentValue": 47.84,
+        "unrealizedProfitLoss": 6.23,
+        "fxImpact": 0.33
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "ABT_US_EQ",
+        "name": "Abbott Laboratories",
+        "isin": "US0028241000",
+        "currency": "USD"
+      },
+      "createdAt": "2026-03-11T20:13:21.000+02:00",
+      "quantity": 0.54205244,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.54205244,
+      "currentPrice": 105.96,
+      "averagePricePaid": 95.83943576,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.84,
+        "currentValue": 49.8,
+        "unrealizedProfitLoss": 4.96,
+        "fxImpact": 0.2
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "RGLD_US_EQ",
+        "name": "Royal Gold",
+        "isin": "US7802871084",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:00.000+02:00",
+      "quantity": 0.27236618,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.27236618,
+      "currentPrice": 198.15,
+      "averagePricePaid": 229.02990379,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 53.91,
+        "currentValue": 46.79,
+        "unrealizedProfitLoss": -7.12,
+        "fxImpact": 0.17
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CVX_US_EQ",
+        "name": "Chevron",
+        "isin": "US1667641005",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:25.000+02:00",
+      "quantity": 0.28263335,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.28263335,
+      "currentPrice": 196.51,
+      "averagePricePaid": 182.6040699,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.47,
+        "currentValue": 48.15,
+        "unrealizedProfitLoss": 3.68,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "MCD_US_EQ",
+        "name": "McDonald's",
+        "isin": "US5801351017",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.19585117,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.19585117,
+      "currentPrice": 270.29,
+      "averagePricePaid": 290.42461171,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 49.06,
+        "currentValue": 45.9,
+        "unrealizedProfitLoss": -3.16,
+        "fxImpact": 0.26
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "MSFT_US_EQ",
+        "name": "Microsoft",
+        "isin": "US5949181045",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.13580152,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.13580152,
+      "currentPrice": 462.53,
+      "averagePricePaid": 405.88647314,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 47.51,
+        "currentValue": 54.46,
+        "unrealizedProfitLoss": 6.95,
+        "fxImpact": 0.28
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "ADC_US_EQ",
+        "name": "Agree Realty",
+        "isin": "US0084921008",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.66388174,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.66388174,
+      "currentPrice": 77.82,
+      "averagePricePaid": 76.76065921,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 43.88,
+        "currentValue": 44.79,
+        "unrealizedProfitLoss": 0.91,
+        "fxImpact": 0.3
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "DUK_US_EQ",
+        "name": "Duke Energy",
+        "isin": "US26441C2044",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.41425712,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.41425712,
+      "currentPrice": 125.43,
+      "averagePricePaid": 125.98455761,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.98,
+        "currentValue": 45.05,
+        "unrealizedProfitLoss": 0.07,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "IBM_US_EQ",
+        "name": "IBM",
+        "isin": "US4592001014",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.23620778,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.23620778,
+      "currentPrice": 221.56,
+      "averagePricePaid": 241.90566458,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 49.31,
+        "currentValue": 45.37,
+        "unrealizedProfitLoss": -3.94,
+        "fxImpact": 0.23
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "MAIN_US_EQ",
+        "name": "Main Street Capital",
+        "isin": "US56035L1044",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:03.000+02:00",
+      "quantity": 0.97263347,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.97263347,
+      "currentPrice": 54.34,
+      "averagePricePaid": 54.99502295,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 46.08,
+        "currentValue": 45.82,
+        "unrealizedProfitLoss": -0.26,
+        "fxImpact": 0.29
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "AAPL_US_EQ",
+        "name": "Apple",
+        "isin": "US0378331005",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.15756575,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.15756575,
+      "currentPrice": 304.58,
+      "averagePricePaid": 278.48691737,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 37.78,
+        "currentValue": 41.61,
+        "unrealizedProfitLoss": 3.83,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CEBSd_EQ",
+        "name": "iShares Copper Miners (Acc)",
+        "isin": "IE00063FT9K6",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-20T15:34:38.000+02:00",
+      "quantity": 6.0,
+      "quantityAvailableForTrading": 6.0,
+      "quantityInPies": 0,
+      "currentPrice": 9.092,
+      "averagePricePaid": 8.7,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 52.2,
+        "currentValue": 54.55,
+        "unrealizedProfitLoss": 2.35,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "PPG_US_EQ",
+        "name": "PPG Industries",
+        "isin": "US6935061076",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:03.000+02:00",
+      "quantity": 0.46821933,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.46821933,
+      "currentPrice": 110.84,
+      "averagePricePaid": 112.16965348,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 45.34,
+        "currentValue": 44.99,
+        "unrealizedProfitLoss": -0.35,
+        "fxImpact": 0.19
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "PNR_US_EQ",
+        "name": "Pentair",
+        "isin": "IE00BLS09M33",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.81006817,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.81006817,
+      "currentPrice": 65.51,
+      "averagePricePaid": 78.474877,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 54.87,
+        "currentValue": 46.01,
+        "unrealizedProfitLoss": -8.86,
+        "fxImpact": 0.25
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "O_US_EQ",
+        "name": "Realty Income",
+        "isin": "US7561091049",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.81506199,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.81506199,
+      "currentPrice": 63.81,
+      "averagePricePaid": 62.80503891,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.11,
+        "currentValue": 45.09,
+        "unrealizedProfitLoss": 0.98,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "PG_US_EQ",
+        "name": "Procter & Gamble",
+        "isin": "US7427181091",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:31:34.000+02:00",
+      "quantity": 0.36157243,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.36157243,
+      "currentPrice": 144.26,
+      "averagePricePaid": 145.9182051,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 45.53,
+        "currentValue": 45.22,
+        "unrealizedProfitLoss": -0.31,
+        "fxImpact": 0.21
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "ECL_US_EQ",
+        "name": "Ecolab",
+        "isin": "US2788651006",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.1895141,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.1895141,
+      "currentPrice": 278.42,
+      "averagePricePaid": 269.47862982,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.01,
+        "currentValue": 45.75,
+        "unrealizedProfitLoss": 1.74,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CF_US_EQ",
+        "name": "CF Industries",
+        "isin": "US1252691001",
+        "currency": "USD"
+      },
+      "createdAt": "2026-03-11T20:12:55.000+02:00",
+      "quantity": 0.43112762,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.43112762,
+      "currentPrice": 125.63,
+      "averagePricePaid": 119.36140858,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.45,
+        "currentValue": 46.96,
+        "unrealizedProfitLoss": 2.51,
+        "fxImpact": 0.17
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "SYY_US_EQ",
+        "name": "Sysco",
+        "isin": "US8718291078",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.62979675,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.62979675,
+      "currentPrice": 85.45,
+      "averagePricePaid": 78.39036959,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 42.51,
+        "currentValue": 46.66,
+        "unrealizedProfitLoss": 4.15,
+        "fxImpact": 0.3
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "U3O8d_EQ",
+        "name": "Sprott Uranium Miners (Acc)",
+        "isin": "IE0005YK6564",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-22T15:18:07.000+02:00",
+      "quantity": 5.0,
+      "quantityAvailableForTrading": 5.0,
+      "quantityInPies": 0,
+      "currentPrice": 10.7,
+      "averagePricePaid": 14.44,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 72.2,
+        "currentValue": 53.5,
+        "unrealizedProfitLoss": -18.7,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "BLK_US_EQ",
+        "name": "BlackRock",
+        "isin": "US09290D1019",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:33.000+02:00",
+      "quantity": 0.04900231,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.04900231,
+      "currentPrice": 1091.35,
+      "averagePricePaid": 1037.09396557,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 43.82,
+        "currentValue": 46.37,
+        "unrealizedProfitLoss": 2.55,
+        "fxImpact": 0.24
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "LITUm_EQ",
+        "name": "Global X Lithium & Battery Tech (Acc)",
+        "isin": "IE00BLCHJN13",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-20T10:17:06.000+02:00",
+      "quantity": 3.0,
+      "quantityAvailableForTrading": 3.0,
+      "quantityInPies": 0,
+      "currentPrice": 10.776,
+      "averagePricePaid": 10.8,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 32.4,
+        "currentValue": 32.33,
+        "unrealizedProfitLoss": -0.07,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "COPAl_EQ",
+        "name": "WisdomTree Copper",
+        "isin": "GB00B15KXQ89",
+        "currency": "USD"
+      },
+      "createdAt": "2025-12-09T10:32:42.000+02:00",
+      "quantity": 1.24347229,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0,
+      "currentPrice": 55.85,
+      "averagePricePaid": 47.01351246,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 50.19,
+        "currentValue": 60.21,
+        "unrealizedProfitLoss": 10.02,
+        "fxImpact": 0.49
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CNQ_US_EQ",
+        "name": "Canadian Natural Resources",
+        "isin": "CA1363851017",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 1.19438713,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 1.19438713,
+      "currentPrice": 47.62,
+      "averagePricePaid": 43.62069775,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 44.91,
+        "currentValue": 49.31,
+        "unrealizedProfitLoss": 4.4,
+        "fxImpact": 0.26
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "JPM_US_EQ",
+        "name": "JPMorgan Chase & Co",
+        "isin": "US46625H1005",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.15034235,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.15034235,
+      "currentPrice": 352.65,
+      "averagePricePaid": 310.15878094,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 40.18,
+        "currentValue": 45.97,
+        "unrealizedProfitLoss": 5.79,
+        "fxImpact": 0.25
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "RY_US_EQ",
+        "name": "Royal Bank of Canada",
+        "isin": "CA7800871021",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:03.000+02:00",
+      "quantity": 0.2513896,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.2513896,
+      "currentPrice": 210.22,
+      "averagePricePaid": 183.38069674,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 39.7,
+        "currentValue": 45.82,
+        "unrealizedProfitLoss": 6.12,
+        "fxImpact": 0.27
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "LOW_US_EQ",
+        "name": "Lowe's",
+        "isin": "US5486611073",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:32:03.000+02:00",
+      "quantity": 0.24565223,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.24565223,
+      "currentPrice": 208.73,
+      "averagePricePaid": 231.91322139,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 49.14,
+        "currentValue": 44.46,
+        "unrealizedProfitLoss": -4.68,
+        "fxImpact": 0.26
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "GWW_US_EQ",
+        "name": "WW Grainger",
+        "isin": "US3848021040",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.0384903,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.0384903,
+      "currentPrice": 1389.9,
+      "averagePricePaid": 1203.16027675,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 39.92,
+        "currentValue": 46.38,
+        "unrealizedProfitLoss": 6.46,
+        "fxImpact": 0.23
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "SLVRPp_EQ",
+        "name": "WisdomTree Silver",
+        "isin": "GB00B15KY328",
+        "currency": "EUR"
+      },
+      "createdAt": "2025-12-09T11:00:58.000+02:00",
+      "quantity": 3.0,
+      "quantityAvailableForTrading": 3.0,
+      "quantityInPies": 0,
+      "currentPrice": 40.695,
+      "averagePricePaid": 71.28666667,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 213.86,
+        "currentValue": 122.09,
+        "unrealizedProfitLoss": -91.77,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "C_US_EQ",
+        "name": "Citigroup",
+        "isin": "US1729674242",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:31:52.000+02:00",
+      "quantity": 0.40639861,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.40639861,
+      "currentPrice": 133.17,
+      "averagePricePaid": 124.50829987,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 43.74,
+        "currentValue": 46.92,
+        "unrealizedProfitLoss": 3.18,
+        "fxImpact": 0.13
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "BNS_US_EQ",
+        "name": "Bank of Nova Scotia",
+        "isin": "CA0641491075",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.60719812,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.60719812,
+      "currentPrice": 88.04,
+      "averagePricePaid": 78.39286459,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.04,
+        "currentValue": 46.35,
+        "unrealizedProfitLoss": 5.31,
+        "fxImpact": 0.23
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "VZLAd_EQ",
+        "name": "WisdomTree Physical Platinum",
+        "isin": "JE00B1VS2W53",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-22T10:10:30.000+02:00",
+      "quantity": 0.15,
+      "quantityAvailableForTrading": 0.15,
+      "quantityInPies": 0,
+      "currentPrice": 130.16,
+      "averagePricePaid": 192.33333333,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 28.85,
+        "currentValue": 19.52,
+        "unrealizedProfitLoss": -9.33,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "WMT_US_EQ",
+        "name": "Walmart",
+        "isin": "US9311421039",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:00.000+02:00",
+      "quantity": 0.47074187,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.47074187,
+      "currentPrice": 111.67,
+      "averagePricePaid": 119.70466957,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 48.66,
+        "currentValue": 45.58,
+        "unrealizedProfitLoss": -3.08,
+        "fxImpact": 0.2
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "COPAPp_EQ",
+        "name": "WisdomTree Copper",
+        "isin": "GB00B15KXQ89",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-27T14:26:30.000+02:00",
+      "quantity": 1.18981812,
+      "quantityAvailableForTrading": 1.0,
+      "quantityInPies": 0.18981812,
+      "currentPrice": 48.59,
+      "averagePricePaid": 43.93108419,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 52.27,
+        "currentValue": 57.81,
+        "unrealizedProfitLoss": 5.54,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "ITW_US_EQ",
+        "name": "Illinois Tool Works",
+        "isin": "US4523081093",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:05.000+02:00",
+      "quantity": 0.18126174,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.18126174,
+      "currentPrice": 286.74,
+      "averagePricePaid": 264.58975843,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.27,
+        "currentValue": 45.06,
+        "unrealizedProfitLoss": 3.79,
+        "fxImpact": 0.31
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CB_US_EQ",
+        "name": "Chubb",
+        "isin": "CH0044328745",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.14629985,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.14629985,
+      "currentPrice": 351.39,
+      "averagePricePaid": 325.83765465,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.01,
+        "currentValue": 44.57,
+        "unrealizedProfitLoss": 3.56,
+        "fxImpact": 0.32
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "EUDFd_EQ",
+        "name": "WisdomTree Europe Defence (Acc)",
+        "isin": "IE0002Y8CX98",
+        "currency": "EUR"
+      },
+      "createdAt": "2026-01-20T10:39:20.000+02:00",
+      "quantity": 2.0,
+      "quantityAvailableForTrading": 2.0,
+      "quantityInPies": 0,
+      "currentPrice": 32.36,
+      "averagePricePaid": 34.8,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 69.6,
+        "currentValue": 64.72,
+        "unrealizedProfitLoss": -4.88,
+        "fxImpact": null
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "ADP_US_EQ",
+        "name": "Automatic Data Processing",
+        "isin": "US0530151036",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:00.000+02:00",
+      "quantity": 0.20227793,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.20227793,
+      "currentPrice": 265.89,
+      "averagePricePaid": 223.10886808,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 38.79,
+        "currentValue": 46.63,
+        "unrealizedProfitLoss": 7.84,
+        "fxImpact": 0.34
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "AFL_US_EQ",
+        "name": "Aflac",
+        "isin": "US0010551028",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.41076532,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.41076532,
+      "currentPrice": 127.89,
+      "averagePricePaid": 114.61532342,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 40.52,
+        "currentValue": 45.55,
+        "unrealizedProfitLoss": 5.03,
+        "fxImpact": 0.3
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "MA_US_EQ",
+        "name": "Mastercard",
+        "isin": "US57636Q1040",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.09528789,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.09528789,
+      "currentPrice": 572.98,
+      "averagePricePaid": 514.02124656,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 42.14,
+        "currentValue": 47.34,
+        "unrealizedProfitLoss": 5.2,
+        "fxImpact": 0.33
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "KO_US_EQ",
+        "name": "Coca-Cola",
+        "isin": "US1912161007",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:02.000+02:00",
+      "quantity": 0.60542398,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.60542398,
+      "currentPrice": 87.72,
+      "averagePricePaid": 78.22617135,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 40.78,
+        "currentValue": 46.04,
+        "unrealizedProfitLoss": 5.26,
+        "fxImpact": 0.28
+      }
+    },
+    {
+      "instrument": {
+        "ticker": "CAH_US_EQ",
+        "name": "Cardinal Health",
+        "isin": "US14149Y1082",
+        "currency": "USD"
+      },
+      "createdAt": "2026-01-15T16:30:01.000+02:00",
+      "quantity": 0.23057783,
+      "quantityAvailableForTrading": 0,
+      "quantityInPies": 0.23057783,
+      "currentPrice": 230.21,
+      "averagePricePaid": 210.3844936,
+      "walletImpact": {
+        "currency": "EUR",
+        "totalCost": 41.76,
+        "currentValue": 46.02,
+        "unrealizedProfitLoss": 4.26,
+        "fxImpact": 0.3
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "type": "DEPOSIT",
+      "amount": 1500.0,
+      "currency": "EUR",
+      "reference": "019fb888-0485-7cda-a0c7-416068123d0b",
+      "dateTime": "2026-07-31T14:15:49.627Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.14,
+      "currency": "EUR",
+      "reference": "019fb5c0-57ac-7f7a-9aa7-0898b224ee94",
+      "dateTime": "2026-07-31T01:18:29.283Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.2,
+      "currency": "EUR",
+      "reference": "019fb5a2-96aa-72a1-a55f-1d25752cf26d",
+      "dateTime": "2026-07-31T00:45:59.333Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.86,
+      "currency": "EUR",
+      "reference": "019fb5a2-93ff-76b1-9498-3b62f3aeac83",
+      "dateTime": "2026-07-31T00:45:58.651Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -6.3,
+      "currency": "EUR",
+      "reference": "019fb275-6e2c-7df1-8f3a-54509904b40c",
+      "dateTime": "2026-07-30T09:57:48.200Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -4.29,
+      "currency": "EUR",
+      "reference": "019fb0ff-ddf1-79bb-b2a1-3e5cd4dc734e",
+      "dateTime": "2026-07-30T03:09:46.350Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.15,
+      "currency": "EUR",
+      "reference": "019fb09a-46fc-7757-a550-4a4fa713fa3b",
+      "dateTime": "2026-07-30T01:18:48.559Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.32,
+      "currency": "EUR",
+      "reference": "019fae28-7367-74bd-be6f-a682b0a2695b",
+      "dateTime": "2026-07-29T13:55:14.403Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -21.76,
+      "currency": "EUR",
+      "reference": "019fabce-030d-767b-bc03-311407f60685",
+      "dateTime": "2026-07-29T02:57:12.969Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.16,
+      "currency": "EUR",
+      "reference": "019fab72-f65e-735f-b119-b26d239d8ac7",
+      "dateTime": "2026-07-29T01:17:45.941Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.33,
+      "currency": "EUR",
+      "reference": "019fa8fd-9e1c-795b-9272-96cacc8f1a21",
+      "dateTime": "2026-07-28T13:50:21.208Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.16,
+      "currency": "EUR",
+      "reference": "019fa64e-ef89-78c3-8633-4bcdcc330e49",
+      "dateTime": "2026-07-28T01:20:18.811Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.31,
+      "currency": "EUR",
+      "reference": "019fa630-d64c-7879-b719-648cefd27672",
+      "dateTime": "2026-07-28T00:47:26.280Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.17,
+      "currency": "EUR",
+      "reference": "019fa12b-8883-733a-bf16-71010cbc2c93",
+      "dateTime": "2026-07-27T01:23:32.596Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.24,
+      "currency": "EUR",
+      "reference": "019f9c67-df46-729e-a74e-7332af6e63e3",
+      "dateTime": "2026-07-26T03:11:20.898Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.17,
+      "currency": "EUR",
+      "reference": "019f9c08-3a0c-7c3f-afad-333c051457bb",
+      "dateTime": "2026-07-26T01:26:52.672Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.33,
+      "currency": "EUR",
+      "reference": "019f99b2-0308-7b0c-a6a9-ecd04a47a48d",
+      "dateTime": "2026-07-25T14:33:28.068Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -40.87,
+      "currency": "EUR",
+      "reference": "019f99b0-1a55-71be-b233-a7b88fe020a0",
+      "dateTime": "2026-07-25T14:31:22.961Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -3.99,
+      "currency": "EUR",
+      "reference": "019f98e4-33bf-764b-8a09-70ddb9aa2dbc",
+      "dateTime": "2026-07-25T10:48:40.121Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.17,
+      "currency": "EUR",
+      "reference": "019f96e7-0489-7027-b907-c4e1cacb5f9b",
+      "dateTime": "2026-07-25T01:32:30.204Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -4.08,
+      "currency": "EUR",
+      "reference": "019f9215-aafd-7428-bf86-928a5c77fecd",
+      "dateTime": "2026-07-24T03:05:21.402Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.17,
+      "currency": "EUR",
+      "reference": "019f91bf-62bf-7178-b873-426c013b0d9f",
+      "dateTime": "2026-07-24T01:31:06.804Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.17,
+      "currency": "EUR",
+      "reference": "019f8c9b-fdde-722f-b41f-3cee471bfc92",
+      "dateTime": "2026-07-23T01:34:21.140Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.27,
+      "currency": "EUR",
+      "reference": "019f8c73-a564-7e68-8392-13d27acadaff",
+      "dateTime": "2026-07-23T00:50:17.056Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.27,
+      "currency": "EUR",
+      "reference": "019f8c73-a338-73e9-90cf-c53d6b0f129a",
+      "dateTime": "2026-07-23T00:50:16.500Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.27,
+      "currency": "EUR",
+      "reference": "019f8c73-a0f6-7c6f-a3e2-b8dadea7d8c8",
+      "dateTime": "2026-07-23T00:50:15.922Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -3.0,
+      "currency": "EUR",
+      "reference": "019f8c6f-108b-79e7-bae9-c7f396ca3958",
+      "dateTime": "2026-07-23T00:45:16.807Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.3,
+      "currency": "EUR",
+      "reference": "019f8a1d-f894-75f4-8de2-42feeac0ef37",
+      "dateTime": "2026-07-22T13:57:27.825Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -3.0,
+      "currency": "EUR",
+      "reference": "019f87ca-985f-7228-8533-3e86203f9ec2",
+      "dateTime": "2026-07-22T03:07:09.276Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.24,
+      "currency": "EUR",
+      "reference": "019f87c9-8e26-75f7-bf4b-e32bfc5a6f48",
+      "dateTime": "2026-07-22T03:06:01.121Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.18,
+      "currency": "EUR",
+      "reference": "019f876c-b782-7f52-b4ec-ce0204b687ff",
+      "dateTime": "2026-07-22T01:24:36.857Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.18,
+      "currency": "EUR",
+      "reference": "019f823d-066a-7c56-a794-63611966f4e0",
+      "dateTime": "2026-07-21T01:14:25.249Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.28,
+      "currency": "EUR",
+      "reference": "019f8227-9f4e-7730-b13e-a58defe8fe86",
+      "dateTime": "2026-07-21T00:51:02.602Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -5.57,
+      "currency": "EUR",
+      "reference": "019f7fd8-4642-75ec-8124-0d5ad452f43b",
+      "dateTime": "2026-07-20T14:05:08.031Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.0,
+      "currency": "EUR",
+      "reference": "019f7ef6-6b4a-784a-8cf7-0a303141aa77",
+      "dateTime": "2026-07-20T09:58:26.375Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.54,
+      "currency": "EUR",
+      "reference": "019f7d7d-3d9d-7f99-82ab-441217e7757a",
+      "dateTime": "2026-07-20T03:06:27.609Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.0,
+      "currency": "EUR",
+      "reference": "019f7d7a-b1ad-7a49-8bfa-4075588b421c",
+      "dateTime": "2026-07-20T03:03:40.714Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.0,
+      "currency": "EUR",
+      "reference": "019f7d7a-af8d-7bb8-9cc3-11badd222032",
+      "dateTime": "2026-07-20T03:03:40.170Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.18,
+      "currency": "EUR",
+      "reference": "019f7d17-3dfd-70a0-a97e-4c6f9448e4fb",
+      "dateTime": "2026-07-20T01:15:03.028Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.24,
+      "currency": "EUR",
+      "reference": "019f7cfc-db1b-71c0-ab63-c6c4c13a7c9e",
+      "dateTime": "2026-07-20T00:46:13.784Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.0,
+      "currency": "EUR",
+      "reference": "019f79bb-9440-7107-b095-6ac1b0cf5ba3",
+      "dateTime": "2026-07-19T09:36:04.157Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -12.37,
+      "currency": "EUR",
+      "reference": "019f79b8-9e03-77a2-8377-61b37c1486e0",
+      "dateTime": "2026-07-19T09:32:50.047Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -0.2,
+      "currency": "EUR",
+      "reference": "019f79b8-51ac-7178-bda6-43eec3ec2847",
+      "dateTime": "2026-07-19T09:32:30.504Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -49.0,
+      "currency": "EUR",
+      "reference": "019f7855-6469-7560-abce-cb2dcf029511",
+      "dateTime": "2026-07-19T03:04:50.022Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -1.06,
+      "currency": "EUR",
+      "reference": "019f7853-1683-7bdf-89ee-102d37b072f7",
+      "dateTime": "2026-07-19T03:02:19.008Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.18,
+      "currency": "EUR",
+      "reference": "019f77f1-f69e-7841-a7af-2ea25efb9df4",
+      "dateTime": "2026-07-19T01:16:13.845Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.24,
+      "currency": "EUR",
+      "reference": "019f77d5-6430-7ebb-866b-ef4dcfd6d472",
+      "dateTime": "2026-07-19T00:45:01.357Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -9.28,
+      "currency": "EUR",
+      "reference": "019f7579-5015-71fb-ab21-96c8e215db44",
+      "dateTime": "2026-07-18T13:45:12.466Z"
+    },
+    {
+      "type": "WITHDRAW",
+      "amount": -11.0,
+      "currency": "EUR",
+      "reference": "019f74ac-2ebb-7dcd-85b5-8b30a9f0e0b4",
+      "dateTime": "2026-07-18T10:01:09.047Z"
+    },
+    {
+      "type": "INTEREST_ON_FREE_CASH",
+      "amount": 0.2,
+      "currency": "EUR",
+      "reference": "019f72ca-fe95-770d-9275-5d8033db9022",
+      "dateTime": "2026-07-18T01:15:33.898Z"
+    }
+  ],
+  "orders": [
+    {
+      "order": {
+        "id": 54864054137,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "CVX_US_EQ",
+        "status": "FILLED",
+        "value": 2.9,
+        "filledValue": 2.9,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "CVX_US_EQ",
+          "name": "Chevron",
+          "isin": "US1667641005",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54906355041,
+        "quantity": 0.01711,
+        "price": 193.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:32:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.9,
+          "fxRate": 1.1387,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054106,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "C_US_EQ",
+        "status": "FILLED",
+        "value": 5.49,
+        "filledValue": 5.49,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "C_US_EQ",
+          "name": "Citigroup",
+          "isin": "US1729674242",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54906354589,
+        "quantity": 0.03725812,
+        "price": 131.73,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:31:53.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 4.32,
+          "fxRate": 1.13874991,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:36:45.072Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054106,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "C_US_EQ",
+        "status": "FILLED",
+        "value": 5.49,
+        "filledValue": 5.49,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "C_US_EQ",
+          "name": "Citigroup",
+          "isin": "US1729674242",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54906354492,
+        "quantity": 0.01011765,
+        "price": 132.07,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:31:52.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.17,
+          "fxRate": 1.14208379,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054116,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "PPG_US_EQ",
+        "status": "FILLED",
+        "value": 5.05,
+        "filledValue": 5.05,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "PPG_US_EQ",
+          "name": "PPG Industries",
+          "isin": "US6935061076",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54906351938,
+        "quantity": 0.04851378,
+        "price": 118.29,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:36.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.05,
+          "fxRate": 1.13862996,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:36:33.234Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054123,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "PG_US_EQ",
+        "status": "FILLED",
+        "value": 3.92,
+        "filledValue": 3.92,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "PG_US_EQ",
+          "name": "Procter & Gamble",
+          "isin": "US7427181091",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54906351422,
+        "quantity": 0.03157338,
+        "price": 141.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:30.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.92,
+          "fxRate": 1.13857968,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:53.336Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054102,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "RGLD_US_EQ",
+        "status": "FILLED",
+        "value": 3.99,
+        "filledValue": 3.99,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "RGLD_US_EQ",
+          "name": "Royal Gold",
+          "isin": "US7802871084",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903899381,
+        "quantity": 0.02310148,
+        "price": 196.16,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:14.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.99,
+          "fxRate": 1.13858952,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:35.162Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054108,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "SYY_US_EQ",
+        "status": "FILLED",
+        "value": 3.16,
+        "filledValue": 3.16,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "SYY_US_EQ",
+          "name": "Sysco",
+          "isin": "US8718291078",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903898544,
+        "quantity": 0.02649128,
+        "price": 85.1,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:11.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.98,
+          "fxRate": 1.13858986,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054098,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "RY_US_EQ",
+        "status": "FILLED",
+        "value": 5.08,
+        "filledValue": 5.08,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "RY_US_EQ",
+          "name": "Royal Bank of Canada",
+          "isin": "CA7800871021",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903898040,
+        "quantity": 0.02716517,
+        "price": 212.5,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:10.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.08,
+          "fxRate": 1.13857961,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:30.405Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054136,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "DUK_US_EQ",
+        "status": "FILLED",
+        "value": 3.75,
+        "filledValue": 3.75,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "DUK_US_EQ",
+          "name": "Duke Energy",
+          "isin": "US26441C2044",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903897292,
+        "quantity": 0.03270797,
+        "price": 130.19,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:08.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.75,
+          "fxRate": 1.13856968,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:26.942Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054101,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "BMO_US_EQ",
+        "status": "FILLED",
+        "value": 5.27,
+        "filledValue": 5.27,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "BMO_US_EQ",
+          "name": "Bank of Montreal",
+          "isin": "CA0636711016",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903896322,
+        "quantity": 0.0331818,
+        "price": 180.49,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:05.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.27,
+          "fxRate": 1.13858993,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:20.429Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054115,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "KMB_US_EQ",
+        "status": "FILLED",
+        "value": 2.18,
+        "filledValue": 2.18,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "KMB_US_EQ",
+          "name": "Kimberly-Clark",
+          "isin": "US4943681035",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903895981,
+        "quantity": 0.0222852,
+        "price": 111.38,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:05.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.18,
+          "fxRate": 1.13858971,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054103,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "BNS_US_EQ",
+        "status": "FILLED",
+        "value": 5.41,
+        "filledValue": 5.41,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "BNS_US_EQ",
+          "name": "Bank of Nova Scotia",
+          "isin": "CA0641491075",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903895735,
+        "quantity": 0.0696252,
+        "price": 88.31,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:03.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.41,
+          "fxRate": 1.13862989,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:16.468Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054105,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "JNJ_US_EQ",
+        "status": "FILLED",
+        "value": 2.42,
+        "filledValue": 2.42,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "JNJ_US_EQ",
+          "name": "Johnson & Johnson",
+          "isin": "US4781601046",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903894601,
+        "quantity": 0.01026269,
+        "price": 268.5,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.42,
+          "fxRate": 1.13864969,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054111,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "AGNC_US_EQ",
+        "status": "FILLED",
+        "value": 5.31,
+        "filledValue": 5.31,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "AGNC_US_EQ",
+          "name": "AGNC Investment",
+          "isin": "US00123Q1040",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903894594,
+        "quantity": 0.54713009,
+        "price": 11.03,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.31,
+          "fxRate": 1.13864997,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:14.459Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054125,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "SLB_US_EQ",
+        "status": "FILLED",
+        "value": 2.38,
+        "filledValue": 2.38,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "SLB_US_EQ",
+          "name": "SLB",
+          "isin": "AN8068571086",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888993,
+        "quantity": 0.05313699,
+        "price": 51.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.38,
+          "fxRate": 1.13864978,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054097,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "MSFT_US_EQ",
+        "status": "FILLED",
+        "value": 3.8,
+        "filledValue": 3.8,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "MSFT_US_EQ",
+          "name": "Microsoft",
+          "isin": "US5949181045",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888989,
+        "quantity": 0.01096394,
+        "price": 393.6,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.8,
+          "fxRate": 1.13862975,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:07.539Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054100,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "O_US_EQ",
+        "status": "FILLED",
+        "value": 3.44,
+        "filledValue": 3.44,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "O_US_EQ",
+          "name": "Realty Income",
+          "isin": "US7561091049",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888982,
+        "quantity": 0.05920116,
+        "price": 65.97,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.44,
+          "fxRate": 1.13862989,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:07.511Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054110,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "KO_US_EQ",
+        "status": "FILLED",
+        "value": 2.0,
+        "filledValue": 2.0,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "KO_US_EQ",
+          "name": "Coca-Cola",
+          "isin": "US1912161007",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888978,
+        "quantity": 0.02547203,
+        "price": 89.4,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.0,
+          "fxRate": 1.13859974,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054138,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "IBM_US_EQ",
+        "status": "FILLED",
+        "value": 3.23,
+        "filledValue": 3.23,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "IBM_US_EQ",
+          "name": "IBM",
+          "isin": "US4592001014",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888974,
+        "quantity": 0.01615014,
+        "price": 227.72,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.23,
+          "fxRate": 1.13860987,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054120,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "MAIN_US_EQ",
+        "status": "FILLED",
+        "value": 3.31,
+        "filledValue": 3.31,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "MAIN_US_EQ",
+          "name": "Main Street Capital",
+          "isin": "US56035L1044",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888970,
+        "quantity": 0.06803005,
+        "price": 55.4,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.31,
+          "fxRate": 1.13862983,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054131,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "LTC_US_EQ",
+        "status": "FILLED",
+        "value": 2.92,
+        "filledValue": 2.92,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "LTC_US_EQ",
+          "name": "LTC Properties",
+          "isin": "US5021751020",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888966,
+        "quantity": 0.07813727,
+        "price": 42.55,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.92,
+          "fxRate": 1.13860987,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054132,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "MCD_US_EQ",
+        "status": "FILLED",
+        "value": 3.99,
+        "filledValue": 3.99,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "MCD_US_EQ",
+          "name": "McDonald's",
+          "isin": "US5801351017",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888962,
+        "quantity": 0.01659936,
+        "price": 273.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.99,
+          "fxRate": 1.13859931,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:07.482Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054104,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "CB_US_EQ",
+        "status": "FILLED",
+        "value": 2.1,
+        "filledValue": 2.1,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "CB_US_EQ",
+          "name": "Chubb",
+          "isin": "CH0044328745",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888958,
+        "quantity": 0.00655084,
+        "price": 365.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.1,
+          "fxRate": 1.13859838,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054128,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "BLK_US_EQ",
+        "status": "FILLED",
+        "value": 3.04,
+        "filledValue": 3.04,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "BLK_US_EQ",
+          "name": "BlackRock",
+          "isin": "US09290D1019",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888953,
+        "quantity": 0.00316104,
+        "price": 1095.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.04,
+          "fxRate": 1.13859828,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054121,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "SHW_US_EQ",
+        "status": "FILLED",
+        "value": 1.49,
+        "filledValue": 1.49,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "SHW_US_EQ",
+          "name": "Sherwin-Williams",
+          "isin": "US8243481061",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888939,
+        "quantity": 0.00481964,
+        "price": 352.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.49,
+          "fxRate": 1.13859951,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054126,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "GWW_US_EQ",
+        "status": "FILLED",
+        "value": 4.14,
+        "filledValue": 4.14,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "GWW_US_EQ",
+          "name": "WW Grainger",
+          "isin": "US3848021040",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888934,
+        "quantity": 0.00336367,
+        "price": 1398.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 4.14,
+          "fxRate": 1.13859822,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:07.455Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054096,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "GD_US_EQ",
+        "status": "FILLED",
+        "value": 2.12,
+        "filledValue": 2.12,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "GD_US_EQ",
+          "name": "General Dynamics",
+          "isin": "US3695501086",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888930,
+        "quantity": 0.00603457,
+        "price": 400.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.12,
+          "fxRate": 1.13859811,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054135,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "JPM_US_EQ",
+        "status": "FILLED",
+        "value": 3.05,
+        "filledValue": 3.05,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "JPM_US_EQ",
+          "name": "JPMorgan Chase & Co",
+          "isin": "US46625H1005",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888925,
+        "quantity": 0.00975485,
+        "price": 356.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.05,
+          "fxRate": 1.13859888,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054108,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "SYY_US_EQ",
+        "status": "FILLED",
+        "value": 3.16,
+        "filledValue": 3.16,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "SYY_US_EQ",
+          "name": "Sysco",
+          "isin": "US8718291078",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888919,
+        "quantity": 0.01575374,
+        "price": 85.25,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.18,
+          "fxRate": 1.13814096,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054124,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "PNR_US_EQ",
+        "status": "FILLED",
+        "value": 4.17,
+        "filledValue": 4.17,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "PNR_US_EQ",
+          "name": "Pentair",
+          "isin": "IE00BLS09M33",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903888915,
+        "quantity": 0.0702131,
+        "price": 67.46,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 4.17,
+          "fxRate": 1.13859993,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:33:07.429Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054107,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "LOW_US_EQ",
+        "status": "FILLED",
+        "value": 2.7,
+        "filledValue": 2.7,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "LOW_US_EQ",
+          "name": "Lowe's",
+          "isin": "US5486611073",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884656,
+        "quantity": 0.01410257,
+        "price": 217.99,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.7,
+          "fxRate": 1.13859971,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054130,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "CSCO_US_EQ",
+        "status": "FILLED",
+        "value": 5.31,
+        "filledValue": 5.31,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "CSCO_US_EQ",
+          "name": "Cisco Systems",
+          "isin": "US17275R1023",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884652,
+        "quantity": 0.05150277,
+        "price": 117.17,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.31,
+          "fxRate": 1.13859991,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:32:57.580Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054118,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "TD_US_EQ",
+        "status": "FILLED",
+        "value": 5.15,
+        "filledValue": 5.15,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "TD_US_EQ",
+          "name": "Toronto-Dominion Bank",
+          "isin": "CA8911605092",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884648,
+        "quantity": 0.04860396,
+        "price": 120.41,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 5.15,
+          "fxRate": 1.13859977,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:32:57.555Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054133,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "ECL_US_EQ",
+        "status": "FILLED",
+        "value": 2.62,
+        "filledValue": 2.62,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "ECL_US_EQ",
+          "name": "Ecolab",
+          "isin": "US2788651006",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884643,
+        "quantity": 0.01044916,
+        "price": 285.49,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.62,
+          "fxRate": 1.13859949,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054112,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "ITW_US_EQ",
+        "status": "FILLED",
+        "value": 1.09,
+        "filledValue": 1.09,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "ITW_US_EQ",
+          "name": "Illinois Tool Works",
+          "isin": "US4523081093",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884639,
+        "quantity": 0.0041787,
+        "price": 297.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.09,
+          "fxRate": 1.1385999,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054119,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "MA_US_EQ",
+        "status": "FILLED",
+        "value": 2.7,
+        "filledValue": 2.7,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "MA_US_EQ",
+          "name": "Mastercard",
+          "isin": "US57636Q1040",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884632,
+        "quantity": 0.00548967,
+        "price": 560.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.7,
+          "fxRate": 1.13859822,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054139,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "CAH_US_EQ",
+        "status": "FILLED",
+        "value": 4.19,
+        "filledValue": 4.19,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "CAH_US_EQ",
+          "name": "Cardinal Health",
+          "isin": "US14149Y1082",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884628,
+        "quantity": 0.02033735,
+        "price": 234.02,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 4.19,
+          "fxRate": 1.13859967,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:32:57.526Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054114,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "AFL_US_EQ",
+        "status": "FILLED",
+        "value": 1.74,
+        "filledValue": 1.74,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "AFL_US_EQ",
+          "name": "Aflac",
+          "isin": "US0010551028",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903884620,
+        "quantity": 0.01526085,
+        "price": 129.82,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:02.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.74,
+          "fxRate": 1.13859973,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054099,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "AAPL_US_EQ",
+        "status": "FILLED",
+        "value": 1.72,
+        "filledValue": 1.72,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "AAPL_US_EQ",
+          "name": "Apple",
+          "isin": "US0378331005",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875572,
+        "quantity": 0.00576184,
+        "price": 339.89,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.72,
+          "fxRate": 1.13859988,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054122,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "GOOD_US_EQ",
+        "status": "FILLED",
+        "value": 3.68,
+        "filledValue": 3.68,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "GOOD_US_EQ",
+          "name": "Gladstone Commercial",
+          "isin": "US3765361080",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875568,
+        "quantity": 0.32168298,
+        "price": 12.99,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.68,
+          "fxRate": 1.13859997,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:32:13.022Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054095,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "CF_US_EQ",
+        "status": "FILLED",
+        "value": 2.73,
+        "filledValue": 2.73,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "CF_US_EQ",
+          "name": "CF Industries",
+          "isin": "US1252691001",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875564,
+        "quantity": 0.02466966,
+        "price": 126.0,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.73,
+          "fxRate": 1.13859969,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054109,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "CNQ_US_EQ",
+        "status": "FILLED",
+        "value": 3.21,
+        "filledValue": 3.21,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "CNQ_US_EQ",
+          "name": "Canadian Natural Resources",
+          "isin": "CA1363851017",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875560,
+        "quantity": 0.07948903,
+        "price": 45.98,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.21,
+          "fxRate": 1.13859987,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054127,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "TROW_US_EQ",
+        "status": "FILLED",
+        "value": 3.22,
+        "filledValue": 3.22,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "TROW_US_EQ",
+          "name": "T Rowe Price",
+          "isin": "US74144T1088",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875556,
+        "quantity": 0.03042565,
+        "price": 120.5,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 3.22,
+          "fxRate": 1.13859963,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054134,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "ADC_US_EQ",
+        "status": "FILLED",
+        "value": 4.1,
+        "filledValue": 4.1,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "ADC_US_EQ",
+          "name": "Agree Realty",
+          "isin": "US0084921008",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875552,
+        "quantity": 0.05696481,
+        "price": 81.75,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 4.1,
+          "fxRate": 1.1385998,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:32:12.996Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054129,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "ADP_US_EQ",
+        "status": "FILLED",
+        "value": 1.27,
+        "filledValue": 1.27,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "ADP_US_EQ",
+          "name": "Automatic Data Processing",
+          "isin": "US0530151036",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903875545,
+        "quantity": 0.00544108,
+        "price": 265.76,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:01.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.27,
+          "fxRate": 1.13859954,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054117,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "PEP_US_EQ",
+        "status": "FILLED",
+        "value": 2.38,
+        "filledValue": 2.38,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "PEP_US_EQ",
+          "name": "PepsiCo",
+          "isin": "US7134481081",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903867708,
+        "quantity": 0.01888409,
+        "price": 143.5,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:00.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.38,
+          "fxRate": 1.13859954,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864054113,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "WMT_US_EQ",
+        "status": "FILLED",
+        "value": 4.64,
+        "filledValue": 4.64,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T06:00:25.000Z",
+        "instrument": {
+          "ticker": "WMT_US_EQ",
+          "name": "Walmart",
+          "isin": "US9311421039",
+          "currency": "USD"
+        }
+      },
+      "fill": {
+        "id": 54903867704,
+        "quantity": 0.04645504,
+        "price": 113.48,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T13:30:00.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 4.64,
+          "fxRate": 1.13859998,
+          "taxes": [
+            {
+              "name": "CURRENCY_CONVERSION_FEE",
+              "quantity": -0.01,
+              "currency": "EUR",
+              "chargedAt": "2026-07-29T13:31:05.801Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864089034,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "COPAPp_EQ",
+        "status": "FILLED",
+        "value": 2.15,
+        "filledValue": 2.15,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T11:19:40.000Z",
+        "instrument": {
+          "ticker": "COPAPp_EQ",
+          "name": "WisdomTree Copper",
+          "isin": "GB00B15KXQ89",
+          "currency": "EUR"
+        }
+      },
+      "fill": {
+        "id": 54900991984,
+        "quantity": 0.04502146,
+        "price": 47.755,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T11:19:45.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 2.15,
+          "fxRate": 1,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864089035,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "WGLDd_EQ",
+        "status": "FILLED",
+        "value": 1.39,
+        "filledValue": 1.39,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T11:19:40.000Z",
+        "instrument": {
+          "ticker": "WGLDd_EQ",
+          "name": "WisdomTree Core Physical Gold",
+          "isin": "JE00BN2CJ301",
+          "currency": "EUR"
+        }
+      },
+      "fill": {
+        "id": 54900991971,
+        "quantity": 0.00395133,
+        "price": 351.78,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T11:19:42.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.39,
+          "fxRate": 1,
+          "taxes": []
+        }
+      }
+    },
+    {
+      "order": {
+        "id": 54864089036,
+        "strategy": "VALUE",
+        "type": "MARKET",
+        "ticker": "SXR8d_EQ",
+        "status": "FILLED",
+        "value": 1.95,
+        "filledValue": 1.95,
+        "currency": "EUR",
+        "extendedHours": false,
+        "initiatedFrom": "AUTOINVEST",
+        "side": "BUY",
+        "createdAt": "2026-07-29T11:19:40.000Z",
+        "instrument": {
+          "ticker": "SXR8d_EQ",
+          "name": "iShares Core S&P 500 (Acc)",
+          "isin": "IE00B5BMR087",
+          "currency": "EUR"
+        }
+      },
+      "fill": {
+        "id": 54900991967,
+        "quantity": 0.00276744,
+        "price": 704.62,
+        "type": "TRADE",
+        "tradingMethod": "OTC",
+        "filledAt": "2026-07-29T11:19:41.000Z",
+        "walletImpact": {
+          "currency": "EUR",
+          "netValue": 1.95,
+          "fxRate": 1,
+          "taxes": []
+        }
+      }
+    }
+  ],
+  "dividends": [
+    {
+      "ticker": "JPM_US_EQ",
+      "instrument": {
+        "ticker": "JPM_US_EQ",
+        "name": "JPMorgan Chase & Co",
+        "isin": "US46625H1005",
+        "currency": "USD"
+      },
+      "reference": "98fee60e-8b01-4920-87eb-ac651dba53e3",
+      "quantity": 0.13492421,
+      "amount": 0.15,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.5,
+      "amountInEuro": 0.15,
+      "paidOn": "2026-07-31T19:03:42.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "GOOD_US_EQ",
+      "instrument": {
+        "ticker": "GOOD_US_EQ",
+        "name": "Gladstone Commercial",
+        "isin": "US3765361080",
+        "currency": "USD"
+      },
+      "reference": "a3ee6495-88af-492a-a755-4f002aef09b5",
+      "quantity": 3.80520798,
+      "amount": 0.28,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.1,
+      "amountInEuro": 0.28,
+      "paidOn": "2026-07-31T18:34:24.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "TD_US_EQ",
+      "instrument": {
+        "ticker": "TD_US_EQ",
+        "name": "Toronto-Dominion Bank",
+        "isin": "CA8911605092",
+        "currency": "USD"
+      },
+      "reference": "45495b67-6881-452e-9f3f-e77a6d2f47b8",
+      "quantity": 0.36273051,
+      "amount": 0.21,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.7988017973,
+      "amountInEuro": 0.21,
+      "paidOn": "2026-07-31T18:01:27.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "LTC_US_EQ",
+      "instrument": {
+        "ticker": "LTC_US_EQ",
+        "name": "LTC Properties",
+        "isin": "US5021751020",
+        "currency": "USD"
+      },
+      "reference": "4753e330-1811-4b59-a8ed-a23401d5d89e",
+      "quantity": 1.20692533,
+      "amount": 0.17,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.19,
+      "amountInEuro": 0.17,
+      "paidOn": "2026-07-31T17:20:45.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "BNS_US_EQ",
+      "instrument": {
+        "ticker": "BNS_US_EQ",
+        "name": "Bank of Nova Scotia",
+        "isin": "CA0641491075",
+        "currency": "USD"
+      },
+      "reference": "ec05fd43-7c2f-40a8-bd10-3847b2e58dc9",
+      "quantity": 0.50642223,
+      "amount": 0.31,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.8089983323,
+      "amountInEuro": 0.31,
+      "paidOn": "2026-07-29T17:30:59.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "SYY_US_EQ",
+      "instrument": {
+        "ticker": "SYY_US_EQ",
+        "name": "Sysco",
+        "isin": "US8718291078",
+        "currency": "USD"
+      },
+      "reference": "766135e1-c548-44f3-9f8f-13592ee51db3",
+      "quantity": 0.52720266,
+      "amount": 0.22,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.55,
+      "amountInEuro": 0.22,
+      "paidOn": "2026-07-24T17:39:07.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "CSCO_US_EQ",
+      "instrument": {
+        "ticker": "CSCO_US_EQ",
+        "name": "Cisco Systems",
+        "isin": "US17275R1023",
+        "currency": "USD"
+      },
+      "reference": "83b53dc3-9c5d-4afc-99b4-96e61294d3a6",
+      "quantity": 0.3755665,
+      "amount": 0.12,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.42,
+      "amountInEuro": 0.12,
+      "paidOn": "2026-07-22T18:26:05.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "ROP_US_EQ",
+      "instrument": {
+        "ticker": "ROP_US_EQ",
+        "name": "Roper Technologies",
+        "isin": "US7766961061",
+        "currency": "USD"
+      },
+      "reference": "1246014d-3058-46af-b721-5a678ab8749e",
+      "quantity": 0.12987985,
+      "amount": 0.09,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.91,
+      "amountInEuro": 0.09,
+      "paidOn": "2026-07-22T17:40:10.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "RGLD_US_EQ",
+      "instrument": {
+        "ticker": "RGLD_US_EQ",
+        "name": "Royal Gold",
+        "isin": "US7802871084",
+        "currency": "USD"
+      },
+      "reference": "f275923e-a353-40bf-ade3-a746f35d4b6f",
+      "quantity": 0.22136167,
+      "amount": 0.08,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.475,
+      "amountInEuro": 0.08,
+      "paidOn": "2026-07-16T13:25:05.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "O_US_EQ",
+      "instrument": {
+        "ticker": "O_US_EQ",
+        "name": "Realty Income",
+        "isin": "US7561091049",
+        "currency": "USD"
+      },
+      "reference": "23a6166e-a2d8-4d3e-a88e-6f5b80e63f90",
+      "quantity": 0.65546413,
+      "amount": 0.13,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.271,
+      "amountInEuro": 0.13,
+      "paidOn": "2026-07-15T19:11:24.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "ADC_US_EQ",
+      "instrument": {
+        "ticker": "ADC_US_EQ",
+        "name": "Agree Realty",
+        "isin": "US0084921008",
+        "currency": "USD"
+      },
+      "reference": "46fd55b9-3565-4055-9c37-b0777112e516",
+      "quantity": 0.54105888,
+      "amount": 0.11,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.267,
+      "amountInEuro": 0.11,
+      "paidOn": "2026-07-15T18:48:10.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "ECL_US_EQ",
+      "instrument": {
+        "ticker": "ECL_US_EQ",
+        "name": "Ecolab",
+        "isin": "US2788651006",
+        "currency": "USD"
+      },
+      "reference": "48132ab3-e48d-4be1-a70a-aee7bb7629cb",
+      "quantity": 0.14050418,
+      "amount": 0.08,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.73,
+      "amountInEuro": 0.08,
+      "paidOn": "2026-07-15T18:21:35.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "MAIN_US_EQ",
+      "instrument": {
+        "ticker": "MAIN_US_EQ",
+        "name": "Main Street Capital",
+        "isin": "US56035L1044",
+        "currency": "USD"
+      },
+      "reference": "e9e26cb4-a54a-4195-b32b-afce9b7a2e48",
+      "quantity": 0.84844039,
+      "amount": 0.17,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.265,
+      "amountInEuro": 0.17,
+      "paidOn": "2026-07-15T18:01:55.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "CAH_US_EQ",
+      "instrument": {
+        "ticker": "CAH_US_EQ",
+        "name": "Cardinal Health",
+        "isin": "US14149Y1082",
+        "currency": "USD"
+      },
+      "reference": "56a959dc-3d47-459e-bdd8-2a8ca891854d",
+      "quantity": 0.18406287,
+      "amount": 0.07,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.5158,
+      "amountInEuro": 0.07,
+      "paidOn": "2026-07-15T17:41:12.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "ITW_US_EQ",
+      "instrument": {
+        "ticker": "ITW_US_EQ",
+        "name": "Illinois Tool Works",
+        "isin": "US4523081093",
+        "currency": "USD"
+      },
+      "reference": "c380d3d8-f503-46f7-95ec-d1fb51332c92",
+      "quantity": 0.15270962,
+      "amount": 0.18,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.61,
+      "amountInEuro": 0.18,
+      "paidOn": "2026-07-10T18:37:29.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "AGNC_US_EQ",
+      "instrument": {
+        "ticker": "AGNC_US_EQ",
+        "name": "AGNC Investment",
+        "isin": "US00123Q1040",
+        "currency": "USD"
+      },
+      "reference": "85404147-d823-4f75-b9d0-d37da6b6f5e0",
+      "quantity": 3.85004336,
+      "amount": 0.34,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.12,
+      "amountInEuro": 0.34,
+      "paidOn": "2026-07-10T18:18:09.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "SLB_US_EQ",
+      "instrument": {
+        "ticker": "SLB_US_EQ",
+        "name": "SLB",
+        "isin": "AN8068571086",
+        "currency": "USD"
+      },
+      "reference": "dd17bb84-e270-45db-9352-5d89e0071cd9",
+      "quantity": 0.56938279,
+      "amount": 0.15,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.295,
+      "amountInEuro": 0.15,
+      "paidOn": "2026-07-09T17:25:45.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "CNQ_US_EQ",
+      "instrument": {
+        "ticker": "CNQ_US_EQ",
+        "name": "Canadian Natural Resources",
+        "isin": "CA1363851017",
+        "currency": "USD"
+      },
+      "reference": "0ffffef5-731b-4f7e-a552-7863cd6333f2",
+      "quantity": 0.94205941,
+      "amount": 0.31,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.4395558025,
+      "amountInEuro": 0.31,
+      "paidOn": "2026-07-07T15:10:32.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "KMB_US_EQ",
+      "instrument": {
+        "ticker": "KMB_US_EQ",
+        "name": "Kimberly-Clark",
+        "isin": "US4943681035",
+        "currency": "USD"
+      },
+      "reference": "90c44354-ee8d-4fab-8d8d-59d9815ee00f",
+      "quantity": 0.36707131,
+      "amount": 0.35,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.28,
+      "amountInEuro": 0.35,
+      "paidOn": "2026-07-02T16:32:23.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "CB_US_EQ",
+      "instrument": {
+        "ticker": "CB_US_EQ",
+        "name": "Chubb",
+        "isin": "CH0044328745",
+        "currency": "USD"
+      },
+      "reference": "4f4affb4-3afd-4a1c-a365-d647ef207058",
+      "quantity": 0.11496295,
+      "amount": 0.1,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.02,
+      "amountInEuro": 0.1,
+      "paidOn": "2026-07-02T16:20:52.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "ADP_US_EQ",
+      "instrument": {
+        "ticker": "ADP_US_EQ",
+        "name": "Automatic Data Processing",
+        "isin": "US0530151036",
+        "currency": "USD"
+      },
+      "reference": "206ce8da-755f-4812-a935-5f35bfa6d351",
+      "quantity": 0.15631707,
+      "amount": 0.2,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.7,
+      "amountInEuro": 0.2,
+      "paidOn": "2026-07-01T18:16:09.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "KO_US_EQ",
+      "instrument": {
+        "ticker": "KO_US_EQ",
+        "name": "Coca-Cola",
+        "isin": "US1912161007",
+        "currency": "USD"
+      },
+      "reference": "68fce17a-fbc9-4a64-9724-48a079ce8cde",
+      "quantity": 0.45768648,
+      "amount": 0.18,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.53,
+      "amountInEuro": 0.18,
+      "paidOn": "2026-07-01T17:51:55.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "LTC_US_EQ",
+      "instrument": {
+        "ticker": "LTC_US_EQ",
+        "name": "LTC Properties",
+        "isin": "US5021751020",
+        "currency": "USD"
+      },
+      "reference": "6fc36b06-0049-4a17-ae64-7f820cff2340",
+      "quantity": 1.1023652,
+      "amount": 0.16,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.19,
+      "amountInEuro": 0.16,
+      "paidOn": "2026-06-30T21:25:23.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "PEP_US_EQ",
+      "instrument": {
+        "ticker": "PEP_US_EQ",
+        "name": "PepsiCo",
+        "isin": "US7134481081",
+        "currency": "USD"
+      },
+      "reference": "e0916eb2-6500-4aa3-8544-d3b1dc722cc0",
+      "quantity": 0.2528593,
+      "amount": 0.28,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.48,
+      "amountInEuro": 0.28,
+      "paidOn": "2026-06-30T19:51:04.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "GOOD_US_EQ",
+      "instrument": {
+        "ticker": "GOOD_US_EQ",
+        "name": "Gladstone Commercial",
+        "isin": "US3765361080",
+        "currency": "USD"
+      },
+      "reference": "66e031e9-40d7-40ac-ba44-ebb51b5267fc",
+      "quantity": 3.26977793,
+      "amount": 0.24,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.1,
+      "amountInEuro": 0.24,
+      "paidOn": "2026-06-30T18:56:41.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "TROW_US_EQ",
+      "instrument": {
+        "ticker": "TROW_US_EQ",
+        "name": "T Rowe Price",
+        "isin": "US74144T1088",
+        "currency": "USD"
+      },
+      "reference": "ce820a18-328c-461d-8900-5997fb615844",
+      "quantity": 0.34490466,
+      "amount": 0.33,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.3,
+      "amountInEuro": 0.33,
+      "paidOn": "2026-06-29T18:23:10.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "MAIN_US_EQ",
+      "instrument": {
+        "ticker": "MAIN_US_EQ",
+        "name": "Main Street Capital",
+        "isin": "US56035L1044",
+        "currency": "USD"
+      },
+      "reference": "4d64cb94-9c2b-49a5-959f-6094a3ad5509",
+      "quantity": 0.79292109,
+      "amount": 0.18,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.3,
+      "amountInEuro": 0.18,
+      "paidOn": "2026-06-29T18:02:28.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "BLK_US_EQ",
+      "instrument": {
+        "ticker": "BLK_US_EQ",
+        "name": "BlackRock",
+        "isin": "US09290D1019",
+        "currency": "USD"
+      },
+      "reference": "f246766e-3525-48da-971b-5abc0ab727c0",
+      "quantity": 0.03528355,
+      "amount": 0.15,
+      "currency": "EUR",
+      "grossAmountPerShare": 5.73,
+      "amountInEuro": 0.15,
+      "paidOn": "2026-06-23T14:34:02.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "MCD_US_EQ",
+      "instrument": {
+        "ticker": "MCD_US_EQ",
+        "name": "McDonald's",
+        "isin": "US5801351017",
+        "currency": "USD"
+      },
+      "reference": "7141bd63-ce58-41f0-9536-5ebe69ca0e87",
+      "quantity": 0.11499714,
+      "amount": 0.16,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.86,
+      "amountInEuro": 0.16,
+      "paidOn": "2026-06-16T17:29:32.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "DUK_US_EQ",
+      "instrument": {
+        "ticker": "DUK_US_EQ",
+        "name": "Duke Energy",
+        "isin": "US26441C2044",
+        "currency": "USD"
+      },
+      "reference": "d1fad2a8-eb1f-4ff1-b425-d80bdd480d5f",
+      "quantity": 0.22956234,
+      "amount": 0.18,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.065,
+      "amountInEuro": 0.18,
+      "paidOn": "2026-06-16T16:59:03.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "MAIN_US_EQ",
+      "instrument": {
+        "ticker": "MAIN_US_EQ",
+        "name": "Main Street Capital",
+        "isin": "US56035L1044",
+        "currency": "USD"
+      },
+      "reference": "e89ab279-10f4-4ab8-b98f-8f06d896a1eb",
+      "quantity": 0.69729568,
+      "amount": 0.13,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.26,
+      "amountInEuro": 0.13,
+      "paidOn": "2026-06-15T20:13:34.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "O_US_EQ",
+      "instrument": {
+        "ticker": "O_US_EQ",
+        "name": "Realty Income",
+        "isin": "US7561091049",
+        "currency": "USD"
+      },
+      "reference": "dc5cfe5c-4638-4f54-8adb-64845e68fc36",
+      "quantity": 0.51991471,
+      "amount": 0.1,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.2705,
+      "amountInEuro": 0.1,
+      "paidOn": "2026-06-15T19:42:38.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "ADC_US_EQ",
+      "instrument": {
+        "ticker": "ADC_US_EQ",
+        "name": "Agree Realty",
+        "isin": "US0084921008",
+        "currency": "USD"
+      },
+      "reference": "131c0b9b-bb5d-4fca-88d9-d559c02152e7",
+      "quantity": 0.42687165,
+      "amount": 0.08,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.267,
+      "amountInEuro": 0.08,
+      "paidOn": "2026-06-12T15:39:39.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "PPG_US_EQ",
+      "instrument": {
+        "ticker": "PPG_US_EQ",
+        "name": "PPG Industries",
+        "isin": "US6935061076",
+        "currency": "USD"
+      },
+      "reference": "d337333a-0b05-4989-b664-8a5c383a713e",
+      "quantity": 0.24906887,
+      "amount": 0.13,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.71,
+      "amountInEuro": 0.13,
+      "paidOn": "2026-06-12T15:19:49.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "MSFT_US_EQ",
+      "instrument": {
+        "ticker": "MSFT_US_EQ",
+        "name": "Microsoft",
+        "isin": "US5949181045",
+        "currency": "USD"
+      },
+      "reference": "0939faaa-8016-4bbe-b279-f73ec27afdbf",
+      "quantity": 0.07738517,
+      "amount": 0.05,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.91,
+      "amountInEuro": 0.05,
+      "paidOn": "2026-06-11T19:16:16.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "EMR_US_EQ",
+      "instrument": {
+        "ticker": "EMR_US_EQ",
+        "name": "Emerson Electric",
+        "isin": "US2910111044",
+        "currency": "USD"
+      },
+      "reference": "83e2ca53-f22f-4bf4-9e25-5935604a47f7",
+      "quantity": 0.20825374,
+      "amount": 0.09,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.555,
+      "amountInEuro": 0.09,
+      "paidOn": "2026-06-10T20:00:38.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "IBM_US_EQ",
+      "instrument": {
+        "ticker": "IBM_US_EQ",
+        "name": "IBM",
+        "isin": "US4592001014",
+        "currency": "USD"
+      },
+      "reference": "16eccedb-d7c3-43c2-890b-13ca6986e0d8",
+      "quantity": 0.11513041,
+      "amount": 0.14,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.69,
+      "amountInEuro": 0.14,
+      "paidOn": "2026-06-10T19:43:26.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "CVX_US_EQ",
+      "instrument": {
+        "ticker": "CVX_US_EQ",
+        "name": "Chevron",
+        "isin": "US1667641005",
+        "currency": "USD"
+      },
+      "reference": "b3c7b74d-6bea-4dce-b70c-a3f7f710bb36",
+      "quantity": 0.15452411,
+      "amount": 0.2,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.78,
+      "amountInEuro": 0.2,
+      "paidOn": "2026-06-10T19:02:05.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "JNJ_US_EQ",
+      "instrument": {
+        "ticker": "JNJ_US_EQ",
+        "name": "Johnson & Johnson",
+        "isin": "US4781601046",
+        "currency": "USD"
+      },
+      "reference": "ef43e04c-b882-42b2-a724-4de5a608a4d9",
+      "quantity": 0.14048755,
+      "amount": 0.14,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.34,
+      "amountInEuro": 0.14,
+      "paidOn": "2026-06-09T18:24:16.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "AGNC_US_EQ",
+      "instrument": {
+        "ticker": "AGNC_US_EQ",
+        "name": "AGNC Investment",
+        "isin": "US00123Q1040",
+        "currency": "USD"
+      },
+      "reference": "a2595ece-501c-4955-90a0-f145e1c01526",
+      "quantity": 3.18330233,
+      "amount": 0.28,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.12,
+      "amountInEuro": 0.28,
+      "paidOn": "2026-06-09T17:56:31.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "SHW_US_EQ",
+      "instrument": {
+        "ticker": "SHW_US_EQ",
+        "name": "Sherwin-Williams",
+        "isin": "US8243481061",
+        "currency": "USD"
+      },
+      "reference": "ffa39f42-01c4-4ab0-82c4-4ebba4ef0173",
+      "quantity": 0.10798529,
+      "amount": 0.06,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.8,
+      "amountInEuro": 0.06,
+      "paidOn": "2026-06-05T14:57:27.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "GWW_US_EQ",
+      "instrument": {
+        "ticker": "GWW_US_EQ",
+        "name": "WW Grainger",
+        "isin": "US3848021040",
+        "currency": "USD"
+      },
+      "reference": "fb15e988-59e6-4f16-be0c-695bc9cdaa6b",
+      "quantity": 0.02308221,
+      "amount": 0.04,
+      "currency": "EUR",
+      "grossAmountPerShare": 2.49,
+      "amountInEuro": 0.04,
+      "paidOn": "2026-06-01T19:15:25.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "AFL_US_EQ",
+      "instrument": {
+        "ticker": "AFL_US_EQ",
+        "name": "Aflac",
+        "isin": "US0010551028",
+        "currency": "USD"
+      },
+      "reference": "010d8d6b-85fd-4ed2-9ee8-6ba73ba77164",
+      "quantity": 0.24600017,
+      "amount": 0.11,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.61,
+      "amountInEuro": 0.11,
+      "paidOn": "2026-06-01T18:34:32.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "LTC_US_EQ",
+      "instrument": {
+        "ticker": "LTC_US_EQ",
+        "name": "LTC Properties",
+        "isin": "US5021751020",
+        "currency": "USD"
+      },
+      "reference": "82bdcf23-1951-4af7-9d07-87eb8495806c",
+      "quantity": 0.83626063,
+      "amount": 0.12,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.19,
+      "amountInEuro": 0.12,
+      "paidOn": "2026-05-29T18:02:24.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "GOOD_US_EQ",
+      "instrument": {
+        "ticker": "GOOD_US_EQ",
+        "name": "Gladstone Commercial",
+        "isin": "US3765361080",
+        "currency": "USD"
+      },
+      "reference": "59dc633d-58dd-43a5-b5e4-97b763a12389",
+      "quantity": 2.29708596,
+      "amount": 0.17,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.1,
+      "amountInEuro": 0.17,
+      "paidOn": "2026-05-29T16:45:14.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "CF_US_EQ",
+      "instrument": {
+        "ticker": "CF_US_EQ",
+        "name": "CF Industries",
+        "isin": "US1252691001",
+        "currency": "USD"
+      },
+      "reference": "d879515b-a261-4989-a6bd-393aadfb608b",
+      "quantity": 0.22043066,
+      "amount": 0.08,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.5,
+      "amountInEuro": 0.08,
+      "paidOn": "2026-05-29T16:05:46.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "WMT_US_EQ",
+      "instrument": {
+        "ticker": "WMT_US_EQ",
+        "name": "Walmart",
+        "isin": "US9311421039",
+        "currency": "USD"
+      },
+      "reference": "83105f53-4065-4884-b90d-c93bcc103daa",
+      "quantity": 0.20155904,
+      "amount": 0.04,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.2475,
+      "amountInEuro": 0.04,
+      "paidOn": "2026-05-26T17:56:38.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "BMO_US_EQ",
+      "instrument": {
+        "ticker": "BMO_US_EQ",
+        "name": "Bank of Montreal",
+        "isin": "CA0636711016",
+        "currency": "USD"
+      },
+      "reference": "f1ed0268-aa38-4450-8345-5502c2843691",
+      "quantity": 0.14150824,
+      "amount": 0.13,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.2088484813,
+      "amountInEuro": 0.13,
+      "paidOn": "2026-05-26T17:24:05.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "C_US_EQ",
+      "instrument": {
+        "ticker": "C_US_EQ",
+        "name": "Citigroup",
+        "isin": "US1729674242",
+        "currency": "USD"
+      },
+      "reference": "afe619b8-8098-492f-acc7-ba172be88c1d",
+      "quantity": 0.18524908,
+      "amount": 0.08,
+      "currency": "EUR",
+      "grossAmountPerShare": 0.6,
+      "amountInEuro": 0.08,
+      "paidOn": "2026-05-22T17:41:55.000+03:00",
+      "type": "DIVIDEND"
+    },
+    {
+      "ticker": "RY_US_EQ",
+      "instrument": {
+        "ticker": "RY_US_EQ",
+        "name": "Royal Bank of Canada",
+        "isin": "CA7800871021",
+        "currency": "USD"
+      },
+      "reference": "48f5a026-0ef3-4acf-97ea-b37c7f4a7774",
+      "quantity": 0.12009015,
+      "amount": 0.1,
+      "currency": "EUR",
+      "grossAmountPerShare": 1.188905482,
+      "amountInEuro": 0.1,
+      "paidOn": "2026-05-22T17:20:31.000+03:00",
+      "type": "DIVIDEND"
+    }
+  ],
+  "fetched_at": "2026-07-31T19:10:58Z",
+  "summary": {
+    "total": 7742.49,
+    "free": 2622.96,
+    "invested": 4943.05,
+    "ppl": -190.46,
+    "positions": 60,
+    "transactions": 50,
+    "orders": 50,
+    "dividends": 50
+  }
+}

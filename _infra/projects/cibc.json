@@ -1,0 +1,21 @@
+{
+  "id": "cibc",
+  "name": "CIBC Credit Recovery",
+  "status": "active",
+  "priority": "critical",
+  "progress": 20,
+  "description": "Втрачений телефон → немає 2FA → пропущений платіж → скоринг -200",
+  "deadlines": {},
+  "next_steps": [
+    "Подзвонити в CIBC: +1-902-420-2422 (24/7)",
+    "Попросити goodwill removal пропущеного платежу",
+    "Замовити кредитний звіт: Equifax + TransUnion Canada"
+  ],
+  "blocked_by": [
+    "Немає телефону для 2FA/SMS"
+  ],
+  "contact": "CIBC: +1-902-420-2422 (24/7)",
+  "last_activity": "Первинний аналіз ситуації, визначено контакти",
+  "tier": "life",
+  "last_updated": "2026-07-29T17:19:53.298044"
+}

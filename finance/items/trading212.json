@@ -1,0 +1,28 @@
+{
+  "_schema": "2.0",
+  "id": "trading212",
+  "type": "portfolio",
+  "title": "Trading 212 — інвестиційний портфель",
+  "status": "active",
+  "priority": "high",
+  "progress_pct": 30,
+  "description": "Інвестиційний портфель на Trading 212. API підключено, базова синхронізація працює.",
+  "amount": {
+    "value": 7742.49,
+    "currency": "EUR"
+  },
+  "portfolio": {
+    "total": 7742.49,
+    "free": 2622.96,
+    "invested": 4943.05,
+    "ppl": -190.46,
+    "positions": 60,
+    "last_sync": "2026-07-31T21:05:00"
+  },
+  "next_step": "Запустити trading-research агента для першого сканування ринку",
+  "last_activity": "31.07.2026 — API підключено, повний снепшот збережено. Агенти створено. Очікування результатів дослідження trading bots.",
+  "sub_items": [
+    "trading212/snapshot.json"
+  ],
+  "last_updated": "2026-07-31T21:15:00"
+}

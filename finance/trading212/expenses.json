@@ -1,0 +1,452 @@
+[
+  {
+    "id": "019fb888-0485-7cda-a0c7-416068123d0b",
+    "date": "2026-07-31T14:15:49.627Z",
+    "type": "DEPOSIT",
+    "amount": 1500.0,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019fb888-0485-7cda-a0c7-416068123d0b"
+  },
+  {
+    "id": "019fb5c0-57ac-7f7a-9aa7-0898b224ee94",
+    "date": "2026-07-31T01:18:29.283Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.14,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019fb5c0-57ac-7f7a-9aa7-0898b224ee94"
+  },
+  {
+    "id": "019fb5a2-96aa-72a1-a55f-1d25752cf26d",
+    "date": "2026-07-31T00:45:59.333Z",
+    "type": "WITHDRAW",
+    "amount": -9.2,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fb5a2-96aa-72a1-a55f-1d25752cf26d"
+  },
+  {
+    "id": "019fb5a2-93ff-76b1-9498-3b62f3aeac83",
+    "date": "2026-07-31T00:45:58.651Z",
+    "type": "WITHDRAW",
+    "amount": -1.86,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fb5a2-93ff-76b1-9498-3b62f3aeac83"
+  },
+  {
+    "id": "019fb275-6e2c-7df1-8f3a-54509904b40c",
+    "date": "2026-07-30T09:57:48.200Z",
+    "type": "WITHDRAW",
+    "amount": -6.3,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fb275-6e2c-7df1-8f3a-54509904b40c"
+  },
+  {
+    "id": "019fb0ff-ddf1-79bb-b2a1-3e5cd4dc734e",
+    "date": "2026-07-30T03:09:46.350Z",
+    "type": "WITHDRAW",
+    "amount": -4.29,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fb0ff-ddf1-79bb-b2a1-3e5cd4dc734e"
+  },
+  {
+    "id": "019fb09a-46fc-7757-a550-4a4fa713fa3b",
+    "date": "2026-07-30T01:18:48.559Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.15,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019fb09a-46fc-7757-a550-4a4fa713fa3b"
+  },
+  {
+    "id": "019fae28-7367-74bd-be6f-a682b0a2695b",
+    "date": "2026-07-29T13:55:14.403Z",
+    "type": "WITHDRAW",
+    "amount": -9.32,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fae28-7367-74bd-be6f-a682b0a2695b"
+  },
+  {
+    "id": "019fabce-030d-767b-bc03-311407f60685",
+    "date": "2026-07-29T02:57:12.969Z",
+    "type": "WITHDRAW",
+    "amount": -21.76,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fabce-030d-767b-bc03-311407f60685"
+  },
+  {
+    "id": "019fab72-f65e-735f-b119-b26d239d8ac7",
+    "date": "2026-07-29T01:17:45.941Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.16,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019fab72-f65e-735f-b119-b26d239d8ac7"
+  },
+  {
+    "id": "019fa8fd-9e1c-795b-9272-96cacc8f1a21",
+    "date": "2026-07-28T13:50:21.208Z",
+    "type": "WITHDRAW",
+    "amount": -9.33,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fa8fd-9e1c-795b-9272-96cacc8f1a21"
+  },
+  {
+    "id": "019fa64e-ef89-78c3-8633-4bcdcc330e49",
+    "date": "2026-07-28T01:20:18.811Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.16,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019fa64e-ef89-78c3-8633-4bcdcc330e49"
+  },
+  {
+    "id": "019fa630-d64c-7879-b719-648cefd27672",
+    "date": "2026-07-28T00:47:26.280Z",
+    "type": "WITHDRAW",
+    "amount": -11.31,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019fa630-d64c-7879-b719-648cefd27672"
+  },
+  {
+    "id": "019fa12b-8883-733a-bf16-71010cbc2c93",
+    "date": "2026-07-27T01:23:32.596Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.17,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019fa12b-8883-733a-bf16-71010cbc2c93"
+  },
+  {
+    "id": "019f9c67-df46-729e-a74e-7332af6e63e3",
+    "date": "2026-07-26T03:11:20.898Z",
+    "type": "WITHDRAW",
+    "amount": -1.24,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f9c67-df46-729e-a74e-7332af6e63e3"
+  },
+  {
+    "id": "019f9c08-3a0c-7c3f-afad-333c051457bb",
+    "date": "2026-07-26T01:26:52.672Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.17,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f9c08-3a0c-7c3f-afad-333c051457bb"
+  },
+  {
+    "id": "019f99b2-0308-7b0c-a6a9-ecd04a47a48d",
+    "date": "2026-07-25T14:33:28.068Z",
+    "type": "WITHDRAW",
+    "amount": -9.33,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f99b2-0308-7b0c-a6a9-ecd04a47a48d"
+  },
+  {
+    "id": "019f99b0-1a55-71be-b233-a7b88fe020a0",
+    "date": "2026-07-25T14:31:22.961Z",
+    "type": "WITHDRAW",
+    "amount": -40.87,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f99b0-1a55-71be-b233-a7b88fe020a0"
+  },
+  {
+    "id": "019f98e4-33bf-764b-8a09-70ddb9aa2dbc",
+    "date": "2026-07-25T10:48:40.121Z",
+    "type": "WITHDRAW",
+    "amount": -3.99,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f98e4-33bf-764b-8a09-70ddb9aa2dbc"
+  },
+  {
+    "id": "019f96e7-0489-7027-b907-c4e1cacb5f9b",
+    "date": "2026-07-25T01:32:30.204Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.17,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f96e7-0489-7027-b907-c4e1cacb5f9b"
+  },
+  {
+    "id": "019f9215-aafd-7428-bf86-928a5c77fecd",
+    "date": "2026-07-24T03:05:21.402Z",
+    "type": "WITHDRAW",
+    "amount": -4.08,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f9215-aafd-7428-bf86-928a5c77fecd"
+  },
+  {
+    "id": "019f91bf-62bf-7178-b873-426c013b0d9f",
+    "date": "2026-07-24T01:31:06.804Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.17,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f91bf-62bf-7178-b873-426c013b0d9f"
+  },
+  {
+    "id": "019f8c9b-fdde-722f-b41f-3cee471bfc92",
+    "date": "2026-07-23T01:34:21.140Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.17,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f8c9b-fdde-722f-b41f-3cee471bfc92"
+  },
+  {
+    "id": "019f8c73-a564-7e68-8392-13d27acadaff",
+    "date": "2026-07-23T00:50:17.056Z",
+    "type": "WITHDRAW",
+    "amount": -11.27,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f8c73-a564-7e68-8392-13d27acadaff"
+  },
+  {
+    "id": "019f8c73-a338-73e9-90cf-c53d6b0f129a",
+    "date": "2026-07-23T00:50:16.500Z",
+    "type": "WITHDRAW",
+    "amount": -11.27,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f8c73-a338-73e9-90cf-c53d6b0f129a"
+  },
+  {
+    "id": "019f8c73-a0f6-7c6f-a3e2-b8dadea7d8c8",
+    "date": "2026-07-23T00:50:15.922Z",
+    "type": "WITHDRAW",
+    "amount": -11.27,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f8c73-a0f6-7c6f-a3e2-b8dadea7d8c8"
+  },
+  {
+    "id": "019f8c6f-108b-79e7-bae9-c7f396ca3958",
+    "date": "2026-07-23T00:45:16.807Z",
+    "type": "WITHDRAW",
+    "amount": -3.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f8c6f-108b-79e7-bae9-c7f396ca3958"
+  },
+  {
+    "id": "019f8a1d-f894-75f4-8de2-42feeac0ef37",
+    "date": "2026-07-22T13:57:27.825Z",
+    "type": "WITHDRAW",
+    "amount": -9.3,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f8a1d-f894-75f4-8de2-42feeac0ef37"
+  },
+  {
+    "id": "019f87ca-985f-7228-8533-3e86203f9ec2",
+    "date": "2026-07-22T03:07:09.276Z",
+    "type": "WITHDRAW",
+    "amount": -3.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f87ca-985f-7228-8533-3e86203f9ec2"
+  },
+  {
+    "id": "019f87c9-8e26-75f7-bf4b-e32bfc5a6f48",
+    "date": "2026-07-22T03:06:01.121Z",
+    "type": "WITHDRAW",
+    "amount": -1.24,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f87c9-8e26-75f7-bf4b-e32bfc5a6f48"
+  },
+  {
+    "id": "019f876c-b782-7f52-b4ec-ce0204b687ff",
+    "date": "2026-07-22T01:24:36.857Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.18,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f876c-b782-7f52-b4ec-ce0204b687ff"
+  },
+  {
+    "id": "019f823d-066a-7c56-a794-63611966f4e0",
+    "date": "2026-07-21T01:14:25.249Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.18,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f823d-066a-7c56-a794-63611966f4e0"
+  },
+  {
+    "id": "019f8227-9f4e-7730-b13e-a58defe8fe86",
+    "date": "2026-07-21T00:51:02.602Z",
+    "type": "WITHDRAW",
+    "amount": -9.28,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f8227-9f4e-7730-b13e-a58defe8fe86"
+  },
+  {
+    "id": "019f7fd8-4642-75ec-8124-0d5ad452f43b",
+    "date": "2026-07-20T14:05:08.031Z",
+    "type": "WITHDRAW",
+    "amount": -5.57,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7fd8-4642-75ec-8124-0d5ad452f43b"
+  },
+  {
+    "id": "019f7ef6-6b4a-784a-8cf7-0a303141aa77",
+    "date": "2026-07-20T09:58:26.375Z",
+    "type": "WITHDRAW",
+    "amount": -1.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7ef6-6b4a-784a-8cf7-0a303141aa77"
+  },
+  {
+    "id": "019f7d7d-3d9d-7f99-82ab-441217e7757a",
+    "date": "2026-07-20T03:06:27.609Z",
+    "type": "WITHDRAW",
+    "amount": -1.54,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7d7d-3d9d-7f99-82ab-441217e7757a"
+  },
+  {
+    "id": "019f7d7a-b1ad-7a49-8bfa-4075588b421c",
+    "date": "2026-07-20T03:03:40.714Z",
+    "type": "WITHDRAW",
+    "amount": -1.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7d7a-b1ad-7a49-8bfa-4075588b421c"
+  },
+  {
+    "id": "019f7d7a-af8d-7bb8-9cc3-11badd222032",
+    "date": "2026-07-20T03:03:40.170Z",
+    "type": "WITHDRAW",
+    "amount": -1.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7d7a-af8d-7bb8-9cc3-11badd222032"
+  },
+  {
+    "id": "019f7d17-3dfd-70a0-a97e-4c6f9448e4fb",
+    "date": "2026-07-20T01:15:03.028Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.18,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f7d17-3dfd-70a0-a97e-4c6f9448e4fb"
+  },
+  {
+    "id": "019f7cfc-db1b-71c0-ab63-c6c4c13a7c9e",
+    "date": "2026-07-20T00:46:13.784Z",
+    "type": "WITHDRAW",
+    "amount": -11.24,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7cfc-db1b-71c0-ab63-c6c4c13a7c9e"
+  },
+  {
+    "id": "019f79bb-9440-7107-b095-6ac1b0cf5ba3",
+    "date": "2026-07-19T09:36:04.157Z",
+    "type": "WITHDRAW",
+    "amount": -11.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f79bb-9440-7107-b095-6ac1b0cf5ba3"
+  },
+  {
+    "id": "019f79b8-9e03-77a2-8377-61b37c1486e0",
+    "date": "2026-07-19T09:32:50.047Z",
+    "type": "WITHDRAW",
+    "amount": -12.37,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f79b8-9e03-77a2-8377-61b37c1486e0"
+  },
+  {
+    "id": "019f79b8-51ac-7178-bda6-43eec3ec2847",
+    "date": "2026-07-19T09:32:30.504Z",
+    "type": "WITHDRAW",
+    "amount": -0.2,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f79b8-51ac-7178-bda6-43eec3ec2847"
+  },
+  {
+    "id": "019f7855-6469-7560-abce-cb2dcf029511",
+    "date": "2026-07-19T03:04:50.022Z",
+    "type": "WITHDRAW",
+    "amount": -49.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7855-6469-7560-abce-cb2dcf029511"
+  },
+  {
+    "id": "019f7853-1683-7bdf-89ee-102d37b072f7",
+    "date": "2026-07-19T03:02:19.008Z",
+    "type": "WITHDRAW",
+    "amount": -1.06,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7853-1683-7bdf-89ee-102d37b072f7"
+  },
+  {
+    "id": "019f77f1-f69e-7841-a7af-2ea25efb9df4",
+    "date": "2026-07-19T01:16:13.845Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.18,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f77f1-f69e-7841-a7af-2ea25efb9df4"
+  },
+  {
+    "id": "019f77d5-6430-7ebb-866b-ef4dcfd6d472",
+    "date": "2026-07-19T00:45:01.357Z",
+    "type": "WITHDRAW",
+    "amount": -11.24,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f77d5-6430-7ebb-866b-ef4dcfd6d472"
+  },
+  {
+    "id": "019f7579-5015-71fb-ab21-96c8e215db44",
+    "date": "2026-07-18T13:45:12.466Z",
+    "type": "WITHDRAW",
+    "amount": -9.28,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f7579-5015-71fb-ab21-96c8e215db44"
+  },
+  {
+    "id": "019f74ac-2ebb-7dcd-85b5-8b30a9f0e0b4",
+    "date": "2026-07-18T10:01:09.047Z",
+    "type": "WITHDRAW",
+    "amount": -11.0,
+    "currency": "EUR",
+    "category": "❓ Інше",
+    "reference": "019f74ac-2ebb-7dcd-85b5-8b30a9f0e0b4"
+  },
+  {
+    "id": "019f72ca-fe95-770d-9275-5d8033db9022",
+    "date": "2026-07-18T01:15:33.898Z",
+    "type": "INTEREST_ON_FREE_CASH",
+    "amount": 0.2,
+    "currency": "EUR",
+    "category": "💵 Дохід",
+    "reference": "019f72ca-fe95-770d-9275-5d8033db9022"
+  }
+]

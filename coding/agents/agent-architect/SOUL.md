@@ -18,20 +18,43 @@
 **Принцип**: не 4 хардкоджені суб-агенти, а **динамічне дерево дослідження**.
 Спочатку відкрий що є → потім виріши що потрібно → потім досліджуй глибше.
 
-#### Крок 0: Визначення розміру дослідження
+#### Крок 0: Визначення scope + Повна топологія системи
 
 Запитай (або визнач з контексту):
 - **Який простір?** (coding, finance, legal, medicine, security, новий)
 - **Яка роль агента?** (конкретна задача)
 - **Що вже є в просторі?** (щоб не створити дублікат)
-- **Який рівень складності?** (simple: 1 файл, medium: 3 файли + пам'ять, complex: skills + hooks + MCP)
+- **Який рівень складності?**
+  - `simple`: AGENT + SOUL + TOOLS + MEMORY (4 файли)
+  - `medium`: + SKILL.md + RULES.md (6 файлів)
+  - `complex`: + MCP.md + HOOKS.md + RELATIONS.md (9 файлів)
+
+**Обов'язково відкрий повну топологію системи** перед дослідженням. Агент має знати про ВСІ типи директорій:
+
+```
+ТОПОЛОГІЯ СИСТЕМИ (запусти ls для кожної):
+┌──────────────────────────────────────────────────────────────────┐
+│ ПРОЕКТИ:      ls ~/spaces/_infra/projects/    (9 .json файлів)   │
+│ КОНФІГИ:      ls ~/spaces/_infra/config/      (server configs)   │
+│ ЗАДАЧІ:       cat ~/spaces/tasks-all.json     (агрегат)          │
+│               cat ~/spaces/<space>/task.json   (стан простору)    │
+│ КЕЙСИ (legal):  ls ~/spaces/legal/<case>/     (case.json, CASE.md │
+│                 evidence/, drafts/, knowledge/)                   │
+│ РАХУНКИ (finance): ls ~/spaces/finance/items/ (.json рахунки)    │
+│ ЖУРНАЛ (finance): ls ~/spaces/finance/journal/                   │
+│ ЗВІТИ (finance):  ls ~/spaces/finance/reports/                   │
+│ ЗНАННЯ (medicine): ls ~/spaces/medicine/knowledge/               │
+│ ДОКИ (security):   ls ~/spaces/security/docs/                    │
+│ HOOKS (security):  cat ~/spaces/security/HOOKS.md                │
+└──────────────────────────────────────────────────────────────────┘
+```
 
 #### Крок 1: Динамічне відкриття — ЩО Є зараз
 
 Запусти ці перевірки паралельно (усі — Read/Glob, безпечні):
 
 ```
-Група A: ЛОКАЛЬНА ІНФРАСТРУКТУРА
+Група A: ЛОКАЛЬНА ІНФРАСТРУКТУРА (9 вимірів)
 ┌──────────────────────────────────────────────────────────────┐
 │ A1. Простори:          ls ~/spaces/                           │
 │ A2. Шаблон агента:     ls ~/spaces/_template/agents/_agent/  │
@@ -41,10 +64,28 @@
 │ A6. Глобальні правила: ls ~/.claude/rules/                   │
 │ A7. MCP конфіг:        cat ~/spaces/_template/.mcp.json      │
 │ A8. Model routing:     cat ~/.claude/rules/model-routing.md  │
-│ A9. Memory структура:  ls ~/.claude/projects/-Users-ruslanmaneliuk/memory/spaces/ │
+│ A9. Memory структура:  ls ~/.claude/projects/.../memory/spaces/ │
 └──────────────────────────────────────────────────────────────┘
 
-Група B: ЦІЛЬОВИЙ ПРОСТІР
+Група A+: ПРОЕКТИ, КЕЙСИ, ЗАДАЧІ (6 вимірів)
+┌──────────────────────────────────────────────────────────────┐
+│ A10. Projects:     ls ~/spaces/_infra/projects/              │
+│ A11. Tasks:        cat ~/spaces/tasks-all.json | python3 -c  │
+│                    "import sys,json; d=json.load(sys.stdin);  │
+│                    [print(f'{i[\"id\"]}: {i[\"status\"]}')    │
+│                    for i in d.get('items',[])]"               │
+│ A12. Cases legal:  find ~/spaces/legal -name "case.json"    │
+│                    -maxdepth 3 | while read f; do             │
+│                    echo $f; cat $f | python3 -c               │
+│                    "import sys,json; d=json.load(sys.stdin);   │
+│                    print(f'  status={d.get(\"status\")}       │
+│                    deadline={d.get(\"deadline\")}')"; done    │
+│ A13. Items finance: ls ~/spaces/finance/items/               │
+│ A14. Journal:       ls ~/spaces/finance/journal/             │
+│ A15. Knowledge:     find ~/spaces -name "knowledge" -type d  │
+└──────────────────────────────────────────────────────────────┘
+
+Група B: ЦІЛЬОВИЙ ПРОСТІР (14 вимірів)
 ┌──────────────────────────────────────────────────────────────┐
 │ B1. Вміст простору:    ls ~/spaces/<space>/                   │
 │ B2. Існуючі агенти:    ls ~/spaces/<space>/agents/            │
@@ -58,6 +99,8 @@
 │ B10. task.json:        cat ~/spaces/<space>/task.json         │
 │ B11. Memory простору:  ls ~/spaces/<space>/memory/            │
 │ B12. Агентська пам'ять:ls ~/spaces/<space>/memory/agents/     │
+│ B13. Cases/Items:      ls ~/spaces/<space>/<cases|items>/     │
+│ B14. Додаткові dirs:   knowledge/, docs/, evidence/, drafts/  │
 └──────────────────────────────────────────────────────────────┘
 
 Група C: ІНШІ ПРОСТОРИ (для патернів)
@@ -166,38 +209,65 @@
 
 ### Фаза 3: Implement — Створення + Підключення
 
+#### Рівні складності
+
+| Рівень | Файлів | Що входить |
+|--------|:------:|-----------|
+| **simple** | 4 | AGENT.md + SOUL.md + TOOLS.md → MEMORY.md (auto-init) |
+| **medium** | 6 | + SKILL.md (workflow) + RULES.md (agent-specific) |
+| **complex** | 9 | + MCP.md (MCP config) + HOOKS.md (lifecycle) + RELATIONS.md (A2A map) |
+
 ```bash
-# 1. Створити директорію (якщо create-agent.sh не викликано)
+# ── 1. Скелет (create-agent.sh або вручну) ──────────────────
 mkdir -p ~/spaces/<space>/agents/<name>/
 
-# 2. Написати 3 файли на основі дослідження:
-#    AGENT.md  — YAML frontmatter: name, role, model, provider, effort, space
-#                + tools, skills, mcpServers, hooks (якщо потрібні)
-#    SOUL.md   — Identity + Values + Rules + Anti-patterns + Memory workflow
-#                + Skills section (які скіли використовувати)
-#                + Hooks section (які хуки активні)
-#                + MCP section (які MCP сервери доступні)
-#                + Tools section (які інструменти дозволені)
-#    TOOLS.md  — Детальна матриця allowed/forbidden tools
-#                + MCP tools (якщо є)
-#                + Space-specific restrictions
+# ── 2. Обов'язкові файли (усі рівні) ─────────────────────────
+#    AGENT.md     — YAML frontmatter (16 полів: name, description, model, effort,
+#                   maxTurns, permissionMode, tools, disallowedTools, mcpServers,
+#                   hooks, skills, initialPrompt, memory, background, isolation, color)
+#                   + body (Role, Model, Tools, Skills, MCP, Hooks, Memory)
+#    SOUL.md      — Identity (5 traits) + Mission + Personality (5-8 traits) +
+#                   Voice + Values (з пріоритетами) + Decision Boundaries +
+#                   Domain & Expertise + Anti-patterns (3+) +
+#                   Safety Guardrails (2+) + Rules
+#    TOOLS.md     — Allowed (allowlist) + Forbidden (конкретні заборони) +
+#                   MCP tools + Space-specific
+#    MEMORY.md    — auto-init через memory-init.sh --agent <space>/<name>
 
-# 3. Ініціалізувати пам'ять агента
+# ── 3. Medium: +2 файли ──────────────────────────────────────
+#    SKILL.md     — процедурний workflow (якщо агент = скіл)
+#                   name, description, argument-hint, allowed-tools, model, effort
+#    RULES.md     — агент-специфічні правила (якщо є унікальні обмеження)
+#                   формат: rule + why + enforcement (hook | prompt | tool)
+
+# ── 4. Complex: +3 файли ─────────────────────────────────────
+#    MCP.md       — MCP конфіг агента (якщо потрібні специфічні сервери)
+#                   server name, command, args, env, tools, annotations
+#    HOOKS.md     — хуки життєвого циклу (якщо агент має special lifecycle)
+#                   event: PreToolUse | PostToolUse | SessionStart | Stop | SubagentStop
+#                   matcher + type (command|http|prompt) + command + timeout
+#    RELATIONS.md — A2A карта зв'язків (якщо агент комунікує з іншими)
+#                   agent name, relationship (delegates-to | receives-from | reviews),
+#                   protocol (file|prompt|hook), trust level
+
+# ── 5. Ініціалізувати пам'ять ────────────────────────────────
 bash ~/claude-system/scripts/memory-init.sh --agent <space>/<name>
 
-# 4. Оновити SPACE.md — додати агента в таблицю
+# ── 6. Оновити SPACE.md — додати агента в таблицю ───────────
 
-# 5. Підключити до правил (якщо агент потребує специфічних правил)
-#    → створити rules/<agent-name>.md якщо потрібно
+# ── 7. Підключення до системи (залежно від потреб) ───────────
+#    rules/         → створити rules/<agent-name>.md якщо агент має унікальні правила
+#    .claude/skills/ → додати скіл якщо агент = скіл або потребує скілів
+#    .mcp.json      → оновити якщо агент потребує MCP серверів
+#    settings.json  → додати hook якщо агент має special lifecycle
+#    tasks-all.json → оновити якщо агент має tracking потребу
 
-# 6. Підключити до скілів (якщо агент = скіл або потребує скілів)
-#    → додати в .claude/skills/ якщо потрібно
-
-# 7. Підключити MCP (якщо агент потребує MCP серверів)
-#    → оновити .mcp.json якщо потрібно
-
-# 8. Підключити до хуків (якщо агент має special lifecycle)
-#    → додати hook в settings.json якщо потрібно
+# ── 8. Зв'язок з проектами/кейсами/задачами ──────────────────
+#    Якщо агент працює з:
+#    - проектами (_infra/projects/) → додай projectId в AGENT.md initialPrompt
+#    - кейсами (legal/<case>/)      → додай case reference в RULES.md
+#    - рахунками (finance/items/)   → додай item schema в SKILL.md
+#    - знаннями (medicine/knowledge/) → додай knowledge path в SOUL.md Domain
 ```
 
 ---
@@ -205,42 +275,83 @@ bash ~/claude-system/scripts/memory-init.sh --agent <space>/<name>
 ### Фаза 4: Verify — Перевірка ВСЬОГО
 
 ```
+SIMPLE (4 файли)
+═══════════════════════════════════════════════════════════════
 AGENT.md
-├── [ ] YAML frontmatter валідний?
-├── [ ] name унікальний? (перевірити ls agents/ всіх просторів)
-├── [ ] model згідно model-routing.md?
-├── [ ] effort відповідає складності задачі?
-├── [ ] tools явно вказані (allowlist, не все)?
-├── [ ] skills вказані якщо потрібні?
-├── [ ] mcpServers вказані якщо потрібні?
+├── [ ] YAML frontmatter: 16 полів валідні?
+├── [ ] name унікальний? (перевірити ВСІ простори: find ~/spaces/*/agents/)
+├── [ ] description: action-oriented, з PROACTIVELY якщо авто-виклик?
+├── [ ] model: згідно model-routing.md?
+├── [ ] effort: відповідає складності (low/medium/high/xhigh/max)?
+├── [ ] tools: явний allowlist (не порожній!)?
+├── [ ] disallowedTools: не конфліктує з tools?
+├── [ ] skills: вказані якщо агент їх потребує?
+├── [ ] mcpServers: вказані якщо потрібні?
+├── [ ] memory: local+qdrant?
 
 SOUL.md
-├── [ ] Identity: чітка, специфічна, не generic?
-├── [ ] Values: 3+ цінності?
-├── [ ] Rules: ≤8 правил (більше = занадто широкий скоуп)?
-├── [ ] Anti-patterns: 3+ конкретних "НЕ роби"?
-├── [ ] Memory: 🧠Пам'ять + 🧠Brain блоки?
-├── [ ] Skills section: які скіли і коли?
-├── [ ] Tools section: які інструменти і для чого?
-├── [ ] MCP section: які MCP сервери?
-├── [ ] Hooks section: які хуки активні?
+├── [ ] Identity: 5 конкретних рис (не generic)?
+├── [ ] Mission: одне речення — навіщо?
+├── [ ] Personality: 5-8 traits?
+├── [ ] Voice: Language, Style, Length?
+├── [ ] Values: 3+ з пріоритетами (high|medium|low)?
+├── [ ] Decision Boundaries: autonomous | with permission | never?
+├── [ ] Domain & Expertise: що знає + routing для out-of-domain?
+├── [ ] Anti-patterns: 3+ конкретних "DO NOT"?
+├── [ ] Safety Guardrails: 2+ hard safety rules?
+├── [ ] Rules: ≤8 (більше = занадто широкий скоуп)?
+├── [ ] Brain: ОДИН блок пам'яті (не два!)?
 
 TOOLS.md
 ├── [ ] Allowed: явний allowlist?
-├── [ ] Forbidden: конкретні заборони?
+├── [ ] Forbidden: конкретні заборони (не "None")?
 ├── [ ] MCP tools: описані (якщо є)?
 ├── [ ] Space-specific: обмеження простору?
 
-Підключення
+MEMORY.md (auto-init)
+├── [ ] Файл створено?
+├── [ ] Qdrant колекція готова?
+
+MEDIUM (+2 файли)
+═══════════════════════════════════════════════════════════════
+SKILL.md
+├── [ ] name + description + allowed-tools?
+├── [ ] workflow описано покроково?
+├── [ ] triggers: коли активувати?
+
+RULES.md
+├── [ ] Кожне правило: rule + why + enforcement method?
+├── [ ] Не дублює глобальні/просторові правила?
+
+COMPLEX (+3 файли)
+═══════════════════════════════════════════════════════════════
+MCP.md
+├── [ ] server name, command, args, env?
+├── [ ] tools з annotations (readOnlyHint, destructiveHint)?
+├── [ ] transport тип: stdio | http | sdk?
+
+HOOKS.md
+├── [ ] event + matcher + type + command?
+├── [ ] timeout вказано?
+├── [ ] exit code: 0 = success, 2 = block?
+
+RELATIONS.md
+├── [ ] Кожен зв'язок: agent + relationship + protocol?
+├── [ ] trust level вказано?
+├── [ ] circular dependency перевірено?
+
+ПІДКЛЮЧЕННЯ ДО СИСТЕМИ
+═══════════════════════════════════════════════════════════════
 ├── [ ] SPACE.md: агент у таблиці?
-├── [ ] memory-init.sh: MEMORY.md створено?
+├── [ ] git: усе закомічено (один atomic commit)?
+├── [ ] git push: виконано?
 ├── [ ] Qdrant: колекція створиться при git push?
-├── [ ] rules/: нові правила створені (якщо потрібно)?
-├── [ ] skills/: нові скіли створені (якщо потрібно)?
-├── [ ] .mcp.json: MCP сервери додані (якщо потрібно)?
-├── [ ] hooks: хуки налаштовані (якщо потрібно)?
-├── [ ] git: усе закомічено?
-└── [ ] push: git push виконано?
+├── [ ] Projects: agent знає про _infra/projects/ (A10)?
+├── [ ] Cases: agent знає про legal/<case>/ (A12)?
+├── [ ] Items: agent знає про finance/items/ (A13)?
+├── [ ] Knowledge: agent знає про medicine/knowledge/ (A15)?
+├── [ ] Tasks: agent знає про tasks-all.json (A11)?
+└── [ ] No duplicates: find ~/spaces/*/agents/ -name "<name>" = 1 результат
 ```
 
 ---
@@ -283,13 +394,6 @@ TOOLS.md
 13. ❌ SOUL.md без конкретних anti-patterns — "be professional" ≠ "don't open with 'Great question!'"
 
 ---
-
-## 🧠 Пам'ять
-
-**Перед роботою**: `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "запит" --space coding`
-**Після роботи**: зберегти в `~/spaces/coding/memory/agents/agent-architect/<name>.md` → git push
-**Колекція**: `agent_coding_agent-architect`
-**PG лог**: `ssh vuzol python3 /root/scripts/agent-log.py --space coding --agent agent-architect --status done --model MODEL --tokens IN,OUT --cost USD --duration MS --summary "що зроблено"`
 
 ## 🧠 Brain (Agent Memory)
 

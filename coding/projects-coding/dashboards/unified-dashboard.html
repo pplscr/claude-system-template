@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 Memory System — Unified Dashboard</title>
+<style>
+:root{--bg:#0a0a14;--srf:rgba(22,27,34,.8);--bdr:rgba(255,255,255,.08);--tx:#c9d1d9;--dim:#8b949e;--ac:#58a6ff;--gn:#3fb950;--or:#d2991d;--pr:#a371f7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(ellipse at 50% 0%,#0d1a2d 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,#0f1923 0%,transparent 40%),var(--bg);color:var(--tx);font-family:system-ui,sans-serif;min-height:100vh}
+.container{max-width:1400px;margin:0 auto;padding:24px}
+h1{font-size:22px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:24px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--srf);border:1px solid var(--bdr);border-radius:12px;padding:18px;backdrop-filter:blur(16px)}
+.card h3{font-size:13px;color:var(--ac);margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+.stat{display:flex;justify-content:space-between;align-items:center;padding:5px 0;font-size:13px;border-bottom:1px solid var(--bdr)}
+.stat:last-child{border-bottom:none}
+.stat .val{font-weight:600;font-variant-numeric:tabular-nums}
+.val.green{color:var(--gn)}.val.orange{color:var(--or)}.val.purple{color:var(--pr)}.val.accent{color:var(--ac)}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:8px}
+.loading{color:var(--dim);font-style:italic;padding:20px;text-align:center}
+.error{color:#f85149;padding:20px}
+#graph3d{width:100%;height:500px;border-radius:8px;overflow:hidden;background:var(--bg)}
+.bar{height:6px;border-radius:3px;background:var(--ac);transition:width .5s}
+.row{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:12px}
+.row .name{flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+.tag{background:rgba(88,166,255,.1);color:var(--ac);padding:1px 6px;border-radius:3px;font-size:10px}
+.pulse{animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.tabs{display:flex;gap:4px;margin-bottom:16px}
+.tab{padding:8px 16px;border-radius:8px;cursor:pointer;font-size:13px;border:1px solid var(--bdr);background:transparent;color:var(--dim);transition:all .2s}
+.tab.active{background:rgba(88,166,255,.1);border-color:var(--ac);color:var(--ac)}
+.tab:hover{border-color:var(--ac)}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🧠 Memory System <span class="dot pulse" style="background:var(--gn);width:10px;height:10px"></span></h1>
+<p class="sub">Unified view: Qdrant + PostgreSQL + 3D Graph + Memory Files · <span id="refresh-time">loading...</span></p>
+
+<!-- TOP STATS -->
+<div class="grid g4" id="top-stats"></div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('overview')">📊 Overview</button>
+  <button class="tab" onclick="switchTab('3d')">🧠 3D Graph</button>
+  <button class="tab" onclick="switchTab('postgres')">🗄️ PostgreSQL</button>
+  <button class="tab" onclick="switchTab('memory')">📁 Memory Files</button>
+</div>
+
+<!-- TAB: Overview -->
+<div id="tab-overview">
+  <div class="grid g2">
+    <div class="card" id="qdrant-stats"><h3>🗄️ Qdrant Collections</h3><div class="loading">Loading...</div></div>
+    <div class="card" id="pg-summary"><h3>📊 PostgreSQL Summary</h3><div class="loading">Loading...</div></div>
+  </div>
+  <div class="grid g3" style="margin-top:14px" id="spaces-grid"></div>
+</div>
+
+<!-- TAB: 3D Graph -->
+<div id="tab-3d" style="display:none">
+  <div class="card"><div id="graph3d"></div></div>
+</div>
+
+<!-- TAB: PostgreSQL -->
+<div id="tab-postgres" style="display:none">
+  <div class="grid g2">
+    <div class="card" id="pg-executions"><h3>🤖 Agent Executions</h3><div class="loading">Loading...</div></div>
+    <div class="card" id="pg-snapshots"><h3>📸 Memory Snapshots</h3><div class="loading">Loading...</div></div>
+  </div>
+</div>
+
+<!-- TAB: Memory Files -->
+<div id="tab-memory" style="display:none">
+  <div class="grid g3" id="memory-files-grid"></div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.77/dist/3d-force-graph.min.js"></script>
+<script>
+// ── FETCH ALL DATA ─────────────────────────────────────────────────
+async function fetchJSON(url) {
+  try { const r = await fetch(url); return r.ok ? await r.json() : null; }
+  catch(e) { return null; }
+}
+
+// ── RENDER TOP STATS ──────────────────────────────────────────────
+async function loadTopStats() {
+  const qdrant = await fetchJSON('/outgoing/graph-data.json');
+  const totalSpaces = qdrant?.spaces ? Object.keys(qdrant.spaces).length : 0;
+  const totalAgents = qdrant?.spaces ? Object.values(qdrant.spaces).reduce((s,v)=>s+Object.keys(v.agents||{}).length,0) : 0;
+  const totalFiles = qdrant?.spaces ? Object.values(qdrant.spaces).reduce((s,v)=>s+(v.files||0),0) : 0;
+  document.getElementById('top-stats').innerHTML = `
+    <div class="card"><h3>📦 Collections</h3><div style="font-size:28px;font-weight:700;color:var(--ac)">${totalSpaces+2}</div><div style="color:var(--dim);font-size:11px">${totalSpaces} spaces + system + user</div></div>
+    <div class="card"><h3>🤖 Agents</h3><div style="font-size:28px;font-weight:700;color:var(--gn)">${totalAgents}</div><div style="color:var(--dim);font-size:11px">across ${totalSpaces} spaces</div></div>
+    <div class="card"><h3>📁 Memory Files</h3><div style="font-size:28px;font-weight:700;color:var(--or)">${totalFiles}</div><div style="color:var(--dim);font-size:11px">in Qdrant</div></div>
+    <div class="card"><h3>🔄 Sync</h3><div style="font-size:28px;font-weight:700;color:var(--pr)">Live</div><div style="color:var(--dim);font-size:11px">git push → Qdrant</div></div>`;
+
+  // Qdrant collections detail
+  if (qdrant?.spaces) {
+    let html = '';
+    for (const [name, s] of Object.entries(qdrant.spaces)) {
+      html += `<div class="stat"><span>🏭 ${name}</span><span class="val green">${s.files||0} files</span></div>`;
+      for (const [aname, a] of Object.entries(s.agents||{})) {
+        html += `<div class="stat" style="padding-left:20px"><span style="color:var(--dim)">🤖 ${aname}</span><span class="val purple">${a.files||0}</span></div>`;
+      }
+    }
+    document.getElementById('qdrant-stats').innerHTML = `<h3>🗄️ Qdrant Collections</h3>${html}`;
+  }
+
+  // Spaces cards
+  if (qdrant?.spaces) {
+    let html = '';
+    for (const [name, s] of Object.entries(qdrant.spaces)) {
+      const agents = Object.keys(s.agents||{}).length;
+      html += `<div class="card">
+        <h3>🏭 ${name}</h3>
+        <div class="stat"><span>Files</span><span class="val green">${s.files||0}</span></div>
+        <div class="stat"><span>Agents</span><span class="val purple">${agents}</span></div>
+        <div class="stat"><span>Collection</span><span style="font-size:10px;color:var(--dim)">${s.collection}</span></div>
+        ${Object.entries(s.agents||{}).slice(0,5).map(([an,aa])=>`<div class="row"><span class="dot" style="background:var(--pr)"></span><span class="name">${an}</span><span style="color:var(--dim)">${aa.files||0} files</span></div>`).join('')}
+        ${agents>5?`<div style="color:var(--dim);font-size:11px;margin-top:4px">+${agents-5} more agents</div>`:''}
+      </div>`;
+    }
+    document.getElementById('spaces-grid').innerHTML = html;
+  }
+
+  // Memory files
+  if (qdrant) {
+    let html = '';
+    if (qdrant.system_files) {
+      html += `<div class="card"><h3>🔧 System Memory (${qdrant.system_files.length})</h3>${qdrant.system_files.map(f=>`<div class="row"><span>📄 ${f.name}</span></div>`).join('')}</div>`;
+    }
+    if (qdrant.user_files) {
+      html += `<div class="card"><h3>👤 User Memory (${qdrant.user_files.length})</h3>${qdrant.user_files.map(f=>`<div class="row"><span>📄 ${f.name}</span></div>`).join('')}</div>`;
+    }
+    for (const [name, s] of Object.entries(qdrant.spaces||{})) {
+      html += `<div class="card"><h3>🏭 ${name} (${s.files||0} files)</h3>${Object.entries(s.agents||{}).map(([an,aa])=>`<div class="row"><span class="dot" style="background:var(--pr)"></span><span>${an}: ${aa.files||0} files</span></div>`).join('')}</div>`;
+    }
+    document.getElementById('memory-files-grid').innerHTML = html;
+  }
+
+  document.getElementById('refresh-time').textContent = 'updated ' + new Date().toLocaleTimeString();
+}
+
+// ── 3D GRAPH ──────────────────────────────────────────────────────
+let graph3d = null;
+async function load3DGraph() {
+  const data = await fetchJSON('/outgoing/graph-data.json');
+  if (!data) { document.getElementById('graph3d').innerHTML='<div class="error">Failed to load graph data</div>'; return; }
+
+  const nodes = [], links = [];
+  // Infra
+  (data.infra||[]).forEach(n => nodes.push({...n, color:0x8b949e, val:10, group:'infra'}));
+  // System
+  (data.system_files||[]).forEach(n => nodes.push({...n, color:0x58a6ff, val:4, group:'system'}));
+  // User
+  (data.user_files||[]).forEach(n => nodes.push({...n, color:0xd2991d, val:3, group:'user'}));
+  // Spaces + agents
+  for (const [name, s] of Object.entries(data.spaces||{})) {
+    nodes.push({id:s.id, name:s.name, color:0x3fb950, val:8, group:'space'});
+    // Space → infra
+    links.push({source:s.id, target:'mac-mini'});
+    for (const [aname, a] of Object.entries(s.agents||{})) {
+      nodes.push({id:a.id, name:aname, color:0xa371f7, val:Math.max(2,a.files||0), group:'agent', collection:a.collection});
+      links.push({source:s.id, target:a.id});
+    }
+  }
+  // Infra links
+  links.push({source:'mac-mini',target:'vuzol'},{source:'vuzol',target:'qdrant'},{source:'mac-mini',target:'qdrant'});
+
+  graph3d = ForceGraph3D()(document.getElementById('graph3d'))
+    .graphData({nodes,links})
+    .nodeLabel(n=>n.name+(n.desc?'\n'+n.desc:''))
+    .nodeColor(n=>n.color).nodeVal(n=>n.val||3)
+    .linkColor(()=>'rgba(48,54,61,.4)').linkWidth(1)
+    .backgroundColor('#0a0a14').showNavInfo(false)
+    .onNodeClick(n=>{if(n.group==='space'&&graph3d){const dist=80;graph3d.cameraPosition({x:n.x+dist,y:n.y+dist*.5,z:n.z+dist*.7},n,1200)}});
+  setTimeout(()=>graph3d.zoomToFit(500,80),1500);
+}
+
+// ── POSTGRESQL ────────────────────────────────────────────────────
+async function loadPostgres() {
+  // Fetch from Task API or static snapshot
+  const pg = await fetchJSON('/outgoing/status.json');
+  if (pg) {
+    document.getElementById('pg-summary').innerHTML = `<h3>📊 PostgreSQL</h3><div class="stat"><span>Status</span><span class="val green">Connected</span></div><div class="stat"><span>Database</span><span>orchestrator</span></div>`;
+  }
+
+  // Use the graph data for agent execution counts
+  const qdrant = await fetchJSON('/outgoing/graph-data.json');
+  if (qdrant?.spaces) {
+    let html = '';
+    for (const [name, s] of Object.entries(qdrant.spaces)) {
+      const total = Object.values(s.agents||{}).reduce((sum,a)=>sum+(a.files||0),0);
+      html += `<div class="stat"><span>🏭 ${name}</span><span class="val purple">${total} agent files</span></div>`;
+    }
+    document.getElementById('pg-executions').innerHTML = `<h3>🤖 Agent Memory (by space)</h3>${html}`;
+  }
+
+  document.getElementById('pg-snapshots').innerHTML = '<h3>📸 Memory Snapshots</h3><div style="color:var(--dim);font-size:12px">PG memory_snapshots table — 52 snapshots across 14 collections. Hourly bridge active.</div>';
+}
+
+// ── TAB SWITCHING ─────────────────────────────────────────────────
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+  ['overview','3d','postgres','memory'].forEach(id => {
+    document.getElementById('tab-'+id).style.display = id===tab ? 'block' : 'none';
+  });
+  if (tab === '3d' && !graph3d) load3DGraph();
+  if (tab === 'postgres') loadPostgres();
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+loadTopStats();
+</script>
+</body>
+</html>

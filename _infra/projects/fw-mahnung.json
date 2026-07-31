@@ -1,0 +1,35 @@
+{
+  "id": "fw-mahnung",
+  "name": "F&W 3. Mahnung",
+  "status": "active",
+  "priority": "critical",
+  "progress": 80,
+  "description": "€13 166.05 борг за проживання (2022-06 – 2024-05), Гамбург",
+  "deadlines": {
+    "ratenzahlung_email": {
+      "date": "2026-07-31",
+      "status": "completed",
+      "desc": "Ratenzahlung email to Joana Ramos — 50€/Monat ohne Anerkennung"
+    },
+    "payment_mahnung3": {
+      "date": "2026-08-15",
+      "status": "pending",
+      "desc": "Send 3. Mahnung to tenant — €13 166.05 debt"
+    },
+    "widerspruch": {
+      "date": "2026-08-17",
+      "status": "pending",
+      "desc": "Widerspruch Einschreiben + Email — 12 arguments"
+    }
+  },
+  "next_steps": [
+    "Wait for F&W response to Ratenzahlung — ~2-4 weeks",
+    "Akteneinsicht — запитати документи Einkommensprüfung",
+    "Widerspruch — підготувати до 17.08"
+  ],
+  "blocked_by": [],
+  "contact": "Joana Ramos, joana.ramos@foerdernundwohnen.de, 040 428 35 38 13",
+  "last_activity": "✅ RATENZAHLUNG SENT 31.07.2026 14:10. Ratenzahlung email sent to Joana Ramos + CC Sachbearbeitung. All protective clauses intact. Widerspruch draft in Gmail, ready for 17.08.",
+  "tier": "life",
+  "last_updated": "2026-07-29T17:21:45.032808"
+}

@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Atlas — 3D Cognitive Graph</title>
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   PREMIUM DESIGN SYSTEM — Stripe / Linear / Vercel quality
+   Glassmorphism · Smooth Easing · Animated Particles · Responsive
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Surfaces ────────────────────────────────────────────────── */
+  --bg-deep:    #0a0a14;
+  --bg-mid:     #0d1117;
+  --bg-blue:    #0a1628;
+  --surface-0:  rgba(9, 12, 16, 0.75);
+  --surface-1:  rgba(13, 17, 23, 0.70);
+  --surface-2:  rgba(22, 27, 34, 0.65);
+  --surface-3:  rgba(33, 38, 45, 0.50);
+
+  /* ── Borders ─────────────────────────────────────────────────── */
+  --border-subtle: rgba(255, 255, 255, 0.055);
+  --border-medium: rgba(255, 255, 255, 0.10);
+  --border-focus:  #58a6ff;
+  --border-glow:   rgba(88, 166, 255, 0.22);
+
+  /* ── Text ────────────────────────────────────────────────────── */
+  --text-primary:   #e6edf3;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #8b949e;
+
+  /* ── Karpathy 5-tier palette (unchanged) ─────────────────────── */
+  --tier-working:    #8b949e;
+  --tier-episodic:   #58a6ff;
+  --tier-semantic:   #3fb950;
+  --tier-procedural: #a371f7;
+  --tier-system:     #d2991d;
+
+  /* ── Radii ───────────────────────────────────────────────────── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* ── Typography ──────────────────────────────────────────────── */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", "Cascadia Code", monospace;
+
+  /* ── Easing (premium feel) ───────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast:   180ms;
+  --duration-normal: 340ms;
+  --duration-slow:   600ms;
+  --duration-camera: 1200ms;
+
+  /* ── Glass ───────────────────────────────────────────────────── */
+  --glass-blur:     20px;
+  --glass-saturate: 180%;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Body with premium dark gradient ─────────────────────────────── */
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, var(--bg-blue) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(13, 26, 45, 0.6) 0%, transparent 45%),
+    radial-gradient(ellipse at 15% 85%, rgba(10, 22, 40, 0.4) 0%, transparent 45%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 50%, var(--bg-blue) 100%);
+  color: var(--text-primary);
+  font-family: var(--font);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Subtle grid pattern ─────────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 35%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 35%, transparent 70%);
+}
+
+/* ── Animated background particles ───────────────────────────────── */
+#particles {
+  position: fixed; inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+/* ── 3D Graph canvas ─────────────────────────────────────────────── */
+#graph {
+  position: fixed; inset: 0;
+  z-index: 3;
+}
+
+/* ── Loading overlay ─────────────────────────────────────────────── */
+#loading {
+  position: fixed; inset: 0;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: var(--bg-deep);
+  transition: opacity 500ms var(--ease-out-expo), visibility 500ms;
+}
+#loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#loading .ring {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--border-medium);
+  border-top-color: var(--border-focus);
+  animation: spin 0.75s linear infinite;
+  box-shadow: 0 0 16px rgba(88,166,255,0.15);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+#loading .label {
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* ── Header ──────────────────────────────────────────────────────── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 10;
+  padding: 18px 22px 14px;
+  background: linear-gradient(180deg, rgba(10,10,20,0.95) 60%, rgba(10,10,20,0) 100%);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  pointer-events: none;
+  display: flex; flex-direction: column; gap: 4px;
+}
+#header > * { pointer-events: auto; }
+#header h1 {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  display: flex; align-items: center; gap: 10px;
+}
+#header h1 .pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border-focus);
+  box-shadow: 0 0 10px var(--border-focus), 0 0 24px rgba(88,166,255,0.35);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 10px var(--border-focus), 0 0 24px rgba(88,166,255,0.35); }
+  50%      { box-shadow: 0 0 5px var(--border-focus), 0 0 12px rgba(88,166,255,0.12); }
+}
+#header .subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.55;
+  max-width: 660px;
+}
+
+/* ── HUD bar ─────────────────────────────────────────────────────── */
+#hud {
+  position: fixed;
+  top: 100px; left: 20px; right: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none;
+  flex-wrap: wrap;
+}
+#hud > * { pointer-events: auto; }
+
+/* Breadcrumb */
+#breadcrumb {
+  display: flex; align-items: center; gap: 2px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  font-size: 12px; color: var(--text-muted);
+  white-space: nowrap;
+}
+#breadcrumb span {
+  color: var(--border-focus); cursor: pointer;
+  transition: color var(--duration-fast) var(--ease-out-expo);
+}
+#breadcrumb span:hover { color: #79c0ff; }
+#breadcrumb .sep {
+  color: var(--text-muted); cursor: default;
+  margin: 0 3px;
+  transition: transform var(--duration-normal) var(--ease-out-back);
+}
+#breadcrumb:hover .sep { transform: scale(1.25); }
+
+/* Search */
+#search-wrap {
+  position: relative; flex: 1;
+  max-width: 320px; min-width: 180px;
+}
+#search-wrap .icon {
+  position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted); font-size: 12px;
+  pointer-events: none; z-index: 2;
+}
+#search {
+  width: 100%;
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 9px 38px 9px 34px;
+  border-radius: var(--radius-sm);
+  font-size: 13px; outline: none;
+  font-family: var(--font);
+  transition: border-color var(--duration-fast) var(--ease-out-expo),
+              box-shadow var(--duration-fast) var(--ease-out-expo);
+}
+#search:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(88,166,255,0.10);
+}
+#search::placeholder { color: var(--text-muted); opacity: 0.65; }
+#search-clear {
+  position: absolute; right: 8px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none;
+  color: var(--text-muted);
+  cursor: pointer; font-size: 17px;
+  line-height: 1;
+  padding: 3px 5px;
+  border-radius: 4px;
+  opacity: 0; visibility: hidden;
+  transition: opacity var(--duration-fast), visibility var(--duration-fast), color var(--duration-fast);
+}
+#search-clear.visible { opacity: 1; visibility: visible; }
+#search-clear:hover { color: var(--text-primary); }
+
+/* Match count */
+#match-count {
+  font-size: 11px; color: var(--text-muted);
+  white-space: nowrap;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity var(--duration-normal) var(--ease-out-expo),
+              transform var(--duration-normal) var(--ease-out-back);
+  pointer-events: none;
+}
+#match-count.visible {
+  opacity: 1; transform: translateY(0);
+}
+
+/* Stats badge */
+#stats-badge {
+  font-size: 11px; color: var(--text-muted);
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  display: flex; align-items: center; gap: 8px;
+}
+#stats-badge b { color: var(--text-secondary); font-weight: 600; }
+#stats-badge .dot-sep { color: var(--border-medium); }
+
+/* Reset button */
+#reset-btn {
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 12px; font-family: var(--font); font-weight: 500;
+  transition: all var(--duration-fast) var(--ease-out-expo);
+  white-space: nowrap;
+}
+#reset-btn:hover {
+  border-color: var(--border-focus);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(88,166,255,0.07);
+}
+
+/* ── Legend (collapsible, with badges) ───────────────────────────── */
+#legend {
+  position: fixed;
+  bottom: 28px; left: 20px;
+  z-index: 10;
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-width: 195px;
+  transition: box-shadow var(--duration-normal) var(--ease-out-expo);
+}
+#legend:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px var(--border-medium);
+}
+#legend-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer; user-select: none;
+  transition: background var(--duration-fast);
+}
+#legend-header:hover { background: rgba(255,255,255,0.025); }
+#legend-header .title {
+  font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.1em; font-weight: 600;
+  color: var(--text-muted);
+}
+#legend-header .chevron {
+  font-size: 11px; color: var(--text-muted);
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+#legend.collapsed #legend-header .chevron { transform: rotate(-90deg); }
+#legend-body {
+  padding: 0 16px 12px;
+  display: flex; flex-direction: column; gap: 2px;
+  overflow: hidden;
+  transition: max-height var(--duration-normal) var(--ease-out-expo),
+              opacity var(--duration-normal) var(--ease-out-expo),
+              padding var(--duration-normal) var(--ease-out-expo);
+  max-height: 220px; opacity: 1;
+}
+#legend.collapsed #legend-body {
+  max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0;
+}
+#legend .row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background var(--duration-fast), transform var(--duration-fast);
+}
+#legend .row:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateX(2px);
+}
+#legend .row.active {
+  background: rgba(88,166,255,0.10);
+  box-shadow: inset 2px 0 0 var(--border-focus);
+}
+#legend .dot {
+  width: 10px; height: 10px;
+  border-radius: 50%; flex-shrink: 0;
+  transition: box-shadow var(--duration-fast);
+}
+#legend .row:hover .dot,
+#legend .row.active .dot { box-shadow: 0 0 8px currentColor; }
+#legend .label { color: var(--text-secondary); flex: 1; font-weight: 500; }
+#legend .count {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid var(--border-subtle);
+  min-width: 24px; text-align: center;
+}
+
+/* ── Info panel (glass, slide-in) ────────────────────────────────── */
+#info {
+  position: fixed;
+  top: 20px; right: 20px; bottom: 20px;
+  z-index: 12;
+  width: 370px;
+  max-width: calc(100vw - 40px);
+  background: var(--surface-1);
+  backdrop-filter: blur(24px) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(24px) saturate(var(--glass-saturate));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.55), 0 0 0 1px var(--border-subtle);
+  transform: translateX(calc(100% + 48px));
+  opacity: 0;
+  transition: transform var(--duration-slow) var(--ease-out-expo),
+              opacity var(--duration-normal) var(--ease-out-expo);
+}
+#info.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+#info::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(ellipse at 0% 0%, rgba(88,166,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+#info-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative; z-index: 1;
+}
+#info-header h3 {
+  font-size: 17px; font-weight: 650;
+  color: var(--text-primary);
+  word-break: break-word;
+  padding-right: 8px;
+  letter-spacing: -0.01em;
+}
+#info-close {
+  color: var(--text-muted); cursor: pointer;
+  font-size: 22px; line-height: 1;
+  flex-shrink: 0;
+  transition: all var(--duration-fast);
+  background: none; border: none;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+#info-close:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.05);
+}
+
+#info-body {
+  flex: 1; overflow-y: auto;
+  padding: 16px 20px 20px;
+  display: flex; flex-direction: column; gap: 14px;
+  position: relative; z-index: 1;
+}
+#info-body p.desc {
+  font-size: 13px; color: var(--text-secondary);
+  line-height: 1.6;
+}
+#info-body .tier-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  align-self: flex-start;
+}
+#info-body .field {
+  display: flex; flex-direction: column; gap: 4px;
+}
+#info-body .field-label {
+  font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+#info-body .field-value {
+  font-size: 12px; color: var(--text-primary);
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  word-break: break-all;
+  line-height: 1.5;
+  transition: all var(--duration-fast);
+}
+#info-body .field-value.clickable {
+  cursor: pointer;
+}
+#info-body .field-value.clickable:hover {
+  background: rgba(88,166,255,0.05);
+  border-color: var(--border-glow);
+}
+#info-body .tags-row {
+  display: flex; flex-wrap: wrap; gap: 5px;
+}
+#info-body .tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px; font-weight: 500;
+  background: rgba(255,255,255,0.025);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+#info-body .tag:hover {
+  color: var(--text-primary);
+  border-color: var(--border-focus);
+  background: rgba(88,166,255,0.06);
+  transform: translateY(-1px);
+}
+#info-body .connections-list {
+  font-size: 11px; color: var(--text-muted);
+  line-height: 1.8;
+  max-height: 135px; overflow-y: auto;
+}
+#info-body .connections-list span {
+  color: var(--border-focus); cursor: pointer;
+  transition: color var(--duration-fast);
+}
+#info-body .connections-list span:hover { color: #79c0ff; text-decoration: underline; }
+#info-body .action-row {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px;
+}
+#info-body .btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 11px; font-family: var(--font); font-weight: 550;
+  cursor: pointer;
+  border: 1px solid var(--border-subtle);
+  transition: all var(--duration-fast);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+#info-body .btn-primary {
+  background: var(--border-focus);
+  color: #fff;
+  border-color: var(--border-focus);
+  box-shadow: 0 2px 8px rgba(88,166,255,0.18);
+}
+#info-body .btn-primary:hover {
+  filter: brightness(1.12);
+  box-shadow: 0 4px 16px rgba(88,166,255,0.28);
+  transform: translateY(-1px);
+}
+#info-body .btn-ghost {
+  background: rgba(255,255,255,0.02);
+  color: var(--text-secondary);
+}
+#info-body .btn-ghost:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ── Keyboard hint ───────────────────────────────────────────────── */
+#kbd-hint {
+  position: fixed;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: 11px; color: var(--text-muted);
+  background: var(--surface-1);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-subtle);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 2s ease;
+}
+#kbd-hint.fading { opacity: 0.18; }
+#kbd-hint kbd {
+  display: inline-block;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: var(--font);
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+/* ── Toast ───────────────────────────────────────────────────────── */
+#toast {
+  position: fixed;
+  top: 24px; left: 50%;
+  transform: translateX(-50%) translateY(-12px);
+  z-index: 30;
+  background: var(--surface-1);
+  backdrop-filter: blur(24px) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(24px) saturate(var(--glass-saturate));
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 12px; font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-out-expo),
+              transform var(--duration-normal) var(--ease-out-back);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+#info-body::-webkit-scrollbar { width: 5px; }
+#info-body::-webkit-scrollbar-track { background: transparent; }
+#info-body::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 10px; }
+#info-body::-webkit-scrollbar-thumb:hover { background: var(--border-focus); }
+
+/* ── Responsive / Mobile ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #header { padding: 12px 14px 10px; }
+  #header h1 { font-size: 18px; }
+  #header .subtitle {
+    font-size: 10px; max-width: 100%;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #hud { top: 80px; left: 10px; right: 10px; gap: 6px; }
+  #search-wrap { max-width: 100%; min-width: 0; flex: 2; }
+  #search { font-size: 12px; padding: 10px 36px 10px 32px; }
+
+  #legend { bottom: 14px; left: 10px; min-width: 155px; }
+  #legend-header { padding: 10px 12px; }
+  #legend-body { padding: 0 12px 10px; }
+  #legend .row { font-size: 10px; padding: 5px 6px; gap: 6px; }
+  #legend .dot { width: 8px; height: 8px; }
+  #legend .count { font-size: 9px; padding: 1px 6px; }
+
+  #info {
+    top: 10px; right: 10px; bottom: 10px;
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    border-radius: var(--radius-lg);
+  }
+  #info-header { padding: 14px 16px 10px; }
+  #info-header h3 { font-size: 15px; }
+  #info-body { padding: 12px 16px 16px; gap: 10px; }
+
+  #kbd-hint { bottom: 14px; font-size: 10px; padding: 6px 10px; }
+  #kbd-hint kbd { font-size: 9px; padding: 1px 4px; }
+
+  #stats-badge { font-size: 10px; padding: 6px 10px; }
+}
+@media (max-width: 480px) {
+  #kbd-hint { display: none; }
+  #hud { flex-direction: column; align-items: stretch; top: 70px; }
+  #stats-badge { align-self: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- Loading overlay -->
+<div id="loading">
+  <div class="ring"></div>
+  <div class="label">Loading Memory Atlas</div>
+</div>
+
+<!-- Background particles canvas (CSS-only lightweight animation) -->
+<canvas id="particles"></canvas>
+
+<!-- 3D Graph canvas -->
+<div id="graph"></div>
+
+<!-- Header -->
+<div id="header">
+  <h1><span class="pulse"></span>Memory Atlas</h1>
+  <p class="subtitle">
+    "Memory is not a single monolith. It is a stack — working memory for the present
+    task, episodic for lived experience, semantic for crystallised knowledge, procedural
+    for practiced skill, and system memory for the agent's very identity. Intelligence
+    is how these layers talk to each other."
+    <span style="font-style:normal;color:var(--text-muted)">— Andrej Karpathy, on AI cognitive architectures</span>
+  </p>
+</div>
+
+<!-- HUD bar -->
+<div id="hud">
+  <div id="breadcrumb">
+    <span data-level="root" onclick="zoomToRoot()">Root</span>
+  </div>
+  <div id="search-wrap">
+    <span class="icon">&#8984;</span>
+    <input id="search" type="text" placeholder="Search nodes..." autofocus>
+    <button id="search-clear" onclick="clearSearch()" title="Clear">&times;</button>
+  </div>
+  <span id="match-count"></span>
+  <span id="stats-badge">
+    <span><b id="stats-nodes">0</b> nodes</span>
+    <span class="dot-sep">&middot;</span>
+    <span><b id="stats-links">0</b> connections</span>
+  </span>
+  <button id="reset-btn" onclick="zoomToRoot()" title="Reset view (R)">Reset</button>
+</div>
+
+<!-- Legend (collapsible) -->
+<div id="legend">
+  <div id="legend-header" onclick="toggleLegend()">
+    <span class="title">Memory Tiers</span>
+    <span class="chevron">&#9660;</span>
+  </div>
+  <div id="legend-body">
+    <div class="row" data-tier="working" onclick="filterByTier('working')">
+      <span class="dot" style="background:var(--tier-working)"></span>
+      <span class="label">Working</span>
+      <span class="count" id="cnt-working">0</span>
+    </div>
+    <div class="row" data-tier="episodic" onclick="filterByTier('episodic')">
+      <span class="dot" style="background:var(--tier-episodic)"></span>
+      <span class="label">Episodic</span>
+      <span class="count" id="cnt-episodic">0</span>
+    </div>
+    <div class="row" data-tier="semantic" onclick="filterByTier('semantic')">
+      <span class="dot" style="background:var(--tier-semantic)"></span>
+      <span class="label">Semantic</span>
+      <span class="count" id="cnt-semantic">0</span>
+    </div>
+    <div class="row" data-tier="procedural" onclick="filterByTier('procedural')">
+      <span class="dot" style="background:var(--tier-procedural)"></span>
+      <span class="label">Procedural</span>
+      <span class="count" id="cnt-procedural">0</span>
+    </div>
+    <div class="row" data-tier="system" onclick="filterByTier('system')">
+      <span class="dot" style="background:var(--tier-system)"></span>
+      <span class="label">System</span>
+      <span class="count" id="cnt-system">0</span>
+    </div>
+  </div>
+</div>
+
+<!-- Info panel (glass, slide-in) -->
+<div id="info">
+  <div id="info-header">
+    <h3 id="info-title"></h3>
+    <button id="info-close" onclick="closeInfo()">&times;</button>
+  </div>
+  <div id="info-body"></div>
+</div>
+
+<!-- Keyboard hint -->
+<div id="kbd-hint">
+  <kbd>Drag</kbd> rotate &middot; <kbd>Scroll</kbd> zoom &middot; <kbd>Click</kbd> drill &middot; <kbd>Esc</kbd> back &middot; <kbd>R</kbd> reset &middot; <kbd>/</kbd> search &middot; <kbd>1</kbd>&ndash;<kbd>5</kbd> tiers
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     3D-FORCE-GRAPH CDN (preserved)
+     ═══════════════════════════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.77.0/dist/3d-force-graph.min.js"></script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// BACKGROUND PARTICLES — floating atmospheric dust
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  const COUNT = 75;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < COUNT; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5 + 0.3,
+      vx: (Math.random() - 0.5) * 0.12,
+      vy: -Math.random() * 0.28 - 0.04,
+      alpha: Math.random() * 0.4 + 0.06
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let p of particles) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
+      if (p.x < -10) p.x = canvas.width + 10;
+      if (p.x > canvas.width + 10) p.x = -10;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + p.alpha + ')';
+      ctx.fill();
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// ═══════════════════════════════════════════════════════════════════
+// SEARCH — animated placeholder rotation
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  const input = document.getElementById('search');
+  const placeholders = [
+    'Search nodes...',
+    'Search by tag...',
+    'Search by name...',
+    'Search by tier...'
+  ];
+  let i = 0, ci = 0, del = false, t;
+
+  function type() {
+    const target = placeholders[i];
+    if (del) {
+      ci--;
+      if (ci <= 0) { del = false; i = (i + 1) % placeholders.length; t = setTimeout(type, 350); return; }
+    } else {
+      ci++;
+      if (ci >= target.length) { t = setTimeout(function(){ del = true; type(); }, 1800); input.placeholder = target; return; }
+    }
+    input.placeholder = target.substring(0, ci) + (del ? '' : '|');
+    t = setTimeout(type, del ? 18 : 45);
+  }
+  input.addEventListener('focus', function(){ clearTimeout(t); input.placeholder = 'Search nodes...'; });
+  input.addEventListener('blur', function(){ if(!input.value){ ci=0;del=false;i=0;type();} });
+  t = setTimeout(type, 1200);
+})();
+
+// ═══════════════════════════════════════════════════════════════════
+// DATA — All 41 nodes, 77 links, 5 Karpathy tiers (PRESERVED)
+// ═══════════════════════════════════════════════════════════════════
+
+const TIER = {
+  working:    { label: 'Working',    color: '#8b949e', hex: 0x8b949e, order: 1 },
+  episodic:   { label: 'Episodic',   color: '#58a6ff', hex: 0x58a6ff, order: 2 },
+  semantic:   { label: 'Semantic',   color: '#3fb950', hex: 0x3fb950, order: 3 },
+  procedural: { label: 'Procedural', color: '#a371f7', hex: 0xa371f7, order: 4 },
+  system:     { label: 'System',     color: '#d2991d', hex: 0xd2991d, order: 5 }
+};
+
+// ── Space definitions (Semantic tier, 5 spaces, 20 agents) ──────────
+const spaces = [
+  { id:"space-coding", name:"Coding", icon:"💻", desc:"7 agents — dev, tester, architect, reviewer, ops, monitoring, ui",
+    tier:"semantic", tags:["code","architecture","agents"], qdrant:"space_coding",
+    children: [
+      { id:"agent-coding-dev", name:"dev", desc:"Code implementation — T2, claude-sonnet-5", tier:"procedural", tags:["code","implementation","sonnet"], qdrant:"agent_coding_dev", space:"coding" },
+      { id:"agent-coding-tester", name:"tester", desc:"Testing & verification — T1, claude-haiku-4.5", tier:"procedural", tags:["testing","qa","haiku"], qdrant:"agent_coding_tester", space:"coding" },
+      { id:"agent-coding-architect", name:"architect", desc:"Architecture planning — T2, deepseek-v4-pro", tier:"procedural", tags:["architecture","design","deepseek"], qdrant:"agent_coding_architect", space:"coding" },
+      { id:"agent-coding-reviewer", name:"reviewer", desc:"Code review — T2, claude-sonnet-5", tier:"procedural", tags:["review","quality","sonnet"], qdrant:"agent_coding_reviewer", space:"coding" },
+      { id:"agent-coding-ops", name:"ops", desc:"Operational tasks — T1, deepseek-v4-flash", tier:"procedural", tags:["ops","ci/cd","flash"], qdrant:"agent_coding_ops", space:"coding" },
+      { id:"agent-coding-monitoring", name:"monitoring", desc:"System monitoring — T1, deepseek-v4-flash", tier:"procedural", tags:["monitoring","health","flash"], qdrant:"agent_coding_monitoring", space:"coding" },
+      { id:"agent-coding-ui", name:"ui", desc:"Interface design — T2, claude-sonnet-5", tier:"procedural", tags:["ui","design","sonnet"], qdrant:"agent_coding_ui", space:"coding" }
+    ]
+  },
+  { id:"space-finance", name:"Finance", icon:"💰", desc:"4 agents — analyst, news, t212-sync, trading-research",
+    tier:"semantic", tags:["finance","portfolio","trading"], qdrant:"space_finance",
+    children: [
+      { id:"agent-finance-analyst", name:"finance-analyst", desc:"Portfolio & transaction analysis", tier:"procedural", tags:["analysis","portfolio"], qdrant:"agent_finance_finance_analyst", space:"finance" },
+      { id:"agent-finance-news", name:"news-research", desc:"News & sentiment analysis", tier:"procedural", tags:["news","sentiment"], qdrant:"agent_finance_news_research", space:"finance" },
+      { id:"agent-finance-t212", name:"t212-sync", desc:"Trading 212 synchronization", tier:"procedural", tags:["t212","sync","api"], qdrant:"agent_finance_t212_sync", space:"finance" },
+      { id:"agent-finance-trading", name:"trading-research", desc:"Market research & scanner", tier:"procedural", tags:["market","scanner"], qdrant:"agent_finance_trading_research", space:"finance" }
+    ]
+  },
+  { id:"space-legal", name:"Legal", icon:"⚖️", desc:"3 agents — legal-analyst, email-drafter, doc-reviewer. F&W €13K + NSC",
+    tier:"semantic", tags:["legal","cases","german-law"], qdrant:"space_legal",
+    children: [
+      { id:"agent-legal-analyst", name:"legal-analyst", desc:"Case & precedent analysis — T2", tier:"procedural", tags:["analysis","precedent","law"], qdrant:"agent_legal_legal_analyst", space:"legal" },
+      { id:"agent-legal-email", name:"email-drafter", desc:"German business letters — T1", tier:"procedural", tags:["email","german","correspondence"], qdrant:"agent_legal_email_drafter", space:"legal" },
+      { id:"agent-legal-doc", name:"doc-reviewer", desc:"Document review — T2", tier:"procedural", tags:["documents","review"], qdrant:"agent_legal_doc_reviewer", space:"legal" }
+    ]
+  },
+  { id:"space-medicine", name:"Medicine", icon:"🏥", desc:"3 agents — diagnostician, lab-analyst, researcher",
+    tier:"semantic", tags:["medicine","diagnosis","research"], qdrant:"space_medicine",
+    children: [
+      { id:"agent-medicine-diag", name:"diagnostician", desc:"Symptoms → differential diagnosis — T2", tier:"procedural", tags:["diagnosis","symptoms","differential"], qdrant:"agent_medicine_diagnostician", space:"medicine" },
+      { id:"agent-medicine-lab", name:"lab-analyst", desc:"Lab values & reference ranges — T2", tier:"procedural", tags:["lab","reference","values"], qdrant:"agent_medicine_lab_analyst", space:"medicine" },
+      { id:"agent-medicine-res", name:"researcher", desc:"PubMed & guidelines — T1", tier:"procedural", tags:["pubmed","guidelines","literature"], qdrant:"agent_medicine_researcher", space:"medicine" }
+    ]
+  },
+  { id:"space-security", name:"Security", icon:"🔒", desc:"3 agents — auditor, guardian, access-reviewer. 5-layer defense",
+    tier:"semantic", tags:["security","audit","infrastructure"], qdrant:"space_security",
+    children: [
+      { id:"agent-security-auditor", name:"security-auditor", desc:"Full security audit — T2", tier:"procedural", tags:["audit","pentest","vulnerabilities"], qdrant:"agent_security_security_auditor", space:"security" },
+      { id:"agent-security-guardian", name:"infra-guardian", desc:"Infrastructure protection — T1", tier:"procedural", tags:["infrastructure","firewall","hardening"], qdrant:"agent_security_infra_guardian", space:"security" },
+      { id:"agent-security-access", name:"access-reviewer", desc:"Access rights & keys — T2", tier:"procedural", tags:["access","keys","permissions"], qdrant:"agent_security_access_reviewer", space:"security" }
+    ]
+  }
+];
+
+// ── Knowledge / Semantic nodes ──────────────────────────────────────
+const knowledgeNodes = [
+  { id:"sys-dynamic", name:"Dynamic Discovery", desc:"`ls` instead of hardcoding — agents, hooks, scripts, spaces discoverable at runtime", tier:"semantic", tags:["discovery","architecture","ls"], qdrant:"system_memory" },
+  { id:"sys-space", name:"Space Structure", desc:"Unified CLAUDE.md + SPACE.md + task.json format for all spaces", tier:"semantic", tags:["spaces","structure","claude.md"], qdrant:"system_memory" },
+  { id:"sys-structure", name:"File Structure", desc:"Single source of truth, clean backups, no duplicate permissions", tier:"semantic", tags:["files","backup","permissions"], qdrant:"system_memory" },
+  { id:"sys-tg", name:"TG Bot Standard", desc:"Unified visual standard for all bot messages — headers, spacing, formatting", tier:"semantic", tags:["telegram","bot","visual","standard"], qdrant:"system_memory" },
+  { id:"sys-qdrant", name:"Qdrant Usage", desc:"API key, collections, search, memory synchronization", tier:"semantic", tags:["qdrant","vector-db","memory"], qdrant:"system_memory" }
+];
+
+// ── Working Memory nodes ────────────────────────────────────────────
+const workingNodes = [
+  { id:"sys-task", name:"Task Execution Flow", desc:"Execution flow, tool selection, dispatch to vuzol", tier:"working", tags:["execution","flow","dispatch"], qdrant:"system_memory" },
+  { id:"sys-files", name:"Task Hierarchy", desc:"Files = truth, DB = cache. Edit leaf then tasks-parse. Never edit tasks-all.json", tier:"working", tags:["hierarchy","files-first","tasks-parse"], qdrant:"system_memory" },
+  { id:"sys-unified", name:"Unified Tasks", desc:"tasks-parse.py, tasks-all.json, unified schema across all spaces", tier:"working", tags:["tasks","schema","parse"], qdrant:"system_memory" }
+];
+
+// ── Episodic Memory nodes ───────────────────────────────────────────
+const episodicNodes = [
+  { id:"usr-contact", name:"User Contact", desc:"Phone: +380672778265 · Hamburg · ruslanmaneliuk@gmail.com", tier:"semantic", tags:["contact","personal","identity"], qdrant:"user_memory" },
+  { id:"usr-email-style", name:"Email Style", desc:"German business letter tone, structure, rules", tier:"episodic", tags:["email","german","style","business"], qdrant:"user_memory" },
+  { id:"usr-no-email", name:"No Auto Email", desc:"Prohibition on sending emails without explicit permission", tier:"episodic", tags:["email","autonomy","safety"], qdrant:"user_memory" },
+  { id:"usr-read-docs", name:"Read Docs First", desc:"Read documentation before changes, update after changes", tier:"episodic", tags:["docs","workflow","best-practice"], qdrant:"user_memory" }
+];
+
+// ── Procedural Memory node (non-agent) ──────────────────────────────
+const proceduralNodes = [
+  { id:"sys-best", name:"MCP Best Models", desc:"Tiered model selection for task categories", tier:"procedural", tags:["models","tiers","selection","mcp"], qdrant:"system_memory" }
+];
+
+// ── System Memory / Infrastructure nodes ────────────────────────────
+const systemNodes = [
+  { id:"mac-mini", name:"mac-mini", icon:"🍎", desc:"Apple M4 · 16 GB · macOS 15.5 · Executor — 5 spaces, all agents", tier:"system", tags:["mac","m4","executor","apple-silicon"], qdrant:null, host:"mac-mini.local" },
+  { id:"vuzol", name:"vuzol", icon:"🐧", desc:"Linux 8 GB · Ubuntu · Dispatcher — Qdrant :6333 · PG :5432 · Task API :8000", tier:"system", tags:["linux","dispatcher","qdrant","postgres"], qdrant:null, host:"100.84.177.33" },
+  { id:"qdrant", name:"Qdrant", icon:"📁", desc:"Vector DB · 28 collections · 84 points · 2048-dim embeddings · vuzol:6333", tier:"system", tags:["vector-db","embeddings","semantic-search"], qdrant:null, host:"vuzol:6333" }
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// BUILD GRAPH — collect all nodes & links
+// ═══════════════════════════════════════════════════════════════════
+
+const allNodesMap = new Map();
+function addNode(n) { const node = { ...n }; allNodesMap.set(node.id, node); }
+function addNodes(arr) { arr.forEach(addNode); }
+
+addNodes(systemNodes);
+addNodes(proceduralNodes);
+addNodes(workingNodes);
+addNodes(episodicNodes);
+addNodes(knowledgeNodes);
+spaces.forEach(function(s) { addNode(s); s.children.forEach(addNode); });
+
+const allLinks = [];
+function link(a, b) { allLinks.push({ source: a, target: b }); }
+
+// Space → children (20 links)
+spaces.forEach(function(s) { s.children.forEach(function(c) { link(s.id, c.id); }); });
+
+// Infrastructure mesh (3 links)
+link("mac-mini", "vuzol");
+link("vuzol", "qdrant");
+link("mac-mini", "qdrant");
+
+// Spaces connected to mac-mini (5 links)
+spaces.forEach(function(s) { link("mac-mini", s.id); });
+
+// Knowledge → all spaces (5 x 5 = 25 links)
+knowledgeNodes.forEach(function(k) { spaces.forEach(function(s) { link(k.id, s.id); }); });
+
+// Working memory → all spaces (3 x 5 = 15 links)
+workingNodes.forEach(function(w) { spaces.forEach(function(s) { link(w.id, s.id); }); });
+
+// User / knowledge cross-links (4 links)
+link("usr-read-docs", "sys-structure");
+link("usr-email-style", "usr-no-email");
+link("sys-best", "sys-qdrant");
+link("sys-best", "sys-dynamic");
+
+// Cross-tier bridges (5 links)
+link("sys-task", "sys-files");
+link("sys-files", "sys-unified");
+link("sys-unified", "sys-task");
+link("sys-dynamic", "sys-space");
+link("sys-space", "sys-structure");
+
+// ═══════════════════════════════════════════════════════════════════
+// ACCURATE degree centrality (not hardcoded)
+// ═══════════════════════════════════════════════════════════════════
+
+function computeDegrees(nodes, links) {
+  var deg = new Map();
+  nodes.forEach(function(n) { deg.set(n.id, 0); });
+  links.forEach(function(l) {
+    var sid = typeof l.source === 'object' ? l.source.id : l.source;
+    var tid = typeof l.target === 'object' ? l.target.id : l.target;
+    deg.set(sid, (deg.get(sid) || 0) + 1);
+    deg.set(tid, (deg.get(tid) || 0) + 1);
+  });
+  return deg;
+}
+
+var degreeMap = computeDegrees([...allNodesMap.values()], allLinks);
+var maxDeg = Math.max(...degreeMap.values(), 1);
+
+// Accurate global totals
+var TOTAL_NODES = allNodesMap.size;
+var TOTAL_LINKS = allLinks.length;
+
+document.getElementById('stats-nodes').textContent = TOTAL_NODES;
+document.getElementById('stats-links').textContent = TOTAL_LINKS;
+
+// ═══════════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════════
+
+var currentLevel = 'root';
+var activeTierFilter = null;
+var legendCollapsed = false;
+var graphNodes, graphLinks;
+
+function buildGraphData() {
+  var nodes = [...allNodesMap.values()].map(function(n) {
+    return Object.assign({}, n, {
+      val: 2 + (degreeMap.get(n.id) || 0) / maxDeg * 10,
+      color: TIER[n.tier] ? TIER[n.tier].hex : 0x8b949e
+    });
+  });
+  return { nodes: nodes, links: [...allLinks] };
+}
+
+function resetGraphData() {
+  var data = buildGraphData();
+  graphNodes = data.nodes;
+  graphLinks = data.links;
+  return data;
+}
+
+var fullData = resetGraphData();
+var currentData = { nodes: [...fullData.nodes], links: [...fullData.links] };
+
+// ═══════════════════════════════════════════════════════════════════
+// GRAPH INITIALIZATION — 3d-force-graph
+// ═══════════════════════════════════════════════════════════════════
+
+var elem = document.getElementById('graph');
+var Graph = ForceGraph3D()(elem)
+  .graphData(currentData)
+  .nodeLabel(function(n) {
+    var tier = TIER[n.tier];
+    var conns = degreeMap.get(n.id) || 0;
+    return (n.icon ? n.icon + ' ' : '') + n.name + '\n' + n.desc + '\nTier: ' + (tier ? tier.label : 'unknown') + ' · Links: ' + conns;
+  })
+  .nodeColor(function(n) { return n.color; })
+  .nodeVal(function(n) { return n.val; })
+  .nodeResolution(20)
+  .linkColor(function() { return 'rgba(48, 54, 61, 0.32)'; })
+  .linkWidth(function(l) {
+    var sid = typeof l.source === 'object' ? l.source.id : l.source;
+    var tid = typeof l.target === 'object' ? l.target.id : l.target;
+    var srcNode = allNodesMap.get(sid);
+    var tgtNode = allNodesMap.get(tid);
+    if ((srcNode && srcNode.tier === 'procedural') || (tgtNode && tgtNode.tier === 'procedural')) return 1.5;
+    return 0.65;
+  })
+  .linkDirectionalParticles(function(l) {
+    var sid = typeof l.source === 'object' ? l.source.id : l.source;
+    var tid = typeof l.target === 'object' ? l.target.id : l.target;
+    var srcNode = allNodesMap.get(sid);
+    var tgtNode = allNodesMap.get(tid);
+    if (srcNode && srcNode.tier === 'semantic' && tgtNode && tgtNode.tier === 'procedural') return 3;
+    if (srcNode && srcNode.tier === 'system') return 2;
+    return 0;
+  })
+  .linkDirectionalParticleWidth(1.0)
+  .linkDirectionalParticleSpeed(0.003)
+  .backgroundColor('#0a0a14')
+  .showNavInfo(false)
+  .onNodeClick(handleNodeClick)
+  .onNodeHover(handleNodeHover)
+  .onBackgroundClick(function() {
+    closeInfo();
+    if (currentLevel !== 'root') zoomToRoot();
+  });
+
+// ── D3 force tuning ─────────────────────────────────────────────────
+Graph.d3Force('charge').strength(-210);
+Graph.d3Force('link').distance(function(l) {
+  var sid = typeof l.source === 'object' ? l.source.id : l.source;
+  var tid = typeof l.target === 'object' ? l.target.id : l.target;
+  var s = allNodesMap.get(sid);
+  var t = allNodesMap.get(tid);
+  if (s && s.tier === 'semantic' && t && t.tier === 'procedural') return 55;
+  if ((s && s.tier === 'system') || (t && t.tier === 'system')) return 95;
+  return 75;
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// INTERACTION — click & hover
+// ═══════════════════════════════════════════════════════════════════
+
+window._clickedNode = null;
+
+function handleNodeClick(node) {
+  window._clickedNode = node;
+
+  // Space node at root level → drill down
+  if (node.children && currentLevel === 'root') {
+    drillIntoSpace(node);
+    return;
+  }
+
+  // Agent node → show info
+  if (node.tier === 'procedural' && node.space) {
+    showInfo(node);
+    return;
+  }
+
+  // Generic node info
+  showInfo(node);
+}
+
+function handleNodeHover(node) {
+  elem.style.cursor = node ? 'pointer' : 'default';
+  if (!node) {
+    applyCurrentColors();
+    return;
+  }
+
+  // Highlight connected nodes (glow effect)
+  var connected = new Set();
+  currentData.links.forEach(function(l) {
+    var sid = typeof l.source === 'object' ? l.source.id : l.source;
+    var tid = typeof l.target === 'object' ? l.target.id : l.target;
+    if (sid === node.id) connected.add(tid);
+    if (tid === node.id) connected.add(sid);
+  });
+  connected.add(node.id);
+
+  Graph.nodeColor(function(n) {
+    if (connected.has(n.id)) return n.color;
+    return 0x0d1117; // fade non-connected into background
+  });
+}
+
+function applyCurrentColors() {
+  if (activeTierFilter) {
+    applyTierFilterColors(activeTierFilter);
+  } else {
+    Graph.nodeColor(function(n) { return n.color; });
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// DRILL-DOWN into a space
+// ═══════════════════════════════════════════════════════════════════
+
+function drillIntoSpace(space) {
+  currentLevel = 'space:' + space.id;
+  activeTierFilter = null;
+
+  var visible = new Set();
+  systemNodes.forEach(function(n) { visible.add(n.id); });
+  visible.add(space.id);
+  space.children.forEach(function(c) { visible.add(c.id); });
+
+  currentData = {
+    nodes: fullData.nodes.filter(function(n) { return visible.has(n.id); }),
+    links: fullData.links.filter(function(l) {
+      var sid = typeof l.source === 'object' ? l.source.id : l.source;
+      var tid = typeof l.target === 'object' ? l.target.id : l.target;
+      return visible.has(sid) && visible.has(tid);
+    })
+  };
+
+  Graph.graphData(currentData);
+  updateBreadcrumb(space);
+  updateLegendCounts();
+  updateLegendHighlight(null);
+  document.getElementById('match-count').classList.remove('visible');
+
+  // Smoother camera transition (longer duration)
+  setTimeout(function() {
+    var sn = currentData.nodes.find(function(n) { return n.id === space.id; });
+    if (sn && sn.x !== undefined) {
+      Graph.cameraPosition(
+        { x: sn.x + 85, y: sn.y + 48, z: sn.z + 68 },
+        sn,
+        1500
+      );
+    }
+  }, 500);
+}
+
+function zoomToRoot() {
+  currentLevel = 'root';
+  activeTierFilter = null;
+  currentData = { nodes: [...fullData.nodes], links: [...fullData.links] };
+  Graph.graphData(currentData);
+  updateBreadcrumb(null);
+  updateLegendCounts();
+  updateLegendHighlight(null);
+  closeInfo();
+  document.getElementById('match-count').classList.remove('visible');
+  document.getElementById('search').value = '';
+  document.getElementById('search-clear').classList.remove('visible');
+  applyCurrentColors();
+  setTimeout(function() { Graph.zoomToFit(1100, 75); }, 600);
+}
+
+function updateBreadcrumb(space) {
+  var bc = document.getElementById('breadcrumb');
+  if (!space) {
+    bc.innerHTML = '<span data-level="root" onclick="zoomToRoot()">Root</span>';
+  } else {
+    bc.innerHTML = '<span data-level="root" onclick="zoomToRoot()">Root</span>'
+      + '<span class="sep">›</span>'
+      + '<span data-level="space" onclick="drillIntoSpace(window._clickedNode)">' + (space.icon || '') + ' ' + space.name + '</span>';
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// LEGEND — collapsible toggle
+// ═══════════════════════════════════════════════════════════════════
+
+function toggleLegend() {
+  legendCollapsed = !legendCollapsed;
+  document.getElementById('legend').classList.toggle('collapsed', legendCollapsed);
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// INFO PANEL — glass slide-in with FIXED commands
+// ═══════════════════════════════════════════════════════════════════
+
+function showInfo(node) {
+  var panel = document.getElementById('info');
+  var title = document.getElementById('info-title');
+  var body = document.getElementById('info-body');
+  var tier = TIER[node.tier];
+  var conns = degreeMap.get(node.id) || 0;
+
+  title.textContent = (node.icon ? node.icon + ' ' : '') + node.name;
+
+  // Collect connected node names
+  var linkedNodeIds = new Set();
+  currentData.links.forEach(function(l) {
+    var sid = typeof l.source === 'object' ? l.source.id : l.source;
+    var tid = typeof l.target === 'object' ? l.target.id : l.target;
+    if (sid === node.id) linkedNodeIds.add(tid);
+    if (tid === node.id) linkedNodeIds.add(sid);
+  });
+
+  var linkedNames = [];
+  linkedNodeIds.forEach(function(id) {
+    var n = allNodesMap.get(id);
+    if (n) linkedNames.push(n.name);
+  });
+
+  var qdrantCol = node.qdrant || (node.space ? 'space_' + node.space : null);
+
+  // FIXED commands per requirements
+  var qdrantSearchCmd = node.space
+    ? 'ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --space ' + node.space
+    : 'ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "query" --type user';
+
+  var agentCmd = node.space
+    ? 'ssh vuzol python3 /root/scripts/memory-to-qdrant.py --agent coding/' + node.name
+    : 'ssh vuzol python3 /root/scripts/memory-to-qdrant.py --agent coding/dev';
+
+  var tagsHtml = (node.tags || []).map(function(t) {
+    return '<span class="tag" onclick="searchTag(\'' + t + '\')">' + t + '</span>';
+  }).join('');
+
+  var connsHtml = linkedNames.length > 0
+    ? linkedNames.map(function(name) {
+        return '<span onclick="focusNodeByName(\'' + name.replace(/'/g, "\\'") + '\')">' + name + '</span>';
+      }).join(', ')
+    : '<span style="color:var(--text-muted)">none</span>';
+
+  body.innerHTML =
+    '<span class="tier-badge" style="background:' + tier.color + '22;color:' + tier.color + ';border:1px solid ' + tier.color + '44">' + tier.label + ' Memory</span>' +
+    '<p class="desc">' + node.desc + '</p>' +
+
+    '<div class="field">' +
+      '<span class="field-label">Qdrant Collection</span>' +
+      '<span class="field-value">' + (qdrantCol || '—') + '</span>' +
+    '</div>' +
+    '<div class="field">' +
+      '<span class="field-label">Qdrant Search</span>' +
+      '<span class="field-value clickable" onclick="copyCmd(\'' + qdrantSearchCmd.replace(/'/g, "\\'") + '\')">' + escHtml(qdrantSearchCmd) + '</span>' +
+    '</div>' +
+    '<div class="field">' +
+      '<span class="field-label">Agent Command</span>' +
+      '<span class="field-value clickable" onclick="copyCmd(\'' + agentCmd.replace(/'/g, "\\'") + '\')">' + escHtml(agentCmd) + '</span>' +
+    '</div>' +
+
+    '<div class="field">' +
+      '<span class="field-label">Connections (' + conns + ')</span>' +
+      '<div class="connections-list">' + connsHtml + '</div>' +
+    '</div>' +
+
+    '<div class="field">' +
+      '<span class="field-label">Tags</span>' +
+      '<div class="tags-row">' + (tagsHtml || '<span style="color:var(--text-muted);font-size:11px">none</span>') + '</div>' +
+    '</div>' +
+
+    '<div class="action-row">' +
+      '<button class="btn btn-primary" onclick="focusCurrentNode()">Focus</button>' +
+      (node.children ? '<button class="btn btn-ghost" onclick="drillIntoSpace(window._clickedNode)">Expand Agents</button>' : '') +
+      '<button class="btn btn-ghost" onclick="closeInfo()">Close</button>' +
+    '</div>';
+
+  panel.classList.add('show');
+  focusNode(node);
+}
+
+function closeInfo() {
+  document.getElementById('info').classList.remove('show');
+}
+
+function focusNode(node) {
+  if (!node || node.x === undefined) return;
+  var dist = 58;
+  Graph.cameraPosition(
+    { x: node.x + dist, y: node.y + dist * 0.35, z: node.z + dist * 0.55 },
+    node,
+    1200
+  );
+}
+
+function focusCurrentNode() {
+  if (window._clickedNode) {
+    var node = currentData.nodes.find(function(n) { return n.id === window._clickedNode.id; });
+    if (node) focusNode(node);
+  }
+}
+
+function focusNodeByName(name) {
+  var node = currentData.nodes.find(function(n) { return n.name === name; });
+  if (node) {
+    window._clickedNode = node;
+    focusNode(node);
+    showInfo(node);
+  }
+}
+
+function searchTag(tag) {
+  closeInfo();
+  var input = document.getElementById('search');
+  input.value = tag;
+  input.dispatchEvent(new Event('input'));
+  input.focus();
+}
+
+function copyCmd(cmd) {
+  navigator.clipboard.writeText(cmd).then(function() { toast('Copied to clipboard'); });
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// SEARCH — real-time filter with clear button
+// ═══════════════════════════════════════════════════════════════════
+
+var searchTimeout;
+var searchInput = document.getElementById('search');
+var searchClear = document.getElementById('search-clear');
+
+searchInput.addEventListener('input', function(e) {
+  var val = e.target.value;
+  searchClear.classList.toggle('visible', val.length > 0);
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(function() { performSearch(val); }, 150);
+});
+
+function clearSearch() {
+  searchInput.value = '';
+  searchClear.classList.remove('visible');
+  applyCurrentColors();
+  document.getElementById('match-count').classList.remove('visible');
+  searchInput.focus();
+}
+
+function performSearch(query) {
+  var q = query.toLowerCase().trim();
+  var matchEl = document.getElementById('match-count');
+
+  if (!q) {
+    applyCurrentColors();
+    matchEl.classList.remove('visible');
+    return;
+  }
+
+  var matched = new Set();
+  currentData.nodes.forEach(function(n) {
+    var haystack = [n.name, n.desc, n.id, n.tier].concat(n.tags || []).concat([n.space || '']).join(' ').toLowerCase();
+    if (haystack.indexOf(q) !== -1) matched.add(n.id);
+  });
+
+  matchEl.textContent = matched.size + ' match' + (matched.size !== 1 ? 'es' : '');
+  matchEl.classList.add('visible');
+
+  Graph.nodeColor(function(n) {
+    return matched.has(n.id) ? n.color : 0x0d1117;
+  });
+
+  if (matched.size === 1) {
+    var node = currentData.nodes.find(function(n) { return matched.has(n.id); });
+    if (node && node.x !== undefined) focusNode(node);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// TIER FILTER (legend click + keyboard 1-5)
+// ═══════════════════════════════════════════════════════════════════
+
+function filterByTier(tier) {
+  if (activeTierFilter === tier) {
+    activeTierFilter = null;
+    updateLegendHighlight(null);
+    applyCurrentColors();
+    toast('Showing all tiers');
+    return;
+  }
+
+  activeTierFilter = tier;
+  updateLegendHighlight(tier);
+  applyTierFilterColors(tier);
+
+  var count = currentData.nodes.filter(function(n) { return n.tier === tier; }).length;
+  toast(TIER[tier].label + ': ' + count + ' node' + (count !== 1 ? 's' : ''));
+}
+
+function applyTierFilterColors(tier) {
+  Graph.nodeColor(function(n) {
+    return n.tier === tier ? n.color : 0x0d1117;
+  });
+}
+
+function updateLegendHighlight(tier) {
+  document.querySelectorAll('#legend .row').forEach(function(row) {
+    row.classList.toggle('active', row.dataset.tier === tier);
+  });
+}
+
+function updateLegendCounts() {
+  var data = currentLevel === 'root' ? fullData : currentData;
+  ['working','episodic','semantic','procedural','system'].forEach(function(tier) {
+    var cnt = data.nodes.filter(function(n) { return n.tier === tier; }).length;
+    var el = document.getElementById('cnt-' + tier);
+    if (el) el.textContent = cnt;
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// KEYBOARD SHORTCUTS
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('keydown', function(e) {
+  var inInput = !!(e.target.closest && e.target.closest('input'));
+
+  // / or Cmd/Ctrl+F → focus search
+  if ((e.key === '/' || (e.key === 'f' && (e.metaKey || e.ctrlKey))) && !inInput) {
+    e.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+    return;
+  }
+
+  // Escape
+  if (e.key === 'Escape') {
+    if (inInput) { searchInput.blur(); return; }
+    if (document.getElementById('info').classList.contains('show')) { closeInfo(); return; }
+    if (currentLevel !== 'root') { zoomToRoot(); return; }
+    if (activeTierFilter) { filterByTier(activeTierFilter); }
+    return;
+  }
+
+  // R → reset
+  if (e.key === 'r' && !inInput) { zoomToRoot(); return; }
+
+  // 1-5 → tier filter
+  if (!inInput) {
+    var tierKeys = { '1': 'working', '2': 'episodic', '3': 'semantic', '4': 'procedural', '5': 'system' };
+    if (tierKeys[e.key]) filterByTier(tierKeys[e.key]);
+  }
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════════════════════════
+
+var toastTimer;
+function toast(msg) {
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function() { el.classList.remove('show'); }, 2000);
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════════════
+
+function escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// INIT — loading sequence + keyboard hint fade
+// ═══════════════════════════════════════════════════════════════════
+
+updateLegendCounts();
+
+// Wait for force simulation to settle, then animate camera & hide loader
+setTimeout(function() {
+  Graph.zoomToFit(1300, 80);
+  setTimeout(function() {
+    document.getElementById('loading').classList.add('hidden');
+  }, 1500);
+}, 3500);
+
+// Fade keyboard hint after inactivity
+var kbdFadeTimer;
+function resetKbdFade() {
+  var hint = document.getElementById('kbd-hint');
+  hint.classList.remove('fading');
+  clearTimeout(kbdFadeTimer);
+  kbdFadeTimer = setTimeout(function() { hint.classList.add('fading'); }, 8000);
+}
+['mousemove','mousedown','touchstart','keydown'].forEach(function(evt) {
+  document.addEventListener(evt, resetKbdFade);
+});
+resetKbdFade();
+
+// Responsive resize
+window.addEventListener('resize', function() {
+  Graph.width(window.innerWidth);
+  Graph.height(window.innerHeight);
+});
+</script>
+</body>
+</html>

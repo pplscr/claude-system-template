@@ -1,0 +1,15 @@
+{
+  "id": "finances",
+  "name": "Фінанси",
+  "status": "active",
+  "priority": "high",
+  "progress": 50,
+  "description": "Бюджет, API ключі, підписки, витрати. Trading 212 API підключено.",
+  "deadlines": {},
+  "next_steps": ["Додати інкрементальну синхронізацію (пагінація за всі періоди)", "Інтегрувати в digest"],
+  "blocked_by": [],
+  "contact": null,
+  "last_activity": "31.07.2026 — Trading 212 API підключено. Повний снепшот: €7 742, 60 позицій, 50 транзакцій, 50 ордерів, 50 дивідендів. Конектор: ~/spaces/finance/trading212/connector.py",
+  "tier": "life",
+  "last_updated": "2026-07-31T21:10:00.000000"
+}

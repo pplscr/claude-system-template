@@ -1,0 +1,45 @@
+{
+  "_schema": "2.0",
+  "space": "test-space",
+  "space_label": "🧪 Тестовий простір",
+  "status": "active",
+  "progress_pct": 50,
+  "priority": "low",
+  "items": [
+    {
+      "id": "test-1",
+      "type": "task",
+      "title": "Тестове завдання",
+      "status": "in_progress",
+      "priority": "low",
+      "progress_pct": 50,
+      "deadlines": {
+        "check": {
+          "date": "2026-08-01",
+          "desc": "Тестовий дедлайн",
+          "days_left": 1
+        }
+      },
+      "next_step": "Перевірити авто-відкриття",
+      "last_activity": "2026-07-31"
+    }
+  ],
+  "deadlines": {
+    "urgent": [
+      {
+        "item_id": "test-1",
+        "item_title": "Тестове завдання",
+        "deadline_key": "check",
+        "date": "2026-08-01",
+        "desc": "Тестовий дедлайн",
+        "days_left": 1
+      }
+    ],
+    "this_week": [],
+    "upcoming": []
+  },
+  "active_cases": 1,
+  "total_tasks": 1,
+  "completed_tasks": 0,
+  "last_updated": "2026-07-31T20:31:30.479144"
+}

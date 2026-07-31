@@ -1,0 +1,1505 @@
+{
+  "count": 150,
+  "items": [
+    {
+      "date": "2026-04-16",
+      "month": "2026-04",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 15.18,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-17",
+      "month": "2026-04",
+      "merchant": "TABAKWAREN KAEHLER",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.5,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-04-18",
+      "month": "2026-04",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 33.4,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-18",
+      "month": "2026-04",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.5,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-04-18",
+      "month": "2026-04",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 26.89,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-18",
+      "month": "2026-04",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 22.58,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-18",
+      "month": "2026-04",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 12.0,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-04-21",
+      "month": "2026-04",
+      "merchant": "Edeka",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 24.09,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-23",
+      "month": "2026-04",
+      "merchant": "FLiXBUS",
+      "merchant_category": "TRANSPORT",
+      "amount": 23.91,
+      "currency": "EUR",
+      "category": "🚇 Транспорт",
+      "category_key": "transport"
+    },
+    {
+      "date": "2026-04-23",
+      "month": "2026-04",
+      "merchant": "TotalEnergies",
+      "merchant_category": "AUTOMOBILE",
+      "amount": 6.85,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-04-23",
+      "month": "2026-04",
+      "merchant": "TotalEnergies",
+      "merchant_category": "AUTOMOBILE",
+      "amount": 5.05,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-04-23",
+      "month": "2026-04",
+      "merchant": "TotalEnergies",
+      "merchant_category": "AUTOMOBILE",
+      "amount": 8.35,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-04-23",
+      "month": "2026-04",
+      "merchant": "TotalEnergies",
+      "merchant_category": "AUTOMOBILE",
+      "amount": 19.84,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-04-24",
+      "month": "2026-04",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 24.42,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-24",
+      "month": "2026-04",
+      "merchant": "Rossmann",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 22.99,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-28",
+      "month": "2026-04",
+      "merchant": "avec 2014",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 2.79,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-04-28",
+      "month": "2026-04",
+      "merchant": "BLUME2000",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 26.99,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-04-28",
+      "month": "2026-04",
+      "merchant": "S2K Food Store GmbH & Co. KG",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 5.57,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-04-29",
+      "month": "2026-04",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 36.09,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-30",
+      "month": "2026-04",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 54.92,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-30",
+      "month": "2026-04",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 71.52,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-04-30",
+      "month": "2026-04",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 29.15,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-02",
+      "month": "2026-05",
+      "merchant": "Rossmann",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 24.35,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-02",
+      "month": "2026-05",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 68.69,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-07",
+      "month": "2026-05",
+      "merchant": "Rewe",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 22.59,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-08",
+      "month": "2026-05",
+      "merchant": "Rewe",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 29.74,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-09",
+      "month": "2026-05",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 51.16,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-09",
+      "month": "2026-05",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 16.09,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-12",
+      "month": "2026-05",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 6.18,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-13",
+      "month": "2026-05",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 8.87,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-13",
+      "month": "2026-05",
+      "merchant": "Edeka Aktiv Markt",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 5.53,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-14",
+      "month": "2026-05",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 7.02,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-05-15",
+      "month": "2026-05",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 13.28,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-15",
+      "month": "2026-05",
+      "merchant": "JET Tankstelle",
+      "merchant_category": "AUTOMOBILE",
+      "amount": 45.98,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-05-16",
+      "month": "2026-05",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 10.97,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-05-17",
+      "month": "2026-05",
+      "merchant": "IRCC",
+      "merchant_category": "GOVERNMENT_SERVICES",
+      "amount": 62.63,
+      "currency": "EUR",
+      "category": "🏛️ Збори",
+      "category_key": "fees"
+    },
+    {
+      "date": "2026-05-17",
+      "month": "2026-05",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 2.74,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-05-17",
+      "month": "2026-05",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.13,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-05-19",
+      "month": "2026-05",
+      "merchant": "Edeka",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 2.24,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-19",
+      "month": "2026-05",
+      "merchant": "Deutsche Post",
+      "merchant_category": "TRANSPORT",
+      "amount": 1.9,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-05-19",
+      "month": "2026-05",
+      "merchant": "Penny Markt",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 9.01,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-20",
+      "month": "2026-05",
+      "merchant": "Burger King",
+      "merchant_category": "RESTAURANTS",
+      "amount": 12.74,
+      "currency": "EUR",
+      "category": "🍽️ Харчування",
+      "category_key": "dining"
+    },
+    {
+      "date": "2026-05-21",
+      "month": "2026-05",
+      "merchant": "Frischemarkt Altona",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 8.22,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-05-22",
+      "month": "2026-05",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 15.99,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-26",
+      "month": "2026-05",
+      "merchant": "Gesundleben Apotheke",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.0,
+      "currency": "EUR",
+      "category": "🏥 Здоров'я",
+      "category_key": "health"
+    },
+    {
+      "date": "2026-05-26",
+      "month": "2026-05",
+      "merchant": "Edeka",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.44,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-27",
+      "month": "2026-05",
+      "merchant": "Amazon",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 32.11,
+      "currency": "EUR",
+      "category": "🛒 Покупки",
+      "category_key": "shopping"
+    },
+    {
+      "date": "2026-05-28",
+      "month": "2026-05",
+      "merchant": "GreenMedical",
+      "merchant_category": "MEMBERSHIPS",
+      "amount": 9.95,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-05-28",
+      "month": "2026-05",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 41.21,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-05-28",
+      "month": "2026-05",
+      "merchant": "Arcaden Apotheke",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 58.5,
+      "currency": "EUR",
+      "category": "🏥 Здоров'я",
+      "category_key": "health"
+    },
+    {
+      "date": "2026-05-29",
+      "month": "2026-05",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 17.15,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-06-04",
+      "month": "2026-06",
+      "merchant": "Arcaden Apotheke",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 58.5,
+      "currency": "EUR",
+      "category": "🏥 Здоров'я",
+      "category_key": "health"
+    },
+    {
+      "date": "2026-06-05",
+      "month": "2026-06",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.21,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-06-06",
+      "month": "2026-06",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 23.95,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-06-08",
+      "month": "2026-06",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 13.25,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-06-08",
+      "month": "2026-06",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.99,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-06-09",
+      "month": "2026-06",
+      "merchant": "Arcaden Apotheke",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 76.5,
+      "currency": "EUR",
+      "category": "🏥 Здоров'я",
+      "category_key": "health"
+    },
+    {
+      "date": "2026-06-10",
+      "month": "2026-06",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 9.55,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-06-10",
+      "month": "2026-06",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 11.0,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-06-16",
+      "month": "2026-06",
+      "merchant": "avec 2014",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 1.99,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-06-21",
+      "month": "2026-06",
+      "merchant": "avec 2014",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 2.14,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-06-22",
+      "month": "2026-06",
+      "merchant": "Lagardère",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 6.75,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-06-23",
+      "month": "2026-06",
+      "merchant": "Arcaden Apotheke",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 83.5,
+      "currency": "EUR",
+      "category": "🏥 Здоров'я",
+      "category_key": "health"
+    },
+    {
+      "date": "2026-06-23",
+      "month": "2026-06",
+      "merchant": "Kiosk Walizada",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 2.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-06-23",
+      "month": "2026-06",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 9.3,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-06-24",
+      "month": "2026-06",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 11.6,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-06-25",
+      "month": "2026-06",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 20.15,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-06-26",
+      "month": "2026-06",
+      "merchant": "McDonald's",
+      "merchant_category": "RESTAURANTS",
+      "amount": 12.09,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-06-26",
+      "month": "2026-06",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.54,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-06-27",
+      "month": "2026-06",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.32,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-06-28",
+      "month": "2026-06",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 3.99,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-08",
+      "month": "2026-07",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 4.67,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "63250310 Hamburg Hbf B",
+      "merchant_category": "RESTAURANTS",
+      "amount": 7.55,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "Penny Markt",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 4.77,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "avec 6181",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 2.14,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "Lagardère",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 2.5,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "JUSTCOM GMBH",
+      "merchant_category": "AUTOMOBILE",
+      "amount": 649.0,
+      "currency": "EUR",
+      "category": "🛒 Покупки",
+      "category_key": "shopping"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 5.9,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-07-09",
+      "month": "2026-07",
+      "merchant": "Manju",
+      "merchant_category": "RESTAURANTS",
+      "amount": 5.9,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-10",
+      "month": "2026-07",
+      "merchant": "Penny Markt",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 14.54,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-10",
+      "month": "2026-07",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 40.54,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-10",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.6,
+      "currency": "USD",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-11",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.6,
+      "currency": "USD",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-11",
+      "month": "2026-07",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.54,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-11",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.6,
+      "currency": "USD",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-12",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.6,
+      "currency": "USD",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-12",
+      "month": "2026-07",
+      "merchant": "TABAKWAREN YELOEGRUE",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 5.0,
+      "currency": "EUR",
+      "category": "🚬 Тютюн",
+      "category_key": "tobacco"
+    },
+    {
+      "date": "2026-07-12",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.6,
+      "currency": "USD",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 10.6,
+      "currency": "USD",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "McDonald's",
+      "merchant_category": "RESTAURANTS",
+      "amount": 4.19,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "Rewe",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 5.47,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "cyberport",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 29.9,
+      "currency": "EUR",
+      "category": "🛒 Покупки",
+      "category_key": "shopping"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "Rewe",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 3.48,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "Kiosk Walizada",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 2.5,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-13",
+      "month": "2026-07",
+      "merchant": "Flix SE",
+      "merchant_category": "TRANSPORT",
+      "amount": 160.95,
+      "currency": "EUR",
+      "category": "🚇 Транспорт",
+      "category_key": "transport"
+    },
+    {
+      "date": "2026-07-14",
+      "month": "2026-07",
+      "merchant": "Rewe",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 2.5,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-14",
+      "month": "2026-07",
+      "merchant": "Europa Apotheke",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 4.95,
+      "currency": "EUR",
+      "category": "🏥 Здоров'я",
+      "category_key": "health"
+    },
+    {
+      "date": "2026-07-14",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.26,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-14",
+      "month": "2026-07",
+      "merchant": "OEZURFA",
+      "merchant_category": "RESTAURANTS",
+      "amount": 18.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-14",
+      "month": "2026-07",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 5.07,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-15",
+      "month": "2026-07",
+      "merchant": "Tchibo",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 3.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-15",
+      "month": "2026-07",
+      "merchant": "Yorma's AG",
+      "merchant_category": "RESTAURANTS",
+      "amount": 2.5,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-15",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 32.1,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-15",
+      "month": "2026-07",
+      "merchant": "DM DROGERIE SAGT DANKE",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 4.25,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-15",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 43.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.06,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "FRÄNKISCHES FREILANDMUSEUM FLADUNGEN",
+      "merchant_category": "ENTERTAINMENT",
+      "amount": 18.0,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.71,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 34.11,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 6.08,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 43.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 11.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "merchant": "Google Cloud",
+      "merchant_category": "UTILITIES",
+      "amount": 10.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-17",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 20.06,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-17",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 49.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-17",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 11.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-17",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.28,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-18",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.06,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-18",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 49.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-18",
+      "month": "2026-07",
+      "merchant": "OpenRouter",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.24,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-18",
+      "month": "2026-07",
+      "merchant": "Franken Therme",
+      "merchant_category": "PERSONAL_SERVICES",
+      "amount": 11.0,
+      "currency": "EUR",
+      "category": "🏊 Розваги",
+      "category_key": "entertainment"
+    },
+    {
+      "date": "2026-07-18",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 12.37,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-18",
+      "month": "2026-07",
+      "merchant": "Lidl",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 0.2,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-19",
+      "month": "2026-07",
+      "merchant": "Hering Sanikonzept",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-19",
+      "month": "2026-07",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.54,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-19",
+      "month": "2026-07",
+      "merchant": "M. Niemeyer Gmbh & Co. Kg",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 1.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-19",
+      "month": "2026-07",
+      "merchant": "Hering Sanikonzept",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-19",
+      "month": "2026-07",
+      "merchant": "OpenRouter",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.24,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-19",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 5.57,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-20",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.28,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-21",
+      "month": "2026-07",
+      "merchant": "Kiosk Walizada",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 3.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-21",
+      "month": "2026-07",
+      "merchant": "Frischemarkt Altona",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.24,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-22",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.3,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-22",
+      "month": "2026-07",
+      "merchant": "Buecherhalle Neugraben",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 3.0,
+      "currency": "EUR",
+      "category": "❓ Інше",
+      "category_key": "other"
+    },
+    {
+      "date": "2026-07-22",
+      "month": "2026-07",
+      "merchant": "OpenRouter",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.27,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-22",
+      "month": "2026-07",
+      "merchant": "OpenRouter",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.27,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-22",
+      "month": "2026-07",
+      "merchant": "OpenRouter",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.27,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-23",
+      "month": "2026-07",
+      "merchant": "Frischemarkt Altona",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 4.08,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-24",
+      "month": "2026-07",
+      "merchant": "Kaufland",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 40.87,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-24",
+      "month": "2026-07",
+      "merchant": "Frischemarkt Wandelhalle",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 3.99,
+      "currency": "EUR",
+      "category": "⛽ Пальне",
+      "category_key": "fuel"
+    },
+    {
+      "date": "2026-07-25",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.33,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-25",
+      "month": "2026-07",
+      "merchant": "Edeka",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 1.24,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-27",
+      "month": "2026-07",
+      "merchant": "OpenRouter",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 11.31,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-27",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.33,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-28",
+      "month": "2026-07",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 21.76,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-28",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.32,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-29",
+      "month": "2026-07",
+      "merchant": "ALDI Nord",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 6.3,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-29",
+      "month": "2026-07",
+      "merchant": "V. Wiedemann & Sohn",
+      "merchant_category": "RETAIL_STORES",
+      "amount": 4.29,
+      "currency": "EUR",
+      "category": "🍔 Продукти",
+      "category_key": "groceries"
+    },
+    {
+      "date": "2026-07-30",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 1.86,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    },
+    {
+      "date": "2026-07-30",
+      "month": "2026-07",
+      "merchant": "DEEPSEEK",
+      "merchant_category": "MISCELLANEOUS",
+      "amount": 9.2,
+      "currency": "EUR",
+      "category": "🤖 AI/API",
+      "category_key": "ai_api"
+    }
+  ]
+}

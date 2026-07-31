@@ -1,0 +1,15 @@
+{
+  "id": "claude-system",
+  "name": "Claude System Management",
+  "status": "active",
+  "priority": "medium",
+  "progress": 0,
+  "description": "Керування claude-system скриптами, state tracking, sync з vuzol",
+  "deadlines": {},
+  "next_steps": [],
+  "blocked_by": [],
+  "contact": null,
+  "last_activity": null,
+  "tier": "life",
+  "last_updated": "2026-07-29T17:19:53.298806"
+}

@@ -1,0 +1,533 @@
+{
+  "_schema": "2.0",
+  "_generated_at": "2026-08-01T00:00:21.612683",
+  "_generated_by": "tasks-parse.py",
+  "total_spaces": 6,
+  "total_items": 18,
+  "active_items": 14,
+  "critical_count": 5,
+  "spaces": [
+    {
+      "space": "legal",
+      "space_label": "Legal",
+      "icon": "⚖️",
+      "status": "active",
+      "priority": "critical",
+      "progress_pct": 82,
+      "active_cases": 2,
+      "total_tasks": 5,
+      "completed_tasks": 0,
+      "blockers": [
+        "German grammar MUST be reviewed separately before sending",
+        "All amounts in Euro",
+        "July 27 'amended service' email was NEVER properly sent — it is in Account A (not main Account B), in All Mail but NOT Sent Mail. Do NOT reference July 27 as a delivery date."
+      ],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [
+          {
+            "item_id": "1283-26-UR",
+            "item_title": "Maneliuk v National Steel Car Limited",
+            "deadline_key": "requirement_to_complete",
+            "date": "2026-08-05",
+            "desc": "10 working days from Requirement to Complete (July 22, 2026). File sworn affidav",
+            "days_left": 6
+          }
+        ],
+        "upcoming": [
+          {
+            "item_id": "F&W-3M",
+            "item_title": "Fördern & Wohnen — 3. Mahnung",
+            "deadline_key": "payment_mahnung3",
+            "date": "2026-08-15",
+            "desc": "Send 3. Mahnung to tenant — €13 166.05 debt (2022-06 – 2024-05)",
+            "days_left": 16
+          },
+          {
+            "item_id": "F&W-3M",
+            "item_title": "Fördern & Wohnen — 3. Mahnung",
+            "deadline_key": "widerspruch",
+            "date": "2026-08-17",
+            "desc": "Widerspruch Einschreiben + Email — 12 arguments",
+            "days_left": 18
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "F&W-3M",
+          "type": "case",
+          "title": "Fördern & Wohnen — 3. Mahnung",
+          "status": "active",
+          "priority": "critical",
+          "progress_pct": 80,
+          "deadlines": {
+            "payment_mahnung3": {
+              "date": "2026-08-15",
+              "desc": "Send 3. Mahnung to tenant — €13 166.05 debt (2022-06 – 2024-05)",
+              "days_left": 16,
+              "status": "pending"
+            },
+            "ratenzahlung_email": {
+              "date": "2026-07-31",
+              "desc": "Ratenzahlung email to Joana Ramos — 50€/Monat ohne Anerkennung",
+              "days_left": -1,
+              "status": "completed"
+            },
+            "widerspruch": {
+              "date": "2026-08-17",
+              "desc": "Widerspruch Einschreiben + Email — 12 arguments",
+              "days_left": 18,
+              "status": "pending"
+            }
+          },
+          "next_step": "Wait for F&W response to Ratenzahlung — ~2-4 weeks",
+          "last_activity": "✅ RATENZAHLUNG SENT 31.07.2026 14:10. Ratenzahlung email sent to Joana Ramos + CC Sachbearbeitung. All protective clauses intact. Widerspruch draft in Gmail, ready for 17.08.",
+          "sub_items": [
+            "fw-debt/case.json"
+          ],
+          "amount": null
+        },
+        {
+          "id": "1283-26-UR",
+          "type": "case",
+          "title": "Maneliuk v National Steel Car Limited",
+          "status": "active",
+          "priority": "critical",
+          "progress_pct": 85,
+          "deadlines": {
+            "requirement_to_complete": {
+              "date": "2026-08-05",
+              "desc": "10 working days from Requirement to Complete (July 22, 2026). File sworn affidav",
+              "days_left": 6,
+              "status": "pending"
+            },
+            "affidavit_pickup": {
+              "date": "2026-07-31",
+              "desc": "Pick up notarized affidavit from Notariat Nesemann | Uhlenbrock | Müller, Harbur",
+              "days_left": -1,
+              "status": "completed"
+            }
+          },
+          "next_step": "Scan sworn affidavit to PDF/A",
+          "last_activity": "📎 Affidavit picked up July 31. Email audit completed: OLRB confirmation Jul 22, notary secured Jul 28. No 'amended service' found. Next: scan + e-file by Aug 5.",
+          "sub_items": [
+            "factory-nsc/case.json"
+          ],
+          "amount": null
+        }
+      ]
+    },
+    {
+      "space": "finance",
+      "space_label": "Фінанси",
+      "icon": "💰",
+      "status": "active",
+      "priority": "medium",
+      "progress_pct": 40,
+      "active_cases": 2,
+      "total_tasks": 2,
+      "completed_tasks": 0,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [
+          {
+            "item_id": "justcom-260707",
+            "item_title": "JUSTCOM — ремонт HP Pavilion Gaming Laptop",
+            "deadline_key": "payment",
+            "date": "2026-08-07",
+            "desc": "payment",
+            "days_left": 7
+          }
+        ],
+        "upcoming": []
+      },
+      "items": [
+        {
+          "id": "justcom-260707",
+          "type": "invoice",
+          "title": "JUSTCOM — ремонт HP Pavilion Gaming Laptop",
+          "status": "pending_payment",
+          "priority": "high",
+          "progress_pct": 50,
+          "deadlines": {
+            "payment": {
+              "date": "2026-08-07",
+              "desc": "payment",
+              "days_left": 7
+            }
+          },
+          "next_step": "Чекати відповіді від Marcus Obertaxer (marcus@justcom.de) або JUSTCOM — 2 запитання про Mainboard + термін",
+          "last_activity": "31.07 17:44 — перший лист на email@justcom.de. 31.07 20:47 — follow-up на marcus@justcom.de (Geschäftsleitung). Жодної відповіді на запитання поки немає.",
+          "sub_items": [
+            "items/justcom-260707.json"
+          ],
+          "amount": {
+            "value": 298.0,
+            "currency": "EUR"
+          }
+        },
+        {
+          "id": "trading212",
+          "type": "portfolio",
+          "title": "Trading 212 — інвестиційний портфель",
+          "status": "active",
+          "priority": "high",
+          "progress_pct": 30,
+          "deadlines": {},
+          "next_step": "Запустити trading-research агента для першого сканування ринку",
+          "last_activity": "31.07.2026 — API підключено, повний снепшот збережено. Агенти створено. Очікування результатів дослідження trading bots.",
+          "sub_items": [
+            "items/trading212.json"
+          ],
+          "amount": {
+            "value": 7742.49,
+            "currency": "EUR"
+          }
+        }
+      ]
+    },
+    {
+      "space": "coding",
+      "space_label": "Coding",
+      "icon": "💻",
+      "status": "paused",
+      "priority": "medium",
+      "progress_pct": 100,
+      "active_cases": 0,
+      "total_tasks": 1,
+      "completed_tasks": 1,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [],
+        "upcoming": []
+      },
+      "items": [
+        {
+          "id": "coding-init",
+          "type": "task",
+          "title": "Активувати простір кодингу",
+          "status": "done",
+          "priority": "medium",
+          "progress_pct": 100,
+          "deadlines": {},
+          "next_step": "",
+          "last_activity": "2026-07-31",
+          "completed_at": "2026-07-31T18:31:17.000000",
+          "notes": "7 агентів мають SOUL.md; проекти: json-validator, notify, sysinfo — завершені; простір готовий до роботи"
+        }
+      ]
+    },
+    {
+      "space": "medicine",
+      "space_label": "Медицина",
+      "icon": "🏥",
+      "status": "paused",
+      "priority": "low",
+      "progress_pct": 0,
+      "active_cases": 0,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [],
+        "upcoming": []
+      },
+      "items": []
+    },
+    {
+      "space": "security",
+      "space_label": "Security",
+      "icon": "🔒",
+      "status": "paused",
+      "priority": "low",
+      "progress_pct": 0,
+      "active_cases": 0,
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [],
+        "this_week": [],
+        "upcoming": []
+      },
+      "items": []
+    },
+    {
+      "space": "test-space",
+      "space_label": "Test Space",
+      "icon": "📋",
+      "status": "active",
+      "priority": "low",
+      "progress_pct": 50,
+      "active_cases": 1,
+      "total_tasks": 1,
+      "completed_tasks": 0,
+      "blockers": [],
+      "deadlines": {
+        "urgent": [
+          {
+            "item_id": "test-1",
+            "item_title": "Тестове завдання",
+            "deadline_key": "check",
+            "date": "2026-08-01",
+            "desc": "Тестовий дедлайн",
+            "days_left": 1
+          }
+        ],
+        "this_week": [],
+        "upcoming": []
+      },
+      "items": [
+        {
+          "id": "test-1",
+          "type": "task",
+          "title": "Тестове завдання",
+          "status": "in_progress",
+          "priority": "low",
+          "progress_pct": 50,
+          "deadlines": {
+            "check": {
+              "date": "2026-08-01",
+              "desc": "Тестовий дедлайн",
+              "days_left": 1
+            }
+          },
+          "next_step": "Перевірити авто-відкриття",
+          "last_activity": "2026-07-31"
+        }
+      ]
+    }
+  ],
+  "infra": {
+    "space": "infra",
+    "space_label": "Інфраструктура",
+    "icon": "🖥️",
+    "status": "active",
+    "priority": "critical",
+    "progress_pct": 48,
+    "active_cases": 9,
+    "total_tasks": 9,
+    "completed_tasks": 0,
+    "blockers": [],
+    "deadlines": {
+      "urgent": [
+        {
+          "item_id": "setup-gmail-orchestrator",
+          "item_title": "Gmail MCP Orchestrator",
+          "deadline_key": "default",
+          "date": "2026-08-01",
+          "desc": "default",
+          "days_left": 0
+        }
+      ],
+      "this_week": [
+        {
+          "item_id": "factory-nsc",
+          "item_title": "NSC Legal Case",
+          "deadline_key": "requirement_to_complete",
+          "date": "2026-08-05",
+          "desc": "requirement_to_complete",
+          "days_left": 4
+        }
+      ],
+      "upcoming": [
+        {
+          "item_id": "fw-mahnung",
+          "item_title": "F&W 3. Mahnung",
+          "deadline_key": "payment_mahnung3",
+          "date": "2026-08-15",
+          "desc": "payment_mahnung3",
+          "days_left": 14
+        },
+        {
+          "item_id": "fw-mahnung",
+          "item_title": "F&W 3. Mahnung",
+          "deadline_key": "widerspruch",
+          "date": "2026-08-17",
+          "desc": "widerspruch",
+          "days_left": 16
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "cibc",
+        "type": "project",
+        "title": "CIBC Credit Recovery",
+        "status": "active",
+        "priority": "critical",
+        "progress_pct": 20,
+        "deadlines": {},
+        "next_step": "Подзвонити в CIBC: +1-902-420-2422 (24/7)",
+        "last_activity": "Первинний аналіз ситуації, визначено контакти",
+        "sub_items": [
+          "_infra/projects/cibc.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "claude-system",
+        "type": "project",
+        "title": "Claude System Management",
+        "status": "active",
+        "priority": "medium",
+        "progress_pct": 0,
+        "deadlines": {},
+        "next_step": "",
+        "last_activity": null,
+        "sub_items": [
+          "_infra/projects/claude-system.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "factory-nsc",
+        "type": "project",
+        "title": "NSC Legal Case",
+        "status": "active",
+        "priority": "critical",
+        "progress_pct": 85,
+        "deadlines": {
+          "affidavit_pickup": {
+            "date": "2026-07-31",
+            "desc": "affidavit_pickup",
+            "days_left": -1,
+            "status": "completed"
+          },
+          "requirement_to_complete": {
+            "date": "2026-08-05",
+            "desc": "requirement_to_complete",
+            "days_left": 4,
+            "status": "pending"
+          }
+        },
+        "next_step": "Scan sworn affidavit to PDF/A",
+        "last_activity": "📎 Affidavit picked up July 31. Email audit completed: OLRB confirmation received Jul 22, notary search (43 emails) Jul 24, notary secured Jul 28. No 'amended service' email found — confirmed. Next: scan affidavit, sign A-136, e-file by Aug 5.",
+        "sub_items": [
+          "_infra/projects/factory-nsc.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "finances",
+        "type": "project",
+        "title": "Фінанси",
+        "status": "active",
+        "priority": "high",
+        "progress_pct": 50,
+        "deadlines": {},
+        "next_step": "Додати інкрементальну синхронізацію (пагінація за всі періоди)",
+        "last_activity": "31.07.2026 — Trading 212 API підключено. Повний снепшот: €7 742, 60 позицій, 50 транзакцій, 50 ордерів, 50 дивідендів. Конектор: ~/spaces/finance/trading212/connector.py",
+        "sub_items": [
+          "_infra/projects/finances.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "fw-mahnung",
+        "type": "project",
+        "title": "F&W 3. Mahnung",
+        "status": "active",
+        "priority": "critical",
+        "progress_pct": 80,
+        "deadlines": {
+          "ratenzahlung_email": {
+            "date": "2026-07-31",
+            "desc": "ratenzahlung_email",
+            "days_left": -1,
+            "status": "completed"
+          },
+          "payment_mahnung3": {
+            "date": "2026-08-15",
+            "desc": "payment_mahnung3",
+            "days_left": 14,
+            "status": "pending"
+          },
+          "widerspruch": {
+            "date": "2026-08-17",
+            "desc": "widerspruch",
+            "days_left": 16,
+            "status": "pending"
+          }
+        },
+        "next_step": "Wait for F&W response to Ratenzahlung — ~2-4 weeks",
+        "last_activity": "✅ RATENZAHLUNG SENT 31.07.2026 14:10. Ratenzahlung email sent to Joana Ramos + CC Sachbearbeitung. All protective clauses intact. Widerspruch draft in Gmail, ready for 17.08.",
+        "sub_items": [
+          "_infra/projects/fw-mahnung.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "mac-infra",
+        "type": "project",
+        "title": "mac-mini Infrastructure",
+        "status": "active",
+        "priority": "high",
+        "progress_pct": 0,
+        "deadlines": {},
+        "next_step": "",
+        "last_activity": null,
+        "sub_items": [
+          "_infra/projects/mac-infra.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "merezha",
+        "type": "project",
+        "title": "Мережа A2A Orchestrator",
+        "status": "active",
+        "priority": "low",
+        "progress_pct": 95,
+        "deadlines": {},
+        "next_step": "Реалізувати L0 Router (intent classification)",
+        "last_activity": "v070 дедлайн знято 29.07.2026 — хобі",
+        "sub_items": [
+          "_infra/projects/merezha.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "pantheon",
+        "type": "project",
+        "title": "Pantheon Office",
+        "status": "active",
+        "priority": "low",
+        "progress_pct": 15,
+        "deadlines": {},
+        "next_step": "Завершити міграцію style/glass-demo2",
+        "last_activity": "Backup перед disk cleanup (eea1d2b). Є незакомічені зміни.",
+        "sub_items": [
+          "_infra/projects/pantheon.json"
+        ],
+        "amount": null
+      },
+      {
+        "id": "setup-gmail-orchestrator",
+        "type": "project",
+        "title": "Gmail MCP Orchestrator",
+        "status": "active",
+        "priority": "medium",
+        "progress_pct": 90,
+        "deadlines": {
+          "default": {
+            "date": "2026-08-01",
+            "desc": "default",
+            "days_left": 0,
+            "status": "pending"
+          }
+        },
+        "next_step": "Перезапустити Claude Code щоб gmail-multi-mcp підхопився в сесії mac-mini",
+        "last_activity": "Gmail MCP працює: (1) vuzol: google-workspace MCP через IMAP/SMTP — 3 акаунти (ruslanmaneliuk, ruslanmanelyuk, jobreviewhub); (2) mac-mini: gmail-multi-mcp додано в settings.json, обидва акаунти OAuth-підключені; (3) Google Maps API ключ налаштовано. Потрібен перезапуск Claude Code для активації MCP в сесії.",
+        "sub_items": [
+          "_infra/projects/setup-gmail-orchestrator.json"
+        ],
+        "amount": null
+      }
+    ]
+  }
+}

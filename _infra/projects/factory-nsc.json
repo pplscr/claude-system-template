@@ -1,0 +1,44 @@
+{
+  "id": "factory-nsc",
+  "name": "NSC Legal Case",
+  "status": "active",
+  "priority": "critical",
+  "progress": 85,
+  "description": "Юридичний кейс проти National Steel Car — OLRB, DFR, OHSA, MECP",
+  "deadlines": {
+    "affidavit_pickup": {
+      "date": "2026-07-31",
+      "status": "completed",
+      "desc": "Pick up notarized affidavit from Notariat Nesemann | Uhlenbrock | Müller"
+    },
+    "requirement_to_complete": {
+      "date": "2026-08-05",
+      "status": "pending",
+      "desc": "File sworn affidavit + A-136 with OLRB"
+    }
+  },
+  "next_steps": [
+    "Scan sworn affidavit to PDF/A",
+    "Sign A-136 (handwritten signature)",
+    "E-file supplementary filing with OLRB",
+    "Serve parties via email"
+  ],
+  "blocked_by": [
+    "Очікування OLRB (OHSA s.50)",
+    "Очікування OLRB (DFR 3203-25-U)"
+  ],
+  "contact": null,
+  "last_activity": "📎 Affidavit picked up July 31. Email audit completed: OLRB confirmation received Jul 22, notary search (43 emails) Jul 24, notary secured Jul 28. No 'amended service' email found — confirmed. Next: scan affidavit, sign A-136, e-file by Aug 5.",
+  "tier": "life",
+  "emails_verified": {
+    "original_service": "2026-07-22 16:38 — Service to Gooding, Gobbett, Carter, Crowder",
+    "olrb_confirmation": "2026-07-22 10:41 — #20260722104151786",
+    "rtc_received": "2026-07-22 18:46 — Requirement to Complete",
+    "notary_search": "2026-07-24 — 43 emails to Hamburg notaries",
+    "notary_secured": "2026-07-28 — Paluszkiewicz confirmed",
+    "affidavit_emailed_to_notary": "2026-07-29 10:09 — Affidavit-EXACT-EMAILED-22July2026",
+    "amended_service_jul27": "NOT FOUND — confirmed NOT in any folder",
+    "affidavit_picked_up": "2026-07-31 ✅"
+  },
+  "last_updated": "2026-07-31T20:35:00.000000"
+}

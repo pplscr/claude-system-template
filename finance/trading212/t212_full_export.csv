@@ -1,0 +1,424 @@
+Action,Time (UTC),Notes,ID,Gross Total,Currency (Gross Total),Charge amount,Currency (Charge amount),Deposit fee,Currency (Deposit fee),Currency conversion from amount,Currency (Currency conversion from amount),Currency conversion to amount,Currency (Currency conversion to amount),Currency conversion fee,Currency (Currency conversion fee),Merchant name,Merchant category,Taxes,Currency (Taxes),Net Total,Currency (Net Total)
+Interest on cash,2026-01-01 02:12:37+00:00,"Interest on cash",ee82a653-0475-4ddf-a674-6154ffc38993,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-03 02:13:07+00:00,"Interest on cash",fcf1ba65-8dd7-4528-9158-f3aca5dd11c9,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-04 02:13:30+00:00,"Interest on cash",c3c07d61-1f22-4646-a3c0-b7f9afd418c7,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-06 02:11:55+00:00,"Interest on cash",e004eaf1-6c4a-4dd6-8d72-d9271874c2a3,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-07 02:12:45+00:00,"Interest on cash",a9b2d3cb-2526-4a13-a0b9-a40258be2f68,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-10 02:13:08+00:00,"Interest on cash",019ba5ad-caa8-785e-ad75-e81f74b90e3f,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-14 02:11:44+00:00,"Interest on cash",019bba45-f249-72c5-bab0-0ae36526e924,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Deposit,2026-01-15 08:00:13+00:00,"Bank Transfer",019bc0ab-574c-765f-b6ce-373275d6adcd,400.00,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-01-16 02:11:24+00:00,"Interest on cash",019bc492-5b55-7884-999b-39154bb3e899,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-01-17 02:11:22+00:00,"Interest on cash",019bc9b8-af49-7543-b099-c46f02dbf9ba,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-01-18 02:11:51+00:00,"Interest on cash",019bcedf-7bbc-7922-aa77-6a107d1a875e,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-01-19 02:11:21+00:00,"Interest on cash",019bd405-6235-7ec4-9581-97b1f4c59325,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-01-20 02:11:42+00:00,"Interest on cash",019bd92c-11eb-7cc7-94d1-a9de88303962,0.03,"EUR",,,,,,,,,,,,,0.00,"EUR",0.03,"EUR"
+Deposit,2026-01-23 15:14:17+00:00,"Transaction ID: VD6TP6GJ8CFSQMD3",019beb6b-9f10-7613-a6e6-505953c0b30b,10.00,"EUR",,,,,,,,,,,,,,,,
+Currency conversion,2026-01-23 16:25:55+00:00,"17.50 EUR -> 20.57 USD",E40MCHDIY4N4O8RN,-0.03,"USD",,,,,17.50,"EUR",20.57,"USD",-0.03,"USD",,,,,,
+Interest on cash,2026-01-24 02:12:17+00:00,"Interest on cash",019bedc6-095e-78eb-b1e3-c36412b6ca19,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Deposit,2026-01-25 18:45:20+00:00,"Transaction ID: CTZWSDTVSTP7JRQ9",019bf679-8ed8-7024-9e47-a67c2f7b7802,500.00,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-01-26 02:12:21+00:00,"Interest on cash",019bf812-d01a-7134-a0f7-8740f56fd656,0.04,"EUR",,,,,,,,,,,,,0.00,"EUR",0.04,"EUR"
+Interest on cash,2026-01-27 02:12:29+00:00,"Interest on cash",019bfd39-4cfc-70b6-8658-13e140cc920c,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Currency conversion,2026-01-27 09:22:35+00:00,"13.55 USD -> 11.42 EUR",2ED5ZEXH767V1LK1,-0.02,"EUR",,,,,13.55,"USD",11.42,"EUR",-0.02,"EUR",,,,,,
+Interest on cash,2026-01-29 02:11:57+00:00,"Interest on cash",019c0785-8771-7d63-a810-0d9014c17d24,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Deposit,2026-02-04 06:45:04+00:00,"Bank Transfer",019c2765-bd10-7d34-a539-79dfdc0a1e96,300.00,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-02-05 02:12:04+00:00,"Interest on cash",019c2b92-280f-72e2-8d4d-3d5ffb783610,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-06 02:12:07+00:00,"Interest on cash",019c30b8-9060-7bac-9db0-b2ac652dff42,0.03,"EUR",,,,,,,,,,,,,0.00,"EUR",0.03,"EUR"
+Interest on cash,2026-02-07 02:12:07+00:00,"Interest on cash",019c35de-ec89-79d2-a0b2-85037e26c4b6,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-02-08 02:12:35+00:00,"Interest on cash",019c3b05-b454-7310-88a8-112b0179cef2,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-02-09 02:11:42+00:00,"Interest on cash",019c402b-42bb-72b1-8806-fa980b006f3d,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-02-10 02:12:06+00:00,"Interest on cash",019c4551-fb5f-753e-8295-15eed2ebd240,0.03,"EUR",,,,,,,,,,,,,0.00,"EUR",0.03,"EUR"
+Interest on cash,2026-02-11 02:12:08+00:00,"Interest on cash",019c4a78-5eb2-77ef-bec1-7cc2c722631d,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-02-12 02:12:10+00:00,"Interest on cash",019c4f9e-c0c3-7298-9fb4-a7e5b07a51c4,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-02-13 02:10:58+00:00,"Interest on cash",019c54c4-03b8-76c5-84ba-777bdf68826d,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-15 02:12:37+00:00,"Interest on cash",019c5f12-3ee7-7451-bf03-a47a871f6945,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-17 02:11:10+00:00,"Interest on cash",019c695d-a33d-7181-910f-f638553d556f,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-19 02:12:04+00:00,"Interest on cash",019c73ab-2e4e-7b4c-b0e0-24d750c0212e,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-21 02:11:44+00:00,"Interest on cash",019c7df7-9995-702c-a25f-1facd6cc95af,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-23 02:12:58+00:00,"Interest on cash",019c8845-732c-7b5f-88f6-7f724a35d734,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-25 02:12:27+00:00,"Interest on cash",019c9291-b18e-7cef-817a-7149a7f4b657,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-02-27 02:11:04+00:00,"Interest on cash",019c9cdd-23c3-7f81-bbbe-446d883ee7f4,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-03-01 02:11:20+00:00,"Interest on cash",019ca72a-1980-73ab-adc0-b3c137f00773,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Deposit,2026-03-01 22:50:17+00:00,"Transaction ID: BM37268Z7KPHH6F6",019cab98-65dc-7a24-8ba1-3fb8310a1599,800.00,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-03-02 02:12:18+00:00,"Interest on cash",019cac51-5afa-7410-b44e-2986c7bb8adb,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-03-04 02:10:43+00:00,"Interest on cash",019cb69c-a032-7b13-8f9d-3651d51b90d8,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-05 02:11:09+00:00,"Interest on cash",019cbbc3-60cd-7439-b090-9b8858184b49,0.04,"EUR",,,,,,,,,,,,,0.00,"EUR",0.04,"EUR"
+Interest on cash,2026-03-06 02:11:56+00:00,"Interest on cash",019cc0ea-7323-7056-be1d-3f616f4c1b7a,0.07,"EUR",,,,,,,,,,,,,0.00,"EUR",0.07,"EUR"
+Currency conversion,2026-03-06 14:47:47+00:00,"50.00 EUR -> 57.81 USD",IF9D7DY8URD9YCOI,-0.09,"USD",,,,,50.00,"EUR",57.81,"USD",-0.09,"USD",,,,,,
+Interest on cash,2026-03-07 02:12:29+00:00,"Interest on cash",019cc611-4fb1-7dca-ac5c-25b9c8f4be64,0.06,"EUR",,,,,,,,,,,,,0.00,"EUR",0.06,"EUR"
+Interest on cash,2026-03-08 02:12:59+00:00,"Interest on cash",019ccb38-2148-7710-851f-e5a4600e64de,0.07,"EUR",,,,,,,,,,,,,0.00,"EUR",0.07,"EUR"
+Interest on cash,2026-03-09 02:12:10+00:00,"Interest on cash",019cd05d-bed4-7f96-a650-0c019fc2399d,0.06,"EUR",,,,,,,,,,,,,0.00,"EUR",0.06,"EUR"
+Interest on cash,2026-03-10 02:12:27+00:00,"Interest on cash",019cd584-5e09-764f-ae6f-ad9ea72e18a6,0.07,"EUR",,,,,,,,,,,,,0.00,"EUR",0.07,"EUR"
+Interest on cash,2026-03-12 02:11:24+00:00,"Interest on cash",019cdfd0-1fcd-7e94-8fa3-0d7174e1e751,0.06,"EUR",,,,,,,,,,,,,0.00,"EUR",0.06,"EUR"
+Interest on cash,2026-03-13 02:11:32+00:00,"Interest on cash",019ce4f6-99d8-70fc-ad05-ab71c3378bd1,0.06,"EUR",,,,,,,,,,,,,0.00,"EUR",0.06,"EUR"
+Interest on cash,2026-03-16 02:14:41+00:00,"Interest on cash",019cf46c-923b-755c-978a-542bd6a26714,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-03-17 02:14:48+00:00,"Interest on cash",019cf993-07cb-7485-92d4-76c838f7e5f4,0.06,"EUR",,,,,,,,,,,,,0.00,"EUR",0.06,"EUR"
+Interest on cash,2026-03-18 02:14:45+00:00,"Interest on cash",019cfeb9-5773-749d-a09c-d23afc8581b6,0.05,"EUR",,,,,,,,,,,,,0.00,"EUR",0.05,"EUR"
+Interest on cash,2026-03-19 02:14:22+00:00,"Interest on cash",019d03df-5bad-77c0-b7a7-069e44b532f2,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-20 02:14:07+00:00,"Interest on cash",019d0905-7b77-7fe1-a0f5-4e3a4dfec996,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-21 02:14:06+00:00,"Interest on cash",019d0e2b-d2cb-70d8-938c-6e9a5c87978e,0.03,"EUR",,,,,,,,,,,,,0.00,"EUR",0.03,"EUR"
+Interest on cash,2026-03-22 02:14:34+00:00,"Interest on cash",019d1352-9de6-705d-b9f8-ad60db41b36f,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-23 02:14:18+00:00,"Interest on cash",019d1878-ba0f-7856-a3cf-432d2bcfcfaa,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-24 02:14:04+00:00,"Interest on cash",019d1d9e-e096-74fa-99d8-b95af5a75cc2,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-03-26 02:14:23+00:00,"Interest on cash",019d27eb-e161-72dd-8a7f-8c18970b6675,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-03-28 02:14:25+00:00,"Interest on cash",019d3238-a11f-774e-a5f7-ae63adf6ce22,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-29 01:14:13+00:00,"Interest on cash",019d3727-e1f6-736f-a8f4-adda596a9541,0.03,"EUR",,,,,,,,,,,,,0.00,"EUR",0.03,"EUR"
+Interest on cash,2026-03-30 01:14:39+00:00,"Interest on cash",019d3c4e-a2db-7772-ac01-0b39f90076f8,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-03-31 01:12:40+00:00,"Interest on cash",019d4173-2dc3-7f1c-81d4-61bdd73a2d66,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-04-01 01:12:43+00:00,"Interest on cash",019d4699-9483-798e-91f5-8193f3d2195f,0.03,"EUR",,,,,,,,,,,,,0.00,"EUR",0.03,"EUR"
+Interest on cash,2026-04-02 01:13:04+00:00,"Interest on cash",019d4bc0-441a-7606-8d77-400246ffc530,0.02,"EUR",,,,,,,,,,,,,0.00,"EUR",0.02,"EUR"
+Interest on cash,2026-04-03 01:13:20+00:00,"Interest on cash",019d50e6-dd62-7de9-bc2e-aa8f61febbf5,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-04-05 01:13:38+00:00,"Interest on cash",019d5b33-dba4-7a64-97a4-97e2245428ac,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-04-06 01:13:05+00:00,"Interest on cash",019d6059-b785-7f0d-b036-f5fe88418fac,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-04-08 01:13:56+00:00,"Interest on cash",019d6aa7-3722-763f-9df3-4199cc683bc7,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-04-09 01:13:53+00:00,"Interest on cash",019d6fcd-86fb-7a0f-a726-63d089bfdb13,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-04-11 01:12:59+00:00,"Interest on cash",019d7a19-6b3b-7a0d-b97b-a6338bb7dbb1,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Interest on cash,2026-04-12 01:13:02+00:00,"Interest on cash",019d7f3f-d160-7d58-b78c-211808c19caa,0.01,"EUR",,,,,,,,,,,,,0.00,"EUR",0.01,"EUR"
+Deposit,2026-04-13 17:36:17+00:00,"Transaction ID: FLK3CPPWTG3KXDR9",019d87ea-6219-7628-9d73-4aef9f022dd5,2000.00,"EUR",2009.17,"EUR",-9.17,"EUR",,,,,,,,,,,,
+Interest on cash,2026-04-14 01:12:38+00:00,"Interest on cash",019d898c-2ec8-7435-97e6-9c7dd33fffa8,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+New card cost,2026-04-14 19:11:07+00:00,,019d8d67-8eb7-7e9f-9a8f-7f8ba32c5634,-4.95,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-15 01:12:44+00:00,"Interest on cash",019d8eb2-a198-7b2e-9391-c3441564f6bc,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+Interest on cash,2026-04-16 01:12:36+00:00,"Interest on cash",019d93d8-dd23-77b5-9245-6f62ad169fc0,0.16,"EUR",,,,,,,,,,,,,0.00,"EUR",0.16,"EUR"
+Card debit,2026-04-16 18:45:58+00:00,,019d9acc-80ce-7c48-9ee1-dde8f5eef76a,-15.18,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Interest on cash,2026-04-17 01:12:59+00:00,"Interest on cash",019d98ff-94bf-7c14-b1e1-def8ab09accd,0.16,"EUR",,,,,,,,,,,,,0.00,"EUR",0.16,"EUR"
+Card debit,2026-04-17 13:24:39+00:00,,019da326-a1d2-7e2c-b1ad-c18838a18f42,-11.50,"EUR",,,,,,,,,,,"TABAKWAREN KAEHLER","MISCELLANEOUS",,,,
+Spending cashback,2026-04-18 01:07:32+00:00,,019d9e20-f382-7ee6-ae4e-5db25aedcb18,0.30,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-18 01:13:00+00:00,"Interest on cash",019d9e25-f47a-7f1e-ad87-439d468166ba,0.16,"EUR",,,,,,,,,,,,,0.00,"EUR",0.16,"EUR"
+Card debit,2026-04-18 13:44:08+00:00,,019da3b3-e429-70a0-8220-29ba0daddd21,-33.40,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-04-18 13:50:52+00:00,,019da3b4-6887-75dc-ad9d-472aa2792116,-1.50,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Card debit,2026-04-18 15:19:12+00:00,,019da50a-aa5c-7ff6-b16d-6b7cf42db80d,-26.89,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-04-18 18:24:40+00:00,,019da608-6ef8-7a3d-9dcc-9c8c134979d3,-22.58,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Card debit,2026-04-18 18:34:34+00:00,,019da3b4-69be-7783-bd84-8eb49b210d9a,-12.00,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Interest on cash,2026-04-19 01:13:47+00:00,"Interest on cash",019da34d-079d-748b-9b06-ac0d5449698c,0.16,"EUR",,,,,,,,,,,,,0.00,"EUR",0.16,"EUR"
+Spending cashback,2026-04-20 01:08:12+00:00,,019da86e-4583-7643-9656-4626600800ba,0.23,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-20 01:08:12+00:00,,019da86e-459f-724c-804b-d03183b83994,0.66,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-20 01:08:12+00:00,,019da86e-45ad-7cd2-bf88-237115f6dfa6,0.03,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-20 01:08:12+00:00,,019da86e-45cb-7522-846e-e2af0ab245f9,0.24,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-20 01:08:12+00:00,,019da86e-45e4-7f8e-a327-9d156770e81f,0.53,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-20 01:08:12+00:00,,019da86e-45eb-7b41-8528-4c9aa09b61c1,0.45,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-20 01:13:00+00:00,"Interest on cash",019da872-ac09-7538-94c5-a40951ed498c,0.15,"EUR",,,,,,,,,,,,,0.00,"EUR",0.15,"EUR"
+Interest on cash,2026-04-21 01:12:48+00:00,"Interest on cash",019dad98-d80f-71ff-a67f-589d329becac,0.15,"EUR",,,,,,,,,,,,,0.00,"EUR",0.15,"EUR"
+Card debit,2026-04-21 07:28:55+00:00,,019db325-1c2b-702d-8924-b30aded44472,-24.09,"EUR",,,,,,,,,,,"Edeka","RETAIL_STORES",,,,
+Interest on cash,2026-04-22 01:12:54+00:00,"Interest on cash",019db2bf-4dd9-7c44-8014-fcb2b1b5a427,0.15,"EUR",,,,,,,,,,,,,0.00,"EUR",0.15,"EUR"
+Spending cashback,2026-04-23 01:06:11+00:00,,019db7df-8215-78b7-9928-a56231b39105,0.48,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-23 01:13:03+00:00,"Interest on cash",019db7e5-c9a8-76fb-810a-b5dbee83b720,0.14,"EUR",,,,,,,,,,,,,0.00,"EUR",0.14,"EUR"
+Card debit,2026-04-23 10:00:16+00:00,,019dc21b-0dd3-79db-91a1-34f2742a83bd,-23.91,"EUR",,,,,,,,,0.00,"UAH","FLiXBUS","TRANSPORT",,,,
+Card debit,2026-04-23 11:24:41+00:00,,019dbee2-84c0-72ce-a4c6-c15df5013da9,-6.85,"EUR",,,,,,,,,,,"TotalEnergies","AUTOMOBILE",,,,
+Card debit,2026-04-23 20:54:15+00:00,,019dbee2-8756-7149-9da6-a91fcf04fe38,-5.05,"EUR",,,,,,,,,,,"TotalEnergies","AUTOMOBILE",,,,
+Card debit,2026-04-23 21:19:44+00:00,,019dbee2-8966-7dd5-9014-2c4486e9abf3,-8.35,"EUR",,,,,,,,,,,"TotalEnergies","AUTOMOBILE",,,,
+Card debit,2026-04-23 22:01:29+00:00,,019dc409-2e56-75fe-a9d1-032c3c217e08,-19.84,"EUR",,,,,,,,,,,"TotalEnergies","AUTOMOBILE",,,,
+Interest on cash,2026-04-24 01:13:02+00:00,"Interest on cash",019dbd0c-215b-7642-8518-484195ca9847,0.14,"EUR",,,,,,,,,,,,,0.00,"EUR",0.14,"EUR"
+Card debit,2026-04-24 10:04:27+00:00,,019dc4f0-5ba5-7628-896b-e6daa261e245,-24.42,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Card debit,2026-04-24 10:16:11+00:00,,019dc297-777f-721b-85f2-a4330b6e308b,-22.99,"EUR",,,,,,,,,,,"Rossmann","MISCELLANEOUS",,,,
+Spending cashback,2026-04-25 01:06:20+00:00,,019dc22c-5c3e-7c36-a644-ee8204a31293,0.13,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-25 01:06:20+00:00,,019dc22c-5c4d-7ffc-bd0e-57e8062e81a4,0.10,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-25 01:06:20+00:00,,019dc22c-5c69-7ad5-a540-788eb049189b,0.16,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-25 01:12:53+00:00,"Interest on cash",019dc232-5ac4-792e-aa3f-8d4db45d29f5,0.14,"EUR",,,,,,,,,,,,,0.00,"EUR",0.14,"EUR"
+Spending cashback,2026-04-26 01:06:53+00:00,,019dc753-3a4f-7033-b959-09206cec7594,0.47,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-26 01:06:53+00:00,,019dc753-3a61-749d-990e-b32fea1438dc,0.45,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-26 01:06:53+00:00,,019dc753-3a72-78d8-9577-5fc22422084b,0.39,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-26 01:06:53+00:00,,019dc753-3a85-75d8-adf2-10aa6e546035,0.48,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-26 01:13:34+00:00,"Interest on cash",019dc759-592c-7db7-81e4-036e064141e2,0.13,"EUR",,,,,,,,,,,,,0.00,"EUR",0.13,"EUR"
+Interest on cash,2026-04-27 01:13:07+00:00,"Interest on cash",019dcc7f-4a3a-7582-baaf-ca2d611b2de9,0.13,"EUR",,,,,,,,,,,,,0.00,"EUR",0.13,"EUR"
+Interest on cash,2026-04-28 01:13:07+00:00,"Interest on cash",019dd1a5-a771-7f22-8198-663dedc19db2,0.13,"EUR",,,,,,,,,,,,,0.00,"EUR",0.13,"EUR"
+Card debit,2026-04-28 07:21:08+00:00,,019dd89c-745d-7ed7-ab6c-a47eb3589f77,-2.79,"EUR",,,,,,,,,,,"avec 2014","MISCELLANEOUS",,,,
+Card debit,2026-04-28 08:29:37+00:00,,019dd6a7-03ad-7d78-a99e-289f67acfaab,-26.99,"EUR",,,,,,,,,,,"BLUME2000","MISCELLANEOUS",,,,
+Card debit,2026-04-28 15:38:50+00:00,,019dd72c-b65d-7f5c-92c4-5d29c75ddb34,-5.57,"EUR",,,,,,,,,,,"S2K Food Store GmbH & Co. KG","RETAIL_STORES",,,,
+Interest on cash,2026-04-29 01:13:24+00:00,"Interest on cash",019dd6cc-43e1-7173-8f2e-530099fc65bb,0.13,"EUR",,,,,,,,,,,,,0.00,"EUR",0.13,"EUR"
+Card debit,2026-04-29 05:26:24+00:00,,019ddbd0-3c52-78c0-ad42-3263f2ec1bc6,-36.09,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Spending cashback,2026-04-30 01:05:11+00:00,,019ddbeb-1a19-7be7-8f87-6460473346e7,0.53,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-30 01:05:11+00:00,,019ddbeb-1a2a-7700-878f-69ec00d0c107,0.11,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-04-30 01:05:11+00:00,,019ddbeb-1a39-7b02-a4ec-3f329d4b9679,0.05,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-04-30 01:14:08+00:00,"Interest on cash",019ddbf3-4d85-7a73-b84c-c6581175025b,0.11,"EUR",,,,,,,,,,,,,0.00,"EUR",0.11,"EUR"
+Card debit,2026-04-30 13:03:49+00:00,,019de3ce-72f7-7b8b-b066-8cbdafcff5e9,-54.92,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Card debit,2026-04-30 13:37:34+00:00,,019de17e-e290-7f84-9db4-13967e316d50,-71.52,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-04-30 16:52:41+00:00,,019de303-e6c6-7b99-a0a0-819a35fa9362,-29.15,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Spending cashback,2026-05-01 01:05:19+00:00,,019de111-97dc-79a9-a9bc-6e03d198c1d7,0.72,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-01 01:14:33+00:00,"Interest on cash",019de11a-0a66-7887-a778-3c467b86dc40,0.12,"EUR",,,,,,,,,,,,,0.00,"EUR",0.12,"EUR"
+Deposit,2026-05-01 02:35:29+00:00,"Transaction ID: CFC687P4HLHBV4G3",019de164-2372-7b2e-ac9f-a12604220363,2000.00,"EUR",2014.00,"EUR",-14.00,"EUR",,,,,,,,,,,,
+Deposit,2026-05-01 02:36:58+00:00,"Transaction ID: WZHHX7P4HLHBV4G3",019de165-7e8c-7cce-af14-75b5bbfa7e93,2000.00,"EUR",2014.00,"EUR",-14.00,"EUR",,,,,,,,,,,,
+Spending cashback,2026-05-02 01:06:02+00:00,,019de638-99a4-7f31-8cef-dd01aef68e9d,1.43,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-02 01:06:02+00:00,,019de638-99b7-7123-bc66-511a92fee2c3,0.58,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-02 01:06:02+00:00,,019de638-99c8-7f66-a1a5-1d6876a6fc61,1.09,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-02 01:14:22+00:00,"Interest on cash",019de640-3baa-72b4-8d4c-388c89b2d740,0.43,"EUR",,,,,,,,,,,,,0.00,"EUR",0.43,"EUR"
+Card debit,2026-05-02 14:20:13+00:00,,019dee22-6704-76cf-bb45-5dd463d1f430,-24.35,"EUR",,,,,,,,,,,"Rossmann","MISCELLANEOUS",,,,
+Card debit,2026-05-02 14:50:52+00:00,,019dee1f-b2c2-7c0a-83a4-093922b6a5f8,-68.69,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Interest on cash,2026-05-03 01:14:30+00:00,"Interest on cash",019deb66-b71e-7e21-b1f5-1d2b1c880edf,0.42,"EUR",,,,,,,,,,,,,0.00,"EUR",0.42,"EUR"
+Spending cashback,2026-05-04 01:08:11+00:00,,019df087-4b9c-756b-a624-d3071bf5947f,1.37,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-04 01:08:11+00:00,,019df087-4ba4-7c94-bd4f-a6eefe6c84a6,0.48,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-04 01:14:18+00:00,"Interest on cash",019df08c-e496-7678-927c-22e7532fe036,0.43,"EUR",,,,,,,,,,,,,0.00,"EUR",0.43,"EUR"
+Withdrawal,2026-05-04 07:54:00+00:00,"Sent to card **** 1736",019df1fa-d27b-7548-9b3f-b79805ef0b47,-500.00,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-05 01:14:09+00:00,"Interest on cash",019df5b3-1cdc-7762-9f5a-e2009bff2655,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Interest on cash,2026-05-06 01:14:26+00:00,"Interest on cash",019dfad9-baca-7b21-a54b-3204f65802a8,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Interest on cash,2026-05-07 01:14:44+00:00,"Interest on cash",019e0000-5e06-7e5b-8e5a-13f308b9485b,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Card debit,2026-05-07 20:49:53+00:00,,019e06f5-e299-75f3-98d1-23ca19e8035d,-22.59,"EUR",,,,,,,,,,,"Rewe","RETAIL_STORES",,,,
+Interest on cash,2026-05-08 01:14:37+00:00,"Interest on cash",019e0526-9cdf-785c-bd61-98cd8f35dc51,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Card debit,2026-05-08 20:45:47+00:00,,019e0c28-7b56-778b-9437-e586dcaed386,-29.74,"EUR",,,,,,,,,,,"Rewe","RETAIL_STORES",,,,
+Spending cashback,2026-05-09 01:04:02+00:00,,019e0a43-4acd-7ffc-a4cc-7263217c22c8,0.45,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-09 01:13:32+00:00,"Interest on cash",019e0a4b-fcbc-7c61-be3a-736cdb07fd99,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Card debit,2026-05-09 12:12:03+00:00,,019e0fd4-ea6b-7648-9803-55b41532fa0c,-51.16,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-05-09 15:27:46+00:00,,019e1225-2740-72e9-8457-f0b1b7233631,-16.09,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Spending cashback,2026-05-10 01:04:01+00:00,,019e0f69-a2a5-7461-be16-0791f86e7630,0.59,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-10 01:14:27+00:00,"Interest on cash",019e0f73-2e04-7098-a17c-8b7fdaa9a97f,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Spending cashback,2026-05-11 01:04:02+00:00,,019e1490-018b-747f-91d6-f9eb35e51f1a,1.02,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-11 01:04:02+00:00,,019e1490-019b-7981-90d6-e881ccde5b8d,0.32,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-11 01:13:15+00:00,"Interest on cash",019e1498-71f0-70ed-acfe-27e7447a71c7,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Interest on cash,2026-05-12 01:12:51+00:00,"Interest on cash",019e19be-6f7d-74da-88db-3572550dd1f0,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Card debit,2026-05-12 18:35:59+00:00,,019e2198-29bb-7449-b7ac-91353c4a29e7,-6.18,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Interest on cash,2026-05-13 01:12:36+00:00,"Interest on cash",019e1ee4-9203-7475-a1d0-eed3425c6f27,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Card debit,2026-05-13 05:46:38+00:00,,019e246e-0eb2-7589-b432-36305e8f6296,-8.87,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-05-13 16:01:28+00:00,,019e2471-832b-72f3-9154-6e7d476f2c51,-5.53,"EUR",,,,,,,,,,,"Edeka Aktiv Markt","RETAIL_STORES",,,,
+Spending cashback,2026-05-14 01:03:53+00:00,,019e2402-f1c6-7284-95d1-71c2adf7bae1,0.12,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-14 01:13:03+00:00,"Interest on cash",019e240b-5589-7909-82b7-8ac1fac34375,0.35,"EUR",,,,,,,,,,,,,0.00,"EUR",0.35,"EUR"
+Card debit,2026-05-14 15:51:00+00:00,,019e298c-1cb6-7ace-b50a-56590deaf6bd,-7.02,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Spending cashback,2026-05-15 01:03:35+00:00,,019e2929-06bb-7540-8d83-dbe2d552b574,0.17,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-15 01:03:35+00:00,,019e2929-06cc-7ad5-b855-751ca411ef73,0.11,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-15 01:12:38+00:00,"Interest on cash",019e2931-505f-779a-814a-cf5e4cd845d0,0.35,"EUR",,,,,,,,,,,,,0.00,"EUR",0.35,"EUR"
+Card debit,2026-05-15 14:41:34+00:00,,019e2ed3-5048-71ae-a939-3af002654608,-13.28,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-05-15 18:04:10+00:00,,019e3029-f692-7e75-8239-bc7f094b3305,-45.98,"EUR",,,,,,,,,,,"JET Tankstelle","AUTOMOBILE",,,,
+Spending cashback,2026-05-16 01:08:05+00:00,,019e2e53-825d-7b52-b753-845402196c59,0.14,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-16 01:13:28+00:00,"Interest on cash",019e2e58-728e-7fae-b6a3-6b3aeef52aac,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Card debit,2026-05-16 17:39:13+00:00,,019e33de-8053-7c80-997b-628fda26164e,-10.97,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Spending cashback,2026-05-17 01:04:24+00:00,,019e3376-7fd3-7410-9f87-44dfc2fc5887,0.26,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-17 01:04:24+00:00,,019e3376-7fe3-7daf-95a5-3dd4ec673886,0.91,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-17 01:14:02+00:00,"Interest on cash",019e337f-5348-7ff0-bda3-fc812a70c9f8,0.34,"EUR",,,,,,,,,,,,,0.00,"EUR",0.34,"EUR"
+Card debit,2026-05-17 12:34:34+00:00,,019e3a5b-92b0-79e4-8f56-e8d4623b351f,-62.63,"EUR",,,,,,,,,0.00,"CAD","IRCC","GOVERNMENT_SERVICES",,,,
+Card debit,2026-05-17 15:10:54+00:00,,019e3908-3423-74fe-93de-586d93975d24,-2.74,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Card debit,2026-05-17 22:21:25+00:00,,019e3908-daaa-709e-b36a-46cdc43a4e80,-9.13,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Spending cashback,2026-05-18 01:08:08+00:00,,019e38a0-47da-7f1d-93ab-5054ca9c9350,0.21,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-18 01:13:09+00:00,"Interest on cash",019e38a4-e06e-7857-8872-13c373c8d6b3,0.35,"EUR",,,,,,,,,,,,,0.00,"EUR",0.35,"EUR"
+Spending cashback,2026-05-19 01:07:35+00:00,,019e3dc6-2009-762c-8951-272a4f7d6581,0.05,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-19 01:07:35+00:00,,019e3dc6-2033-7521-b622-9f4836c2656c,0.18,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-19 01:13:18+00:00,"Interest on cash",019e3dcb-5d20-7cde-91fc-022ed99302c3,0.34,"EUR",,,,,,,,,,,,,0.00,"EUR",0.34,"EUR"
+Card debit,2026-05-19 08:14:46+00:00,,019e4354-ba59-770f-bab2-37f6434ee62c,-2.24,"EUR",,,,,,,,,,,"Edeka","RETAIL_STORES",,,,
+Card debit,2026-05-19 08:50:24+00:00,,019e4351-6ba9-7405-a301-a40d574fbdd4,-1.90,"EUR",,,,,,,,,,,"Deutsche Post","TRANSPORT",,,,
+Card debit,2026-05-19 09:51:08+00:00,,019e42cd-e3e6-70b6-9ef8-13d4374342e9,-9.01,"EUR",,,,,,,,,,,"Penny Markt","RETAIL_STORES",,,,
+Interest on cash,2026-05-20 01:13:19+00:00,"Interest on cash",019e42f1-bdba-72e6-b43d-a60eba5c0522,0.34,"EUR",,,,,,,,,,,,,0.00,"EUR",0.34,"EUR"
+Card debit,2026-05-20 22:36:03+00:00,,019e4d2b-8572-7149-92f3-3ae4711286f1,-12.74,"EUR",,,,,,,,,,,"Burger King","RESTAURANTS",,,,
+Spending cashback,2026-05-21 01:07:00+00:00,,019e4812-4fb6-7cb8-a8b6-7ac3df2760f1,0.18,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-21 01:07:00+00:00,,019e4812-4fc9-7691-aafc-bf5a0e5794ae,0.03,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-21 01:07:00+00:00,,019e4812-4fd8-75fd-b627-0906c61aeae8,0.04,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-21 01:11:07+00:00,"Interest on cash",019e4816-16b9-7331-bebb-f74ac1b98c88,0.32,"EUR",,,,,,,,,,,,,0.00,"EUR",0.32,"EUR"
+Card debit,2026-05-21 20:53:41+00:00,,019e4f09-56d9-7080-885d-829ba281cbb3,-8.22,"EUR",,,,,,,,,,,"Frischemarkt Altona","RETAIL_STORES",,,,
+Interest on cash,2026-05-22 01:10:09+00:00,"Interest on cash",019e4d3b-90b2-7248-b36f-393ddc682d60,0.33,"EUR",,,,,,,,,,,,,0.00,"EUR",0.33,"EUR"
+Card debit,2026-05-22 10:50:36+00:00,,019e551a-89ab-7663-8a22-707044e6d1de,-15.99,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Spending cashback,2026-05-23 01:06:39+00:00,,019e525e-b6d7-7760-b735-63c0b04ad159,0.25,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-23 01:06:39+00:00,,019e525e-b6e7-7bd8-af13-38a1b0ca7180,0.16,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-23 01:09:50+00:00,"Interest on cash",019e5261-a2d8-75c9-92a0-b973773a306f,0.32,"EUR",,,,,,,,,,,,,0.00,"EUR",0.32,"EUR"
+Spending cashback,2026-05-24 01:07:13+00:00,,019e5785-969e-7c33-90f5-8ec33094e237,0.31,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-24 01:10:36+00:00,"Interest on cash",019e5788-b194-7b18-8206-e583fce2d031,0.32,"EUR",,,,,,,,,,,,,0.00,"EUR",0.32,"EUR"
+Interest on cash,2026-05-25 01:12:35+00:00,"Interest on cash",019e5cb0-dee7-75a9-8205-67f097d6c1bd,0.33,"EUR",,,,,,,,,,,,,0.00,"EUR",0.33,"EUR"
+Interest on cash,2026-05-26 01:12:43+00:00,"Interest on cash",019e61d7-59f6-7cd5-a33b-5e69d6e89ea3,0.32,"EUR",,,,,,,,,,,,,0.00,"EUR",0.32,"EUR"
+Card debit,2026-05-26 06:59:18+00:00,,019e6765-de7e-730a-b79a-265ae1107ce2,-10.00,"EUR",,,,,,,,,,,"Gesundleben Apotheke","MISCELLANEOUS",,,,
+Card debit,2026-05-26 07:51:28+00:00,,019e6765-2f28-7cea-8160-c10e2ea12600,-1.44,"EUR",,,,,,,,,,,"Edeka","RETAIL_STORES",,,,
+Card debit,2026-05-27 00:24:28+00:00,,019e7128-673b-77df-bbbc-1116f4c8aaf3,-32.11,"EUR",,,,,,,,,,,"Amazon","MISCELLANEOUS",,,,
+Interest on cash,2026-05-27 01:12:57+00:00,"Interest on cash",019e66fd-ebed-7a25-bc9d-58297656b51b,0.32,"EUR",,,,,,,,,,,,,0.00,"EUR",0.32,"EUR"
+Spending cashback,2026-05-28 01:05:40+00:00,,019e6c1d-9ca1-7fce-9bea-de1984c1eeb7,0.02,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-28 01:05:40+00:00,,019e6c1d-9cb1-73ce-b689-8877b735f8ed,0.20,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-28 01:12:51+00:00,"Interest on cash",019e6c24-2f62-7970-b274-411fd558f3a4,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Withdrawal,2026-05-28 01:30:00+00:00,"Sent to card **** 1736",019e6c33-e356-7b58-980b-79584c68ebc7,-800.00,"EUR",,,,,,,,,,,,,,,,
+Card debit,2026-05-28 03:02:30+00:00,,019e6edf-a5b2-7ad4-a79d-a4a820d99736,-9.95,"EUR",,,,,,,,,,,"GreenMedical","MEMBERSHIPS",,,,
+Card debit,2026-05-28 09:27:30+00:00,,019e71b0-3536-7854-b728-ab0d8b1055ce,-41.21,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-05-28 16:58:37+00:00,,019e76d2-b6bf-7f3a-8731-d12451e4447b,-58.50,"EUR",,,,,,,,,,,"Arcaden Apotheke","MISCELLANEOUS",,,,
+Interest on cash,2026-05-29 01:09:10+00:00,"Interest on cash",019e7147-2da8-77df-a123-fd2d3f2f532c,0.22,"EUR",,,,,,,,,,,,,0.00,"EUR",0.22,"EUR"
+Card debit,2026-05-29 19:17:32+00:00,,019e7c08-963b-71dc-927e-98f5a0ce4dde,-17.15,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Spending cashback,2026-05-30 01:07:05+00:00,,019e766b-a28e-7e60-a266-11ad32f606ed,0.64,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-05-30 01:07:05+00:00,,019e766b-a2a1-70ef-935b-aab9f228b9d2,0.82,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-30 01:09:03+00:00,"Interest on cash",019e766d-6ef2-7dc5-8771-09bccbc67709,0.22,"EUR",,,,,,,,,,,,,0.00,"EUR",0.22,"EUR"
+Spending cashback,2026-05-31 01:07:29+00:00,,019e7b92-58e7-7b32-8ca8-63e1f605c485,1.17,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-05-31 01:09:08+00:00,"Interest on cash",019e7b93-db5f-79e4-a8fd-c73a840d6467,0.22,"EUR",,,,,,,,,,,,,0.00,"EUR",0.22,"EUR"
+Spending cashback,2026-06-01 01:06:48+00:00,,019e80b8-15f3-75dd-b327-2cdba12e8cf0,0.34,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-01 01:09:10+00:00,"Interest on cash",019e80ba-3ff8-7e5d-91e3-87e7b1480fab,0.21,"EUR",,,,,,,,,,,,,0.00,"EUR",0.21,"EUR"
+Interest on cash,2026-06-02 01:08:49+00:00,"Interest on cash",019e85e0-4c30-74d8-9f36-8ae1beb482e9,0.21,"EUR",,,,,,,,,,,,,0.00,"EUR",0.21,"EUR"
+Interest on cash,2026-06-03 01:10:08+00:00,"Interest on cash",019e8b07-da18-7e75-8434-583e8c14baf3,0.21,"EUR",,,,,,,,,,,,,0.00,"EUR",0.21,"EUR"
+Interest on cash,2026-06-04 01:08:26+00:00,"Interest on cash",019e902c-a947-7831-95ea-d2e41097f708,0.20,"EUR",,,,,,,,,,,,,0.00,"EUR",0.20,"EUR"
+Card debit,2026-06-04 20:53:13+00:00,,019e9ae7-e6cd-758b-b3a2-6f8271abc35c,-58.50,"EUR",,,,,,,,,,,"Arcaden Apotheke","MISCELLANEOUS",,,,
+Interest on cash,2026-06-05 01:08:12+00:00,"Interest on cash",019e9552-cffb-75be-bb35-386f64709908,0.20,"EUR",,,,,,,,,,,,,0.00,"EUR",0.20,"EUR"
+Card debit,2026-06-05 22:08:35+00:00,,019e9d38-d4fa-713f-b9a1-15efa8dc770c,-9.21,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-06-06 01:10:04+00:00,"Interest on cash",019e9a7a-df9a-75fd-b816-3c2f896bad7a,0.20,"EUR",,,,,,,,,,,,,0.00,"EUR",0.20,"EUR"
+Card debit,2026-06-06 12:27:48+00:00,,019ea010-c101-71fa-8c0d-fb8a5a2158ac,-23.95,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Spending cashback,2026-06-07 01:04:26+00:00,,019e9f9c-13ef-78df-836e-45d855578714,1.17,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-06-07 01:04:26+00:00,,019e9f9c-13f7-7160-b59b-5e053c3e8ade,0.18,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-07 01:10:14+00:00,"Interest on cash",019e9fa1-6450-7611-a516-6bb8d905084b,0.19,"EUR",,,,,,,,,,,,,0.00,"EUR",0.19,"EUR"
+Spending cashback,2026-06-08 01:04:12+00:00,,019ea4c2-393c-758e-a000-fd7353269a41,0.47,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-08 01:09:53+00:00,"Interest on cash",019ea4c7-6ec4-72c9-8286-e5587bfd0b31,0.20,"EUR",,,,,,,,,,,,,0.00,"EUR",0.20,"EUR"
+Deposit,2026-06-08 17:24:49+00:00,"Transaction ID: KBW7C48VWCGZG6H6",019ea844-0190-70a8-8fc6-4b2aeff1c978,1000.00,"EUR",1007.00,"EUR",-7.00,"EUR",,,,,,,,,,,,
+Card debit,2026-06-08 17:57:11+00:00,,019eaa5b-4029-79a9-ac06-217ca9234924,-13.25,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Card debit,2026-06-08 18:31:35+00:00,,019eaca0-a4ad-7364-8c26-56f2187e0a2f,-1.99,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Interest on cash,2026-06-09 01:08:50+00:00,"Interest on cash",019ea9ec-d1fe-747d-9ee9-050625995cdb,0.27,"EUR",,,,,,,,,,,,,0.00,"EUR",0.27,"EUR"
+Card debit,2026-06-09 11:06:34+00:00,,019eaf7b-718c-7590-8f07-8be963fffb67,-76.50,"EUR",,,,,,,,,,,"Arcaden Apotheke","MISCELLANEOUS",,,,
+Spending cashback,2026-06-10 01:07:42+00:00,,019eaf12-26dc-7501-a752-a0f3ad6ec5b1,0.26,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-06-10 01:07:42+00:00,,019eaf12-26f1-7085-8e6c-68378104b1a3,0.03,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-10 01:08:19+00:00,"Interest on cash",019eaf12-b74d-7d1e-b25c-755bb43f42fb,0.27,"EUR",,,,,,,,,,,,,0.00,"EUR",0.27,"EUR"
+Card debit,2026-06-10 18:18:06+00:00,,019eb6f4-74b1-7883-abac-fbefe90559a9,-9.55,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Card debit,2026-06-10 18:43:16+00:00,,019eb4a5-734a-7d3f-a57b-67ec6ca13e84,-11.00,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Spending cashback,2026-06-11 01:07:39+00:00,,019eb438-7488-768b-b9fe-b955fa5554b5,1.53,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-11 01:08:20+00:00,"Interest on cash",019eb439-144c-7352-93f9-c44a25487a4c,0.27,"EUR",,,,,,,,,,,,,0.00,"EUR",0.27,"EUR"
+Spending cashback,2026-06-12 01:07:35+00:00,,019eb95e-c213-71d1-b13a-e8436d3a8fdf,0.22,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-06-12 01:07:35+00:00,,019eb95e-c228-73db-87f1-8971e96dc567,0.19,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-12 01:09:18+00:00,"Interest on cash",019eb960-55d2-7777-bd19-cf5173c7f377,0.26,"EUR",,,,,,,,,,,,,0.00,"EUR",0.26,"EUR"
+Interest on cash,2026-06-13 01:08:25+00:00,"Interest on cash",019ebe85-dff4-7809-b4be-f36c67ec8673,0.27,"EUR",,,,,,,,,,,,,0.00,"EUR",0.27,"EUR"
+Interest on cash,2026-06-14 01:08:13+00:00,"Interest on cash",019ec3ac-0f7e-75eb-94c0-98f702a95dcd,0.27,"EUR",,,,,,,,,,,,,0.00,"EUR",0.27,"EUR"
+Interest on cash,2026-06-15 01:08:15+00:00,"Interest on cash",019ec8d2-71b7-7d06-8b0d-ae47dfd0a0b4,0.26,"EUR",,,,,,,,,,,,,0.00,"EUR",0.26,"EUR"
+Interest on cash,2026-06-16 01:08:40+00:00,"Interest on cash",019ecdf9-30d1-7b40-a6b7-32a61d216208,0.27,"EUR",,,,,,,,,,,,,0.00,"EUR",0.27,"EUR"
+Card debit,2026-06-16 06:13:52+00:00,,019ed4ff-76a3-7db8-a5f2-485c4e3636e9,-1.99,"EUR",,,,,,,,,,,"avec 2014","MISCELLANEOUS",,,,
+Interest on cash,2026-06-17 01:09:14+00:00,"Interest on cash",019ed320-0f8b-7362-9219-c148a661186f,0.26,"EUR",,,,,,,,,,,,,0.00,"EUR",0.26,"EUR"
+Spending cashback,2026-06-18 01:07:19+00:00,,019ed844-abe8-7266-ad2c-6c8436e7f9d0,0.03,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-18 01:09:12+00:00,"Interest on cash",019ed846-642a-7dd0-aa98-0ab76aa82036,0.25,"EUR",,,,,,,,,,,,,0.00,"EUR",0.25,"EUR"
+Interest on cash,2026-06-19 01:09:34+00:00,"Interest on cash",019edd6d-17d2-7e8a-91f0-433e31900c66,0.30,"EUR",,,,,,,,,,,,,0.00,"EUR",0.30,"EUR"
+Interest on cash,2026-06-20 01:08:40+00:00,"Interest on cash",019ee292-9f50-7247-9fdb-a56c2ef7866c,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Deposit,2026-06-20 16:51:18+00:00,"Transaction ID: NQKFQGQV7QNSLRG3",019ee5f1-a309-786c-8f3f-397916929123,1000.00,"EUR",1007.00,"EUR",-7.00,"EUR",,,,,,,,,,,,
+Interest on cash,2026-06-21 01:08:49+00:00,"Interest on cash",019ee7b9-1fff-7be0-bf3a-3389ce5336d8,0.39,"EUR",,,,,,,,,,,,,0.00,"EUR",0.39,"EUR"
+Card debit,2026-06-21 13:05:00+00:00,,019eeec6-74a3-7fe4-914c-0ed562836a44,-2.14,"EUR",,,,,,,,,,,"avec 2014","MISCELLANEOUS",,,,
+Interest on cash,2026-06-22 01:09:17+00:00,"Interest on cash",019eecdf-e8bf-7f6a-b623-1001b20e93ab,0.39,"EUR",,,,,,,,,,,,,0.00,"EUR",0.39,"EUR"
+Card debit,2026-06-22 08:06:32+00:00,,019ef3e2-72cc-7a43-80ff-b679ea133533,-6.75,"EUR",,,,,,,,,,,"Lagardère","RETAIL_STORES",,,,
+Spending cashback,2026-06-23 01:06:59+00:00,,019ef204-2aaa-7080-ab10-559a8cf2a4b6,0.04,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-23 01:08:21+00:00,"Interest on cash",019ef205-68cc-70ae-932b-f580d5466c1c,0.39,"EUR",,,,,,,,,,,,,0.00,"EUR",0.39,"EUR"
+Card debit,2026-06-23 12:37:44+00:00,,019ef796-da80-725d-aa58-8c8d9fc7fbe2,-83.50,"EUR",,,,,,,,,,,"Arcaden Apotheke","MISCELLANEOUS",,,,
+Card debit,2026-06-23 12:42:20+00:00,,019ef796-d241-717a-8385-ac863d323cbf,-2.00,"EUR",,,,,,,,,,,"Kiosk Walizada","RETAIL_STORES",,,,
+Card debit,2026-06-23 19:15:10+00:00,,019ef796-d859-7cf6-95ed-40efbe1b87ce,-9.30,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Spending cashback,2026-06-24 01:07:18+00:00,,019ef72a-d026-70a2-99f5-dca61965ba68,0.13,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-24 01:08:14+00:00,"Interest on cash",019ef72b-abed-75ef-b12c-e017c318bb6f,0.39,"EUR",,,,,,,,,,,,,0.00,"EUR",0.39,"EUR"
+Card debit,2026-06-24 19:15:46+00:00,,019efcc1-e09a-7a8b-94a1-3f6ebdc55ee3,-11.60,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Spending cashback,2026-06-25 01:06:42+00:00,,019efc50-9d79-74cb-a453-230e53dd5216,0.04,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-06-25 01:06:42+00:00,,019efc50-9d93-7348-804b-e247496b279b,0.18,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-06-25 01:06:42+00:00,,019efc50-9d9c-7567-80b3-0f93da5b8c3f,1.67,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-25 01:08:46+00:00,"Interest on cash",019efc52-8415-7a77-bc12-46ba7996ed4e,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Card debit,2026-06-25 12:02:46+00:00,,019f01e4-ce06-7681-a7cc-8b4439594786,-20.15,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Spending cashback,2026-06-26 01:06:37+00:00,,019f0176-e738-7263-ab4d-bd26a02d3d43,0.23,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-26 01:08:25+00:00,"Interest on cash",019f0178-8e0e-74bb-99bc-cb35efbf7ea2,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Card debit,2026-06-26 08:22:25+00:00,,019f0887-0189-7f73-ab8e-820b083152c9,-12.09,"EUR",,,,,,,,,,,"McDonald's","RESTAURANTS",,,,
+Card debit,2026-06-26 08:43:19+00:00,,019f070f-ed38-7553-85f8-6cd830924fa3,-1.54,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Spending cashback,2026-06-27 01:06:58+00:00,,019f069d-9790-7f67-ad24-622b5c35f28e,0.40,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-27 01:08:57+00:00,"Interest on cash",019f069f-680d-79de-bac4-eeb271ff20f4,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Card debit,2026-06-27 10:22:17+00:00,,019f0bb1-6bf2-7329-b6f4-470c07f799ce,-9.32,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Spending cashback,2026-06-28 01:07:06+00:00,,019f0bc4-11e9-7be6-93f0-34a75ed4255d,0.03,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-06-28 01:07:06+00:00,,019f0bc4-123d-7b18-85df-593cc265891f,0.24,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-28 01:10:03+00:00,"Interest on cash",019f0bc6-c544-76f6-9991-d4cfc7a6c4ca,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Card debit,2026-06-28 10:58:45+00:00,,019f1159-4dad-7a1d-b9a2-d451f6fbfb61,-3.99,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Spending cashback,2026-06-29 01:06:55+00:00,,019f10ea-41d9-7e72-8efc-5df2ba2f3534,0.18,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-29 01:09:55+00:00,"Interest on cash",019f10ec-ffad-7b36-a26e-528240f05db3,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Spending cashback,2026-06-30 01:05:36+00:00,,019f160f-67ac-7753-9ee8-ef07b95f2c3b,0.07,"EUR",,,,,,,,,,,,,,,,
+Interest on cash,2026-06-30 01:09:32+00:00,"Interest on cash",019f1613-02c2-7762-a55e-63eb9d644f59,0.38,"EUR",,,,,,,,,,,,,0.00,"EUR",0.38,"EUR"
+Interest on cash,2026-07-01 01:10:15+00:00,"Interest on cash",019f1b3a-0519-73d4-9f19-111ba7f1eba9,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Interest on cash,2026-07-02 01:09:43+00:00,"Interest on cash",019f205f-e5f9-76b3-95fb-af239c21b172,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Interest on cash,2026-07-03 01:06:16+00:00,"Interest on cash",019f2583-38d7-727e-ab8a-6895c5c4f429,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Interest on cash,2026-07-04 01:07:24+00:00,"Interest on cash",019f2aaa-8082-7d6f-82c1-6289d85794e2,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Interest on cash,2026-07-05 01:07:22+00:00,"Interest on cash",019f2fd0-d592-7c67-9688-9afb4891d124,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Interest on cash,2026-07-06 01:07:24+00:00,"Interest on cash",019f34f7-52d5-7d65-917c-535506d5ee5d,0.37,"EUR",,,,,,,,,,,,,0.00,"EUR",0.37,"EUR"
+Interest on cash,2026-07-07 01:06:15+00:00,"Interest on cash",019f3a1c-8d47-73e8-9946-413881d84c95,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Interest on cash,2026-07-08 01:06:16+00:00,"Interest on cash",019f3f42-eaec-7020-b8c7-46d51a2d6903,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Card debit,2026-07-08 14:11:17+00:00,,019f44e1-049d-76d2-bebd-aeaf7d33308f,-4.67,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Interest on cash,2026-07-09 01:06:44+00:00,"Interest on cash",019f4469-aed3-7db1-9c85-bb7d56bf6479,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Card debit,2026-07-09 02:10:57+00:00,,019f4a04-f732-784e-87ad-c950927c83c1,-7.55,"EUR",,,,,,,,,,,"63250310 Hamburg Hbf B","RESTAURANTS",,,,
+Card debit,2026-07-09 11:34:23+00:00,,019f4978-b95c-7885-a540-21c220d0ff2b,-4.77,"EUR",,,,,,,,,,,"Penny Markt","RETAIL_STORES",,,,
+Card debit,2026-07-09 12:21:29+00:00,,019f4b86-00c4-7a76-8601-27c112f5a321,-2.14,"EUR",,,,,,,,,,,"avec 6181","MISCELLANEOUS",,,,
+Card debit,2026-07-09 13:25:00+00:00,,019f4b82-5193-75df-9a15-5a3fb47a44e4,-2.50,"EUR",,,,,,,,,,,"Lagardère","RETAIL_STORES",,,,
+Card debit,2026-07-09 14:49:06+00:00,,019f4b80-8108-7827-9e20-057c38a578c1,-649.00,"EUR",,,,,,,,,,,"JUSTCOM GMBH","AUTOMOBILE",,,,
+Card debit,2026-07-09 16:40:40+00:00,,019f4a05-1a8d-7bf1-a8d4-52b0f5ae78bb,-5.90,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Card debit,2026-07-09 21:46:09+00:00,,019f4b83-49a1-7541-b83f-fae8e4acf4aa,-5.90,"EUR",,,,,,,,,,,"Manju","RESTAURANTS",,,,
+Interest on cash,2026-07-10 01:06:48+00:00,"Interest on cash",019f4990-1a08-740b-b03e-424ef68b66f8,0.36,"EUR",,,,,,,,,,,,,0.00,"EUR",0.36,"EUR"
+Spending cashback,2026-07-10 01:07:33+00:00,,019f4990-d074-7d23-bcb1-fabed92f01ac,0.09,"EUR",,,,,,,,,,,,,,,,
+Card debit,2026-07-10 13:24:27+00:00,,019f5094-bbc0-7b2b-a587-cc14840259f5,-14.54,"EUR",,,,,,,,,,,"Penny Markt","RETAIL_STORES",,,,
+Card debit,2026-07-10 14:51:12+00:00,,019f4f2d-07f4-7d24-92d1-350ac69e9005,-40.54,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-07-10 21:35:10+00:00,,019f5172-5e5d-7f9d-8661-949d51e0c081,-10.60,"USD",,,,,,,,,,,"DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-11 01:06:20+00:00,"Interest on cash",019f4eb6-1049-7e42-b165-41048ded0440,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-8798-7975-aa35-90adbe8881e1,0.09,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-87b4-7eae-bd5b-5e188fc7eec9,0.15,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-87be-7090-860c-01a12cb4eb82,0.11,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-87da-7064-a56e-cb23aa41bb3f,12.98,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-87eb-7cb5-bf25-e6de3c4435ee,0.05,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-8801-7f3c-a819-17f53de032b7,0.11,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-11 01:07:58+00:00,,019f4eb7-8816-76d9-8699-60e77ed976eb,0.04,"EUR",,,,,,,,,,,,,,,,
+Card debit,2026-07-11 12:55:13+00:00,,019f53c9-829a-7b53-950e-7a2dad5abf6e,-10.60,"USD",,,,,,,,,,,"DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-11 19:25:02+00:00,,019f55b1-e934-7b22-ba40-15bd4932ba0a,-1.54,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Card debit,2026-07-11 23:22:32+00:00,,019f5693-4a96-7f4d-be95-bd4dc32026cb,-10.60,"USD",,,,,,,,,,,"DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-12 01:06:19+00:00,"Interest on cash",019f53dc-6586-7703-bfe4-6648e6d29a19,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Spending cashback,2026-07-12 01:08:12+00:00,,019f53de-1bb6-7683-b893-4fcf8197c208,0.81,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-12 01:08:12+00:00,,019f53de-1bc9-7302-afc7-5766c9c389b1,0.29,"EUR",,,,,,,,,,,,,,,,
+Spending cashback,2026-07-12 01:08:12+00:00,,019f53de-1bf2-714c-9868-73058a8c9d67,0.18,"EUR",,,,,,,,,,,,,,,,
+Card debit,2026-07-12 12:08:58+00:00,,019f58f1-e262-7ad2-a194-5698140d5395,-10.60,"USD",,,,,,,,,,,"DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-12 15:19:57+00:00,,019f5977-b19c-71c5-8fad-38e642133461,-5.00,"EUR",,,,,,,,,,,"TABAKWAREN YELOEGRUE","RETAIL_STORES",,,,
+Card debit,2026-07-12 20:04:10+00:00,,019f5bcb-abc9-7067-89d9-bcda546562a5,-10.60,"USD",,,,,,,,,,,"DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-13 01:06:15+00:00,"Interest on cash",019f5902-b268-75bb-bcb1-140bd96e6df0,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Spending cashback,2026-07-13 01:08:04+00:00,,019f5904-5634-7a56-8e20-12b6170bb80e,0.10,"EUR",,,,,,,,,,,,,,,,
+Card debit,2026-07-13 06:14:57+00:00,,019f5bcb-ae87-7150-9dfa-7c5659a38654,-10.60,"USD",,,,,,,,,,,"DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-13 09:22:51+00:00,,019f6003-b844-710d-86b5-ccd8147fe279,-4.19,"EUR",,,,,,,,,,,"McDonald's","RESTAURANTS",,,,
+Card debit,2026-07-13 10:30:09+00:00,,019f5eaa-c5f6-7a1d-82f1-93e316eeea89,-5.47,"EUR",,,,,,,,,,,"Rewe","RETAIL_STORES",,,,
+Card debit,2026-07-13 11:49:52+00:00,,019f6004-254c-7cc0-8596-594e3dc6034c,-29.90,"EUR",,,,,,,,,,,"cyberport","MISCELLANEOUS",,,,
+Card debit,2026-07-13 12:27:30+00:00,,019f5eaa-9599-7dac-a963-8fdca44af779,-3.48,"EUR",,,,,,,,,,,"Rewe","RETAIL_STORES",,,,
+Card debit,2026-07-13 15:35:27+00:00,,019f5eb2-9369-71d7-81f6-c16e1b47e30c,-2.50,"EUR",,,,,,,,,,,"Kiosk Walizada","RETAIL_STORES",,,,
+Card debit,2026-07-13 21:12:59+00:00,,019f6337-b80c-7330-8314-1a742501dd48,-160.95,"EUR",,,,,,,,,,,"Flix SE","TRANSPORT",,,,
+Interest on cash,2026-07-14 01:06:13+00:00,"Interest on cash",019f5e29-1f06-7137-97ba-b2f570180ff9,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Card debit,2026-07-14 11:13:26+00:00,,019f660d-8c22-774f-b07e-175a0744fea4,-2.50,"EUR",,,,,,,,,,,"Rewe","RETAIL_STORES",,,,
+Card debit,2026-07-14 11:35:13+00:00,,019f63bd-fca3-7c96-a4da-058bf72dd844,-4.95,"EUR",,,,,,,,,,,"Europa Apotheke","MISCELLANEOUS",,,,
+Card debit,2026-07-14 14:12:05+00:00,,019f633c-66f9-743b-81f7-8a6089482760,-9.26,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-14 16:04:35+00:00,,019f63c1-9197-74be-952b-f6b6cface63e,-18.00,"EUR",,,,,,,,,,,"OEZURFA","RESTAURANTS",,,,
+Card debit,2026-07-14 19:25:43+00:00,,019f6539-5057-791e-950d-ba19c75cc5c1,-5.07,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Interest on cash,2026-07-15 01:06:50+00:00,"Interest on cash",019f634f-f094-7017-ac0b-f15ebc721f2c,0.29,"EUR",,,,,,,,,,,,,0.00,"EUR",0.29,"EUR"
+Card debit,2026-07-15 04:47:55+00:00,,019f68e4-deba-7a44-82fd-9114b3d473df,-3.00,"EUR",,,,,,,,,,,"Tchibo","RETAIL_STORES",,,,
+Card debit,2026-07-15 04:53:21+00:00,,019f6a69-b4a5-785d-afa1-941245f2fee5,-2.50,"EUR",,,,,,,,,,,"Yorma's AG","RESTAURANTS",,,,
+Card debit,2026-07-15 13:57:09+00:00,,019f6a62-a921-7336-966a-0ce85327f7ae,-32.10,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-15 14:38:48+00:00,,019f6a6c-5c3e-7288-b4c0-53eac0a1517d,-4.25,"EUR",,,,,,,,,,,"DM DROGERIE SAGT DANKE","MISCELLANEOUS",,,,
+Card debit,2026-07-15 14:46:07+00:00,,019f6a65-3b01-7767-9c1b-1fdd37e8d0d2,-43.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Interest on cash,2026-07-16 01:15:03+00:00,"Interest on cash",019f687d-cf49-765f-9572-b07e9d5d2646,0.25,"EUR",,,,,,,,,,,,,0.00,"EUR",0.25,"EUR"
+Card debit,2026-07-16 07:32:30+00:00,,019f6d8d-0092-701c-8b0f-752ab5512f35,-1.06,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-16 07:59:24+00:00,,019f6d8f-27dd-7632-9e0c-23f5dba70dd6,-18.00,"EUR",,,,,,,,,,,"FRÄNKISCHES FREILANDMUSEUM FLADUNGEN","ENTERTAINMENT",,,,
+Card debit,2026-07-16 11:15:15+00:00,,019f6d8d-0207-7b0b-b167-1eec2466fd21,-1.71,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-16 11:16:07+00:00,,019f6d8c-fe74-79d9-9b49-c381672958c4,-34.11,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-16 13:22:56+00:00,,019f6f7e-2642-72f8-ae2b-d0b3f19724f3,-6.08,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-16 13:36:43+00:00,,019f6f80-c18d-755c-8a48-13c70ed03b07,-43.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Card debit,2026-07-16 18:09:38+00:00,,019f6f80-c437-7c98-93a1-c9bcdf3aea6a,-11.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Card debit,2026-07-16 23:03:52+00:00,,019f72c6-c87a-766c-8576-fc5e094936c8,-10.00,"EUR",,,,,,,,,,,"Google Cloud","UTILITIES",,,,
+Interest on cash,2026-07-17 01:14:29+00:00,"Interest on cash",019f6da3-a53c-791b-9c0c-166101b74664,0.21,"EUR",,,,,,,,,,,,,0.00,"EUR",0.21,"EUR"
+Card debit,2026-07-17 07:57:23+00:00,,019f72c1-735b-759c-a06c-7d80549e4e0c,-20.06,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-17 08:40:05+00:00,,019f72c3-c02f-783b-a95a-9300837bdda1,-49.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Card debit,2026-07-17 19:14:49+00:00,,019f74ac-2ebb-7dcd-85b5-8b30a9f0e0b4,-11.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Card debit,2026-07-17 21:04:36+00:00,,019f7579-5015-71fb-ab21-96c8e215db44,-9.28,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-18 01:15:33+00:00,"Interest on cash",019f72ca-fe95-770d-9275-5d8033db9022,0.20,"EUR",,,,,,,,,,,,,0.00,"EUR",0.20,"EUR"
+Card debit,2026-07-18 06:44:19+00:00,,019f7853-1683-7bdf-89ee-102d37b072f7,-1.06,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-18 08:27:44+00:00,,019f7855-6469-7560-abce-cb2dcf029511,-49.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Card debit,2026-07-18 13:27:46+00:00,,019f77d5-6430-7ebb-866b-ef4dcfd6d472,-11.24,"EUR",,,,,,,,,0.00,"USD","OpenRouter","MISCELLANEOUS",,,,
+Card debit,2026-07-18 17:25:56+00:00,,019f79bb-9440-7107-b095-6ac1b0cf5ba3,-11.00,"EUR",,,,,,,,,,,"Franken Therme","PERSONAL_SERVICES",,,,
+Card debit,2026-07-18 17:38:31+00:00,,019f79b8-9e03-77a2-8377-61b37c1486e0,-12.37,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Card debit,2026-07-18 19:28:47+00:00,,019f79b8-51ac-7178-bda6-43eec3ec2847,-0.20,"EUR",,,,,,,,,,,"Lidl","RETAIL_STORES",,,,
+Interest on cash,2026-07-19 01:16:13+00:00,"Interest on cash",019f77f1-f69e-7841-a7af-2ea25efb9df4,0.18,"EUR",,,,,,,,,,,,,0.00,"EUR",0.18,"EUR"
+Card debit,2026-07-19 06:16:46+00:00,,019f7d7a-af8d-7bb8-9cc3-11badd222032,-1.00,"EUR",,,,,,,,,,,"Hering Sanikonzept","RETAIL_STORES",,,,
+Card debit,2026-07-19 09:50:47+00:00,,019f7d7d-3d9d-7f99-82ab-441217e7757a,-1.54,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Card debit,2026-07-19 09:52:03+00:00,,019f7ef6-6b4a-784a-8cf7-0a303141aa77,-1.00,"EUR",,,,,,,,,,,"M. Niemeyer Gmbh & Co. Kg","MISCELLANEOUS",,,,
+Card debit,2026-07-19 10:16:24+00:00,,019f7d7a-b1ad-7a49-8bfa-4075588b421c,-1.00,"EUR",,,,,,,,,,,"Hering Sanikonzept","RETAIL_STORES",,,,
+Card debit,2026-07-19 11:38:04+00:00,,019f7cfc-db1b-71c0-ab63-c6c4c13a7c9e,-11.24,"EUR",,,,,,,,,0.00,"USD","OpenRouter","MISCELLANEOUS",,,,
+Card debit,2026-07-19 18:46:45+00:00,,019f7fd8-4642-75ec-8124-0d5ad452f43b,-5.57,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-20 01:15:03+00:00,"Interest on cash",019f7d17-3dfd-70a0-a97e-4c6f9448e4fb,0.18,"EUR",,,,,,,,,,,,,0.00,"EUR",0.18,"EUR"
+Card debit,2026-07-20 12:48:47+00:00,,019f8227-9f4e-7730-b13e-a58defe8fe86,-9.28,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-21 01:14:25+00:00,"Interest on cash",019f823d-066a-7c56-a794-63611966f4e0,0.18,"EUR",,,,,,,,,,,,,0.00,"EUR",0.18,"EUR"
+Card debit,2026-07-21 09:38:36+00:00,,019f87ca-985f-7228-8533-3e86203f9ec2,-3.00,"EUR",,,,,,,,,,,"Kiosk Walizada","RETAIL_STORES",,,,
+Card debit,2026-07-21 16:55:17+00:00,,019f87c9-8e26-75f7-bf4b-e32bfc5a6f48,-1.24,"EUR",,,,,,,,,,,"Frischemarkt Altona","RETAIL_STORES",,,,
+Interest on cash,2026-07-22 01:24:36+00:00,"Interest on cash",019f876c-b782-7f52-b4ec-ce0204b687ff,0.18,"EUR",,,,,,,,,,,,,0.00,"EUR",0.18,"EUR"
+Card debit,2026-07-22 05:24:54+00:00,,019f8a1d-f894-75f4-8de2-42feeac0ef37,-9.30,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-22 08:11:26+00:00,,019f8c6f-108b-79e7-bae9-c7f396ca3958,-3.00,"EUR",,,,,,,,,,,"Buecherhalle Neugraben","MISCELLANEOUS",,,,
+Card debit,2026-07-22 11:35:24+00:00,,019f8c73-a0f6-7c6f-a3e2-b8dadea7d8c8,-11.27,"EUR",,,,,,,,,0.00,"USD","OpenRouter","MISCELLANEOUS",,,,
+Card debit,2026-07-22 12:15:02+00:00,,019f8c73-a338-73e9-90cf-c53d6b0f129a,-11.27,"EUR",,,,,,,,,0.00,"USD","OpenRouter","MISCELLANEOUS",,,,
+Card debit,2026-07-22 13:18:12+00:00,,019f8c73-a564-7e68-8392-13d27acadaff,-11.27,"EUR",,,,,,,,,0.00,"USD","OpenRouter","MISCELLANEOUS",,,,
+Interest on cash,2026-07-23 01:34:21+00:00,"Interest on cash",019f8c9b-fdde-722f-b41f-3cee471bfc92,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+Card debit,2026-07-23 18:47:32+00:00,,019f9215-aafd-7428-bf86-928a5c77fecd,-4.08,"EUR",,,,,,,,,,,"Frischemarkt Altona","RETAIL_STORES",,,,
+Interest on cash,2026-07-24 01:31:06+00:00,"Interest on cash",019f91bf-62bf-7178-b873-426c013b0d9f,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+Card debit,2026-07-24 18:02:06+00:00,,019f99b0-1a55-71be-b233-a7b88fe020a0,-40.87,"EUR",,,,,,,,,,,"Kaufland","RETAIL_STORES",,,,
+Card debit,2026-07-24 18:52:36+00:00,,019f98e4-33bf-764b-8a09-70ddb9aa2dbc,-3.99,"EUR",,,,,,,,,,,"Frischemarkt Wandelhalle","RETAIL_STORES",,,,
+Interest on cash,2026-07-25 01:32:30+00:00,"Interest on cash",019f96e7-0489-7027-b907-c4e1cacb5f9b,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+Card debit,2026-07-25 02:57:10+00:00,,019f99b2-0308-7b0c-a6a9-ecd04a47a48d,-9.33,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-25 13:12:46+00:00,,019f9c67-df46-729e-a74e-7332af6e63e3,-1.24,"EUR",,,,,,,,,,,"Edeka","RETAIL_STORES",,,,
+Interest on cash,2026-07-26 01:26:52+00:00,"Interest on cash",019f9c08-3a0c-7c3f-afad-333c051457bb,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+Interest on cash,2026-07-27 01:23:32+00:00,"Interest on cash",019fa12b-8883-733a-bf16-71010cbc2c93,0.17,"EUR",,,,,,,,,,,,,0.00,"EUR",0.17,"EUR"
+Card debit,2026-07-27 17:32:05+00:00,,019fa630-d64c-7879-b719-648cefd27672,-11.31,"EUR",,,,,,,,,0.00,"USD","OpenRouter","MISCELLANEOUS",,,,
+Card debit,2026-07-27 20:32:11+00:00,,019fa8fd-9e1c-795b-9272-96cacc8f1a21,-9.33,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-28 01:20:18+00:00,"Interest on cash",019fa64e-ef89-78c3-8633-4bcdcc330e49,0.16,"EUR",,,,,,,,,,,,,0.00,"EUR",0.16,"EUR"
+Card debit,2026-07-28 10:36:59+00:00,,019fabce-030d-767b-bc03-311407f60685,-21.76,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Card debit,2026-07-28 23:54:33+00:00,,019fae28-7367-74bd-be6f-a682b0a2695b,-9.32,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-29 01:17:45+00:00,"Interest on cash",019fab72-f65e-735f-b119-b26d239d8ac7,0.16,"EUR",,,,,,,,,,,,,0.00,"EUR",0.16,"EUR"
+Card debit,2026-07-29 11:19:39+00:00,,019fb275-6e2c-7df1-8f3a-54509904b40c,-6.30,"EUR",,,,,,,,,,,"ALDI Nord","RETAIL_STORES",,,,
+Card debit,2026-07-29 11:53:12+00:00,,019fb0ff-ddf1-79bb-b2a1-3e5cd4dc734e,-4.29,"EUR",,,,,,,,,,,"V. Wiedemann & Sohn","RETAIL_STORES",,,,
+Interest on cash,2026-07-30 01:18:48+00:00,"Interest on cash",019fb09a-46fc-7757-a550-4a4fa713fa3b,0.15,"EUR",,,,,,,,,,,,,0.00,"EUR",0.15,"EUR"
+Card debit,2026-07-30 08:30:14+00:00,,019fb5a2-93ff-76b1-9498-3b62f3aeac83,-1.86,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Card debit,2026-07-30 14:14:39+00:00,,019fb5a2-96aa-72a1-a55f-1d25752cf26d,-9.20,"EUR",,,,,,,,,0.00,"USD","DEEPSEEK","MISCELLANEOUS",,,,
+Interest on cash,2026-07-31 01:18:29+00:00,"Interest on cash",019fb5c0-57ac-7f7a-9aa7-0898b224ee94,0.14,"EUR",,,,,,,,,,,,,0.00,"EUR",0.14,"EUR"
+Deposit,2026-07-31 14:15:49+00:00,"Bank Transfer",019fb888-0485-7cda-a0c7-416068123d0b,1500.00,"EUR",,,,,,,,,,,,,,,,

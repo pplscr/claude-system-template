@@ -1,0 +1,19 @@
+{
+  "id": "setup-gmail-orchestrator",
+  "name": "Gmail MCP Orchestrator",
+  "status": "active",
+  "priority": "medium",
+  "progress": 90,
+  "description": "Gmail доступ для оркестратора — vuzol + mac-mini",
+  "deadlines": {
+    "default": "2026-08-01"
+  },
+  "next_steps": [
+    "Перезапустити Claude Code щоб gmail-multi-mcp підхопився в сесії mac-mini"
+  ],
+  "blocked_by": [],
+  "contact": null,
+  "last_activity": "Gmail MCP працює: (1) vuzol: google-workspace MCP через IMAP/SMTP — 3 акаунти (ruslanmaneliuk, ruslanmanelyuk, jobreviewhub); (2) mac-mini: gmail-multi-mcp додано в settings.json, обидва акаунти OAuth-підключені; (3) Google Maps API ключ налаштовано. Потрібен перезапуск Claude Code для активації MCP в сесії.",
+  "tier": "hobby",
+  "last_updated": "2026-07-31T20:30:00.000000"
+}

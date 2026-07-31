@@ -1,0 +1,15 @@
+{
+  "id": "mac-infra",
+  "name": "mac-mini Infrastructure",
+  "status": "active",
+  "priority": "high",
+  "progress": 0,
+  "description": "CLAUDE.md, rules, scripts, healthcheck, backup to vuzol",
+  "deadlines": {},
+  "next_steps": [],
+  "blocked_by": [],
+  "contact": null,
+  "last_activity": null,
+  "tier": "life",
+  "last_updated": "2026-07-29T17:19:53.298689"
+}

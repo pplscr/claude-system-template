@@ -1,0 +1,26 @@
+{
+  "_note": "Tailscale ACL — застосувати через tailscale admin console або tailscale set-acl",
+  "_status": "draft — НЕ застосовано, потребує перевірки перед apply",
+  "acls": [
+    {
+      "action": "accept",
+      "src": ["mac-mini"],
+      "dst": ["vuzol:*"]
+    },
+    {
+      "action": "accept",
+      "src": ["vuzol"],
+      "dst": ["mac-mini:*"]
+    },
+    {
+      "action": "accept",
+      "src": ["autogroup:admin"],
+      "dst": ["*:*"]
+    }
+  ],
+  "tagOwners": {},
+  "hosts": {
+    "vuzol": "100.84.177.33",
+    "mac-mini": "100.127.88.114"
+  }
+}

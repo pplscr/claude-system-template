@@ -1,0 +1,33 @@
+{
+  "_schema": "2.0",
+  "id": "justcom-260707",
+  "type": "invoice",
+  "title": "JUSTCOM — ремонт HP Pavilion Gaming Laptop",
+  "status": "pending_payment",
+  "priority": "high",
+  "progress_pct": 50,
+  "description": "Ремонт ноутбука HP Pavilion Gaming (SN: 5CD1390FPI). Кошторис від 24.07.2026. Коротке замикання, заміна материнської плати.",
+  "deadlines": {
+    "payment": {
+      "date": "2026-08-07",
+      "desc": "14 днів від кошторису (24.07). Підтвердити через лінк.",
+      "days_left": 7
+    }
+  },
+  "amount": {
+    "value": 298.00,
+    "currency": "EUR"
+  },
+  "next_step": "Чекати відповіді від Marcus Obertaxer (marcus@justcom.de) або JUSTCOM — 2 запитання про Mainboard + термін",
+  "last_activity": "31.07 17:44 — перший лист на email@justcom.de. 31.07 20:47 — follow-up на marcus@justcom.de (Geschäftsleitung). Жодної відповіді на запитання поки немає.",
+  "emails_sent": [
+    {"date": "2026-07-31T17:44:00", "to": "email@justcom.de", "subject": "Re: Dein Auftrag 260707-022 — Kostenvoranschlag", "status": "no_reply"},
+    {"date": "2026-07-31T20:47:00", "to": "marcus@justcom.de", "subject": "Rückfrage zum Kostenvoranschlag — Auftrag 260707-022 — keine Antwort seit 31.07", "status": "sent"}
+  ],
+  "contact": "JUSTCOM <email@justcom.de>, 040 209 336 440",
+  "links": {
+    "cost_estimate": "https://repair.justcom.de/External/Action/cb7a1a67-edf5-4afb-8f95-06b9040d8020",
+    "bank": "Hamburger Sparkasse, BLZ: 20050550, Konto: 1282150117"
+  },
+  "last_updated": "2026-07-31T17:00:00"
+}

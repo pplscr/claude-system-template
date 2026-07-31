@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Dashboard — mac-mini + vuzol</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #c9d1d9; --dim: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --orange: #d2991d; --red: #f85149; --purple: #a371f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; line-height: 1.5; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  h2 { font-size: 16px; color: var(--accent); margin: 24px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .sub { color: var(--dim); font-size: 13px; margin-bottom: 24px; }
+  .grid { display: grid; gap: 16px; }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-5 { grid-template-columns: repeat(5, 1fr); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .card h3 { font-size: 14px; color: var(--accent); margin-bottom: 8px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .dot.green { background: var(--green); }
+  .dot.orange { background: var(--orange); }
+  .dot.red { background: var(--red); }
+  .dot.purple { background: var(--purple); }
+  .collection { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .collection:last-child { border-bottom: none; }
+  .badge { background: var(--border); padding: 2px 8px; border-radius: 10px; font-size: 11px; color: var(--dim); }
+  .badge.active { background: #1a3a2a; color: var(--green); }
+  .port { font-family: 'SF Mono', monospace; font-size: 12px; }
+  .port .num { color: var(--accent); }
+  .port .svc { color: var(--dim); }
+  .flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; }
+  .flow .box { background: var(--card); border: 1px solid var(--border); padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
+  .flow .arrow { color: var(--dim); font-size: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--dim); font-weight: 500; }
+  .arch { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px; flex-wrap: wrap; }
+  .arch .node { background: var(--card); border: 2px solid var(--border); border-radius: 12px; padding: 16px 20px; text-align: center; }
+  .arch .node.mac { border-color: var(--accent); }
+  .arch .node.vuz { border-color: var(--green); }
+  .arch .node.win { border-color: var(--border); border-style: dashed; }
+  .arch .pipe { font-size: 20px; color: var(--dim); }
+  .arch .label { font-size: 11px; color: var(--dim); margin-top: 4px; }
+  .tag { display: inline-block; background: #1a2332; color: var(--accent); padding: 1px 6px; border-radius: 4px; font-size: 10px; margin: 1px; }
+  @media (max-width: 900px) { .grid-2, .grid-3, .grid-5 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<h1>🧠 Memory Dashboard</h1>
+<p class="sub">mac-mini + vuzol · 3 nodes · 8 Qdrant collections · 72 points · updated 2026-07-31</p>
+
+<!-- Architecture -->
+<h2>🏗️ Memory Architecture</h2>
+<div class="arch">
+  <div class="node mac">
+    <strong>🍎 mac-mini</strong>
+    <div class="label">macOS M4 16GB · executor</div>
+    <div class="label">~/.claude/.../memory/ (git)</div>
+    <div class="label">9 system · 4 user · 5 spaces</div>
+  </div>
+  <div class="pipe">──git push──→</div>
+  <div class="node vuz">
+    <strong>🐧 vuzol</strong>
+    <div class="label">Linux 8GB · dispatcher</div>
+    <div class="label">/srv/memory-mirror/</div>
+    <div class="label">post-receive hook → Qdrant</div>
+  </div>
+  <div class="pipe">──→</div>
+  <div class="node vuz">
+    <strong>🗄️ Qdrant</strong>
+    <div class="label">:6333 · Docker</div>
+    <div class="label">8 collections · 72 points</div>
+    <div class="label">2048d · nemotron-embed-1b</div>
+  </div>
+  <div class="pipe"></div>
+  <div class="node win">
+    <strong>🪟 win-node</strong>
+    <div class="label">Windows · майбутній</div>
+    <div class="label">через git clone + push</div>
+  </div>
+</div>
+
+<!-- Qdrant Collections + Ports -->
+<div class="grid grid-2">
+  <div class="card">
+    <h3>📦 Qdrant Collections <span class="badge active">72 total</span></h3>
+    <div class="collection"><span><span class="dot green"></span> system_memory</span><span class="badge">9 pts</span></div>
+    <div class="collection"><span><span class="dot green"></span> user_memory</span><span class="badge">4 pts</span></div>
+    <div class="collection"><span><span class="dot green"></span> factory_nsc_memory</span><span class="badge">54 pts</span></div>
+    <div class="collection"><span><span class="dot orange"></span> space_coding</span><span class="badge">1 pt</span></div>
+    <div class="collection"><span><span class="dot orange"></span> space_finance</span><span class="badge">1 pt</span></div>
+    <div class="collection"><span><span class="dot orange"></span> space_legal</span><span class="badge">1 pt</span></div>
+    <div class="collection"><span><span class="dot orange"></span> space_medicine</span><span class="badge">1 pt</span></div>
+    <div class="collection"><span><span class="dot orange"></span> space_security</span><span class="badge">1 pt</span></div>
+  </div>
+
+  <div class="card">
+    <h3>🔌 Open Ports — mac-mini</h3>
+    <div class="port"><span class="dot green"></span> <span class="num">11434</span> <span class="svc">Ollama (0.0.0.0)</span></div>
+    <div class="port"><span class="dot green"></span> <span class="num">7777</span> <span class="svc">Browser MCP (127.0.0.1)</span></div>
+    <div class="port"><span class="dot green"></span> <span class="num">8001</span> <span class="svc">SSH tunnel → vuzol (127.0.0.1)</span></div>
+    <h3 style="margin-top:16px">🔌 Open Ports — vuzol</h3>
+    <div class="port"><span class="dot green"></span> <span class="num">22</span> <span class="svc">SSH</span></div>
+    <div class="port"><span class="dot green"></span> <span class="num">80/443</span> <span class="svc">nginx + Tailscale</span></div>
+    <div class="port"><span class="dot green"></span> <span class="num">4000</span> <span class="svc">LiteLLM (Docker)</span></div>
+    <div class="port"><span class="dot green"></span> <span class="num">6333</span> <span class="svc">Qdrant (Docker)</span></div>
+    <div class="port"><span class="dot green"></span> <span class="num">8000</span> <span class="svc">Task API</span></div>
+    <div class="port"><span class="dot orange"></span> <span class="num">8888</span> <span class="svc">upload_server (deleted src!)</span></div>
+    <div class="port"><span class="dot purple"></span> <span class="num">5432</span> <span class="svc">PostgreSQL (127.0.0.1)</span></div>
+    <div class="port"><span class="dot purple"></span> <span class="num">8081</span> <span class="svc">Vaultwarden (127.0.0.1)</span></div>
+  </div>
+</div>
+
+<!-- Spaces -->
+<h2>📂 Spaces</h2>
+<div class="grid grid-5">
+  <div class="card">
+    <h3>💻 coding</h3>
+    <div class="port"><span class="dot green"></span> 7 agents</div>
+    <div class="port"><span class="dot green"></span> 1 memory file</div>
+    <div class="port"><span class="dot green"></span> space_coding: 1 pt</div>
+    <div style="margin-top:8px"><span class="tag">dev</span><span class="tag">tester</span><span class="tag">architect</span><span class="tag">reviewer</span><span class="tag">ops</span><span class="tag">monitoring</span><span class="tag">ui</span></div>
+  </div>
+  <div class="card">
+    <h3>💰 finance</h3>
+    <div class="port"><span class="dot orange"></span> 0 agents (direct)</div>
+    <div class="port"><span class="dot green"></span> 1 memory file</div>
+    <div class="port"><span class="dot green"></span> space_finance: 1 pt</div>
+    <div style="margin-top:8px"><span class="tag">budget €200/міс</span></div>
+  </div>
+  <div class="card">
+    <h3>⚖️ legal</h3>
+    <div class="port"><span class="dot green"></span> 3 agents</div>
+    <div class="port"><span class="dot green"></span> 1 memory file</div>
+    <div class="port"><span class="dot green"></span> space_legal: 1 pt</div>
+    <div style="margin-top:8px"><span class="tag">legal-analyst</span><span class="tag">email-drafter</span><span class="tag">doc-reviewer</span></div>
+  </div>
+  <div class="card">
+    <h3>🏥 medicine</h3>
+    <div class="port"><span class="dot green"></span> 3 agents</div>
+    <div class="port"><span class="dot green"></span> 1 memory file</div>
+    <div class="port"><span class="dot green"></span> space_medicine: 1 pt</div>
+    <div style="margin-top:8px"><span class="tag">diagnostician</span><span class="tag">lab-analyst</span><span class="tag">researcher</span></div>
+  </div>
+  <div class="card">
+    <h3>🔒 security</h3>
+    <div class="port"><span class="dot green"></span> 3 agents</div>
+    <div class="port"><span class="dot green"></span> 1 memory file</div>
+    <div class="port"><span class="dot green"></span> space_security: 1 pt</div>
+    <div style="margin-top:8px"><span class="tag">auditor</span><span class="tag">guardian</span><span class="tag">access-reviewer</span></div>
+  </div>
+</div>
+
+<!-- Sync Pipeline -->
+<h2>🔄 Sync Pipeline</h2>
+<div class="card">
+  <div class="flow">
+    <div class="box">tasks-parse.py</div><span class="arrow">→</span>
+    <div class="box">tasks-all.json</div><span class="arrow">→</span>
+    <div class="box">scp → vuzol</div><span class="arrow">→</span>
+    <div class="box">task-db.py migrate</div><span class="arrow">→</span>
+    <div class="box">PostgreSQL</div><span class="arrow">→</span>
+    <div class="box">Task API :8000</div><span class="arrow">→</span>
+    <div class="box">TG bot</div>
+  </div>
+  <div class="flow" style="margin-top:12px">
+    <div class="box">memory/ (git)</div><span class="arrow">→</span>
+    <div class="box">git push vuzol</div><span class="arrow">→</span>
+    <div class="box">post-receive hook</div><span class="arrow">→</span>
+    <div class="box">/srv/memory-mirror/</div><span class="arrow">→</span>
+    <div class="box">Qdrant :6333</div>
+  </div>
+</div>
+
+<!-- Stats -->
+<h2>📊 System Stats</h2>
+<div class="grid grid-3">
+  <div class="card">
+    <h3>🍎 mac-mini</h3>
+    <div class="port">Model: DeepSeek V4 Pro</div>
+    <div class="port">Hooks: 9 (4 wired + 3 Stop + 2 PreToolUse)</div>
+    <div class="port">MCP: maps-osrm, maps-google, browser</div>
+    <div class="port">Spaces: 5 active</div>
+    <div class="port">Memory: 13 system/user + 5 space</div>
+  </div>
+  <div class="card">
+    <h3>🐧 vuzol</h3>
+    <div class="port">Model: DeepSeek V4 Pro (via LiteLLM :4000)</div>
+    <div class="port">Hooks: 8 wired</div>
+    <div class="port">MCP: subagent-mcp, cache, search, google-workspace</div>
+    <div class="port">Services: Docker ×7, cron ×14, timers ×21</div>
+    <div class="port">Task API: v3 (task-db.py unified, 745 lines)</div>
+  </div>
+  <div class="card">
+    <h3>🪟 win-node</h3>
+    <div class="port" style="color: var(--dim)">Майбутній вузол</div>
+    <div class="port" style="color: var(--dim)">git clone пам'ять</div>
+    <div class="port" style="color: var(--dim)">доступ до Qdrant через Tailscale</div>
+    <div class="port" style="color: var(--dim)">Task API через HTTP</div>
+  </div>
+</div>
+
+</body>
+</html>

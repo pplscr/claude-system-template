@@ -1,0 +1,21 @@
+{
+  "id": "merezha",
+  "name": "Мережа A2A Orchestrator",
+  "status": "active",
+  "priority": "low",
+  "progress": 95,
+  "description": "Agent-to-Agent комунікація L0-L3, Python 3.12+, v0.4.0",
+  "deadlines": {
+    "v070": ""
+  },
+  "next_steps": [
+    "Реалізувати L0 Router (intent classification)",
+    "Налаштувати Qdrant для semantic memory",
+    "Написати тести для A2A протоколу"
+  ],
+  "blocked_by": [],
+  "contact": null,
+  "last_activity": "v070 дедлайн знято 29.07.2026 — хобі",
+  "tier": "hobby",
+  "last_updated": "2026-07-29T20:59:57.442717"
+}
