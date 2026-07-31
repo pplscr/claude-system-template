@@ -1,0 +1,19 @@
+{
+  "_schema": "2.0",
+  "space": "test-000916",
+  "space_label": "test-000916",
+  "status": "active",
+  "priority": "medium",
+  "progress_pct": 0,
+  "active_cases": 0,
+  "total_tasks": 0,
+  "completed_tasks": 0,
+  "blockers": [],
+  "deadlines": {
+    "urgent": [],
+    "this_week": [],
+    "upcoming": []
+  },
+  "items": [],
+  "last_updated": "2026-08-01"
+}
