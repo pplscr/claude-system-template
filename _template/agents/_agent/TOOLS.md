@@ -1,7 +1,8 @@
 # TOOLS — {AGENT_NAME}
 
 ## Allowed
-- ✅ Read, Bash, Write, Edit, Grep, Glob
+- ✅ Read, Write, Edit, Grep, Glob
+- ✅ Bash(ls:*, cat:*, find:*, grep:*, git:status,git:diff,git:log, python3:*, ssh:vuzol, curl:*)
 - ✅ WebSearch, WebFetch
 - ✅ Agent (if agent spawns sub-agents)
 
