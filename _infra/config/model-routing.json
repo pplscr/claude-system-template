@@ -1,37 +1,31 @@
 {
-  "default": "nemotron",
+  "default": "deepseek-v4-flash",
   "models": {
-    "nemotron": {
-      "provider": "openai-compatible",
-      "model": "nvidia/llama-3.1-nemotron-70b-instruct",
-      "cost_per_mtok": 0,
-      "priority": 1
-    },
-    "ds-flash": {
+    "deepseek-v4-flash": {
       "provider": "deepseek",
       "model": "deepseek-chat",
       "cost_per_mtok": 0.27,
-      "priority": 2
+      "priority": 1
     },
-    "ds-pro": {
+    "deepseek-v4-pro": {
       "provider": "deepseek",
       "model": "deepseek-reasoner",
-      "cost_per_mtok": 1.10,
-      "priority": 3
+      "cost_per_mtok": 0.55,
+      "priority": 2
     },
     "opus": {
       "provider": "anthropic",
       "model": "claude-opus-5",
       "cost_per_mtok": 15,
-      "priority": 4,
+      "priority": 3,
       "note": "critique only"
     }
   },
   "routing": {
-    "simple": ["nemotron", "ds-flash"],
-    "medium": ["ds-flash", "ds-pro"],
-    "complex": ["ds-pro", "opus"],
-    "critique": ["opus", "ds-pro"]
+    "simple": ["deepseek-v4-flash"],
+    "medium": ["deepseek-v4-flash", "deepseek-v4-pro"],
+    "complex": ["deepseek-v4-pro", "opus"],
+    "critique": ["opus", "deepseek-v4-pro"]
   },
   "budget": {
     "monthly_euro": 200,

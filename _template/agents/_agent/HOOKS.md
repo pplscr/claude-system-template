@@ -25,5 +25,7 @@
 | SessionStart | Once per session | Init, health check |
 | PreToolUse | Before every tool call | Block dangerous operations |
 | PostToolUse | After every tool call | Audit, lint, validate |
+| PreCompact | Before context compression | Save critical state |
+| PostCompact | After context compression | Restore state, inject dynamic context |
 | Stop | Session end | Checkpoint, cleanup |
 | SubagentStop | Subagent finishes | Chain to next agent |
