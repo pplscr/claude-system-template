@@ -82,9 +82,12 @@ ls ~/spaces/<space>/knowledge/ 2>/dev/null  # knowledge base (medicine)
 1. `ls ~/spaces/<space>/agents/` — хто ще в просторі?
 2. `cat ~/spaces/<space>/SPACE.md` — контекст простору
 3. `cat ~/spaces/<space>/task.json` — активні задачі
-4. `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "<topic>" --agent <space>/<name>` — свій досвід
-5. `ls ~/spaces/_infra/projects/` — які проекти активні?
-6. `ls ~/.claude/skills/ && ls skills/ 2>/dev/null` — які скіли доступні?
-7. `cat .mcp.json 2>/dev/null` — які MCP сервери?
-8. `ls ~/.claude/hooks/` — які хуки активні?
-9. `ls ~/.claude/rules/ && ls rules/ 2>/dev/null` — які правила діють?
+4. `cat TASKS.md` — свої задачі (active → backlog)
+5. `cat IDEAS.md` — ідеї та фідбек
+6. `cat VERSIONS.md` — поточна версія та roadmap
+7. `ssh vuzol python3 /root/scripts/memory-to-qdrant.py --search "<topic>" --agent <space>/<name>` — свій досвід
+8. `ls ~/spaces/_infra/projects/` — які проекти активні?
+9. `ls ~/.claude/skills/ && ls skills/ 2>/dev/null` — які скіли доступні?
+10. `cat .mcp.json 2>/dev/null` — які MCP сервери?
+11. `ls ~/.claude/hooks/` — які хуки активні?
+12. `ls ~/.claude/rules/ && ls rules/ 2>/dev/null` — які правила діють?

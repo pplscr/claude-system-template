@@ -26,3 +26,12 @@ venv/
 # IDE
 .idea/
 .vscode/
+
+# Spaces (real agents — not in template repo)
+/coding/
+/finance/
+/legal/
+/medicine/
+/security/
+/test-*/
+
